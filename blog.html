@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel tips, visa guides, and destination inspiration from Visa Nest — for UK travellers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>Travel Blog &amp; Guides | Visa Nest</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <style>
+    .blog-hero-bg {
+      background-image: url("./src/assets/images/blog-bg.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body
+  class="bg-white font-['Poppins',sans-serif] text-slate-900 antialiased"
+  data-active-nav="blog"
+>
+  <header id="site-header" class="site-header-bar fixed top-0 w-full isolate bg-white lg:bg-slate-900 transition-shadow duration-500" style="z-index: 100;">
+    <nav id="site-nav" class="flex w-full items-center justify-between px-5 py-4 sm:px-8 sm:py-5 lg:px-12 xl:px-20" aria-label="Primary navigation">
+      <a href="index.html" class="load-nav flex items-center gap-2">
+        <span class="inline-flex h-11 w-11 items-center justify-center overflow-hidden sm:h-12 sm:w-12">
+          <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="eager">
+        </span>
+        <span class="leading-tight">
+          <span id="brand-main" class="block text-[23px] font-semibold tracking-tight text-slate-900 sm:text-[30px] lg:text-white">Visa <span id="brand-accent" class="text-[#3b70fe]">Nest</span></span>
+          <span id="brand-subtitle" class="ml-1 block text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500 lg:text-slate-300">Visa & Travel Assistance</span>
+        </span>
+      </a>
+
+      <button id="menu-btn" type="button" class="relative inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-lg transition-colors lg:hidden focus-visible:outline-none" style="touch-action: manipulation;" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-btn-icon menu-btn-icon--bars pointer-events-none absolute inset-0 flex items-center justify-center transition duration-300 ease-out" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </span>
+        <span class="menu-btn-icon menu-btn-icon--close pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 ease-out" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" d="M6 6l12 12M18 6L6 18"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="hidden items-center gap-8 lg:flex">
+        <ul id="desktop-nav-links" class="flex items-center gap-8 text-[14px] font-medium text-white">
+          <li class="load-nav"><a href="index.html" data-nav="home" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
+          <li class="load-nav"><a href="destinations.html" data-nav="destinations" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Destination</a></li>
+          <li class="load-nav"><a href="services.html" data-nav="service" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Service</a></li>
+          <li class="load-nav"><a href="about.html" data-nav="about" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
+          <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+        </ul>
+        <a href="contact.html" class="load-nav inline-flex items-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">
+          Contact
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M10.5 4.5 16 10l-5.5 5.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="mobile-menu-outer lg:hidden"
+      role="navigation"
+      aria-label="Mobile"
+      aria-hidden="true"
+      inert
+    >
+      <div class="mobile-menu-inner min-h-0 overflow-hidden">
+        <div class="mobile-menu-surface bg-white shadow-[0_18px_40px_-24px_rgba(15,23,42,0.2)]">
+          <ul class="mobile-menu-list space-y-1 px-4 py-4 text-sm font-medium text-slate-700">
+            <li><a href="index.html" data-nav="home" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Home</a></li>
+            <li><a href="destinations.html" data-nav="destinations" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Destination</a></li>
+            <li><a href="services.html" data-nav="service" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Service</a></li>
+            <li><a href="about.html" data-nav="about" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">About</a></li>
+            <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+            <li class="pt-2">
+              <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section
+      id="blog-hero"
+      class="relative overflow-hidden border-b border-white/10 pb-12 pt-[88px] sm:pb-16 sm:pt-[96px] lg:pb-20 lg:pt-44"
+      aria-labelledby="blog-heading"
+    >
+      <div class="blog-hero-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div
+        class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/20 to-slate-950/40"
+        aria-hidden="true"
+      ></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="load-hero text-[11px] font-bold uppercase tracking-[0.2em] text-sky-200/95 sm:text-xs">
+            Travel journal
+          </p>
+          <h1 id="blog-heading" class="load-hero mt-3 text-[1.85rem] font-bold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.65rem]">
+            Tips, guides &amp; stories for your next trip
+          </h1>
+          <p class="load-hero mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-white/88 sm:mt-6 sm:text-lg sm:leading-relaxed">
+            Practical visa advice, destination ideas, and travel inspiration — written for UK residents planning trips abroad.
+          </p>
+          <div
+            class="load-hero mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-10 sm:gap-3"
+            role="list"
+            aria-label="Topics covered on the blog"
+          >
+            <span
+              role="listitem"
+              class="blog-hero-chip inline-flex cursor-default select-none items-center rounded-full border border-white/35 bg-white/10 px-4 py-2 text-[12px] font-semibold text-white shadow-sm backdrop-blur-md transition duration-300 ease-out will-change-transform hover:-translate-y-0.5 hover:border-[#7eb0ff]/80 hover:bg-[#3b70fe]/35 hover:text-white hover:shadow-[0_10px_28px_-10px_rgba(59,112,254,0.65)]"
+            >
+              Visa tips
+            </span>
+            <span
+              role="listitem"
+              class="blog-hero-chip inline-flex cursor-default select-none items-center rounded-full border border-white/35 bg-white/10 px-4 py-2 text-[12px] font-semibold text-white shadow-sm backdrop-blur-md transition duration-300 ease-out will-change-transform hover:-translate-y-0.5 hover:border-[#7eb0ff]/80 hover:bg-[#3b70fe]/35 hover:text-white hover:shadow-[0_10px_28px_-10px_rgba(59,112,254,0.65)]"
+            >
+              Destinations
+            </span>
+            <span
+              role="listitem"
+              class="blog-hero-chip inline-flex cursor-default select-none items-center rounded-full border border-white/35 bg-white/10 px-4 py-2 text-[12px] font-semibold text-white shadow-sm backdrop-blur-md transition duration-300 ease-out will-change-transform hover:-translate-y-0.5 hover:border-[#7eb0ff]/80 hover:bg-[#3b70fe]/35 hover:text-white hover:shadow-[0_10px_28px_-10px_rgba(59,112,254,0.65)]"
+            >
+              Travel planning
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="blog-posts"
+      class="bg-white py-12 sm:py-16 lg:py-20"
+      aria-labelledby="blog-posts-heading"
+    >
+      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <h2 id="blog-posts-heading" class="sr-only">Latest articles</h2>
+
+        <div data-blog-card class="blog-featured-card group relative mb-10 overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_28px_-12px_rgba(15,23,42,0.1)] sm:mb-12 sm:rounded-3xl lg:mb-14">
+          <a href="contact.html#contact-form" class="grid grid-cols-1 gap-0 lg:grid-cols-12 lg:gap-0">
+            <div class="relative aspect-[16/10] overflow-hidden bg-slate-100 lg:col-span-7 lg:aspect-auto lg:min-h-[320px]">
+              <img
+                src="./assets/images/destination-01-bali.jpg"
+                alt=""
+                class="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+                width="1200"
+                height="675"
+                loading="eager"
+                decoding="async"
+              />
+              <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100 lg:hidden" aria-hidden="true"></span>
+            </div>
+            <div class="flex flex-col justify-center px-6 py-8 sm:p-10 lg:col-span-5 lg:py-12 lg:pl-10 lg:pr-12">
+              <span class="text-[11px] font-bold uppercase tracking-[0.18em] text-[#3b70fe]">Featured</span>
+              <p class="mt-2 text-[13px] text-slate-500">12 March 2026 · 6 min read</p>
+              <h3 class="mt-4 text-[1.35rem] font-bold leading-snug tracking-tight text-[#1a1a1a] sm:text-2xl lg:text-[1.65rem]">
+                Schengen visa from the UK: checklist that actually saves time
+              </h3>
+              <p class="mt-4 text-[15px] leading-relaxed text-slate-600 sm:text-base">
+                Documents, appointments, and common pitfalls — a clear roadmap before you book flights or hotels.
+              </p>
+              <span class="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-[#3b70fe] transition group-hover:gap-3">
+                Read article
+                <span aria-hidden="true" class="text-lg leading-none">&rarr;</span>
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 lg:gap-8">
+          <article data-blog-card class="blog-post-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_24px_-14px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(59,112,254,0.18)]">
+            <a href="contact.html#contact-form" class="flex flex-1 flex-col">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="./assets/images/destination-02-tongariro.jpg"
+                  alt=""
+                  class="h-full w-full object-cover transition duration-600 ease-out group-hover:scale-105"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <p class="text-[12px] font-semibold uppercase tracking-wide text-[#3b70fe]">Guides</p>
+                <h3 class="mt-2 text-lg font-bold leading-snug text-[#1a1a1a] sm:text-xl">
+                  First-time USA visitor visa: what to expect at the interview
+                </h3>
+                <p class="mt-1 text-[13px] text-slate-500">28 February 2026</p>
+                <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+                  Calm preparation beats last-minute stress — here is how to organise your paperwork and story.
+                </p>
+                <span class="mt-4 text-[14px] font-semibold text-slate-900 group-hover:text-[#3b70fe]">Read more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article data-blog-card class="blog-post-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_24px_-14px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(59,112,254,0.18)]">
+            <a href="contact.html#contact-form" class="flex flex-1 flex-col">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="./assets/images/destination-04-great-barrier-reef.jpg"
+                  alt=""
+                  class="h-full w-full object-cover transition duration-600 ease-out group-hover:scale-105"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <p class="text-[12px] font-semibold uppercase tracking-wide text-[#3b70fe]">Destinations</p>
+                <h3 class="mt-2 text-lg font-bold leading-snug text-[#1a1a1a] sm:text-xl">
+                  Reef to rainforest: pacing a two-week Australia trip
+                </h3>
+                <p class="mt-1 text-[13px] text-slate-500">15 February 2026</p>
+                <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+                  Balance long drives with downtime — a sample route that respects jet lag and weather windows.
+                </p>
+                <span class="mt-4 text-[14px] font-semibold text-slate-900 group-hover:text-[#3b70fe]">Read more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article data-blog-card class="blog-post-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_24px_-14px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(59,112,254,0.18)]">
+            <a href="contact.html#contact-form" class="flex flex-1 flex-col">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="./assets/images/destination-08-patagonia.jpg"
+                  alt=""
+                  class="h-full w-full object-cover transition duration-600 ease-out group-hover:scale-105"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <p class="text-[12px] font-semibold uppercase tracking-wide text-[#3b70fe]">Planning</p>
+                <h3 class="mt-2 text-lg font-bold leading-snug text-[#1a1a1a] sm:text-xl">
+                  Travel insurance: questions to ask before you buy
+                </h3>
+                <p class="mt-1 text-[13px] text-slate-500">2 February 2026</p>
+                <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+                  Medical cover, cancellations, and activities — cut through jargon with a short decision list.
+                </p>
+                <span class="mt-4 text-[14px] font-semibold text-slate-900 group-hover:text-[#3b70fe]">Read more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article data-blog-card class="blog-post-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_24px_-14px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(59,112,254,0.18)]">
+            <a href="contact.html#contact-form" class="flex flex-1 flex-col">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="./assets/images/destination-10-rainforest.jpg"
+                  alt=""
+                  class="h-full w-full object-cover transition duration-600 ease-out group-hover:scale-105"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <p class="text-[12px] font-semibold uppercase tracking-wide text-[#3b70fe]">Guides</p>
+                <h3 class="mt-2 text-lg font-bold leading-snug text-[#1a1a1a] sm:text-xl">
+                  Packing light without forgetting essentials
+                </h3>
+                <p class="mt-1 text-[13px] text-slate-500">20 January 2026</p>
+                <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+                  A carry-on mindset for city breaks and short-haul — layers, adapters, and one “just in case” rule.
+                </p>
+                <span class="mt-4 text-[14px] font-semibold text-slate-900 group-hover:text-[#3b70fe]">Read more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article data-blog-card class="blog-post-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_24px_-14px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(59,112,254,0.18)]">
+            <a href="contact.html#contact-form" class="flex flex-1 flex-col">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="./assets/images/destination-12-maldives.jpg"
+                  alt=""
+                  class="h-full w-full object-cover transition duration-600 ease-out group-hover:scale-105"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <p class="text-[12px] font-semibold uppercase tracking-wide text-[#3b70fe]">Destinations</p>
+                <h3 class="mt-2 text-lg font-bold leading-snug text-[#1a1a1a] sm:text-xl">
+                  Island escapes: when to book for best value
+                </h3>
+                <p class="mt-1 text-[13px] text-slate-500">8 January 2026</p>
+                <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+                  Shoulder seasons, resort bundles, and flexible dates — without the hype.
+                </p>
+                <span class="mt-4 text-[14px] font-semibold text-slate-900 group-hover:text-[#3b70fe]">Read more →</span>
+              </div>
+            </a>
+          </article>
+
+          <article data-blog-card class="blog-post-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_24px_-14px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(59,112,254,0.18)]">
+            <a href="contact.html#contact-form" class="flex flex-1 flex-col">
+              <div class="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                <img
+                  src="./assets/images/destination-05-alpine-highlands.jpg"
+                  alt=""
+                  class="h-full w-full object-cover transition duration-600 ease-out group-hover:scale-105"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="flex flex-1 flex-col p-5 sm:p-6">
+                <p class="text-[12px] font-semibold uppercase tracking-wide text-[#3b70fe]">Stories</p>
+                <h3 class="mt-2 text-lg font-bold leading-snug text-[#1a1a1a] sm:text-xl">
+                  Alpine roads: driving abroad after Brexit
+                </h3>
+                <p class="mt-1 text-[13px] text-slate-500">22 December 2025</p>
+                <p class="mt-3 flex-1 text-[15px] leading-relaxed text-slate-600">
+                  IDP reminders, insurance, and where to check local rules before you set off.
+                </p>
+                <span class="mt-4 text-[14px] font-semibold text-slate-900 group-hover:text-[#3b70fe]">Read more →</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section
+      id="newsletter"
+      class="relative overflow-hidden bg-white py-10 sm:py-14 lg:py-20"
+      aria-labelledby="newsletter-heading"
+    >
+      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 xl:gap-16">
+          <div class="min-w-0 lg:max-w-[46rem] lg:pr-4">
+            <h2
+              id="newsletter-heading"
+              class="our-heading font-[600] leading-tight text-slate-900"
+              data-newsletter-anim
+            >
+              Stay Updated on the Latest Adventures, Tips, and Exclusive Offers.
+            </h2>
+            <p
+              class="mt-4 max-w-lg text-[15px] leading-relaxed text-slate-600 sm:mt-5 sm:text-[16px]"
+              data-newsletter-anim
+            >
+              Never miss out on travel tips, exclusive offers, and inspiring destinations. Subscribe to our
+              newsletter and let the adventure come straight to your inbox!
+            </p>
+            <form
+              class="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-3"
+              data-newsletter-anim
+              action="#"
+              method="post"
+              onsubmit="event.preventDefault()"
+            >
+              <label class="sr-only" for="newsletter-email-blog">Email address</label>
+              <input
+                id="newsletter-email-blog"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="Enter your email"
+                class="min-h-12 w-full min-w-0 flex-1 rounded-full border border-slate-300 bg-white px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-[#3b70fe] focus:ring-2 focus:ring-[#3b70fe]/25"
+              />
+              <button
+                type="submit"
+                class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-slate-900 px-8 py-3 text-[15px] font-semibold text-white transition duration-300 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe] focus-visible:ring-offset-2 sm:px-10"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          <div
+            class="relative mx-auto w-full max-w-[320px] sm:max-w-[350px] lg:mx-0 lg:ml-auto lg:max-w-[380px]"
+            data-newsletter-anim
+          >
+            <div
+              class="relative h-[250px] w-full rounded-xl bg-[#c6984f] sm:h-[290px] lg:h-[340px] lg:overflow-visible"
+            >
+              <img
+                src="./src/assets/images/man.png"
+                alt="Traveler with backpack"
+                class="pointer-events-none absolute bottom-0 left-1/2 z-[1] h-[128%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
+                width="400"
+                height="500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div
+              class="absolute bottom-2 right-2 z-[2] w-[min(calc(100%-0.75rem),220px)] rounded-xl bg-white p-3.5 shadow-lg shadow-slate-900/10 ring-1 ring-slate-200/90 sm:bottom-3 sm:right-3 sm:p-4 lg:bottom-0 lg:right-0 lg:translate-x-[6%] lg:translate-y-[28%]"
+            >
+              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">50+</p>
+              <p class="mt-1 text-xs leading-snug text-slate-600 sm:text-[13px]">Countries to Explore</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative overflow-hidden border-t border-slate-200 bg-[#f6f7fb]">
+    <div class="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 sm:py-12 lg:px-14 xl:px-20">
+      <div class="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+        <div class="col-span-2 min-w-0 lg:col-span-5" data-footer-anim>
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <span class="inline-flex h-10 w-10 items-center justify-center overflow-hidden sm:h-11 sm:w-11">
+              <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="lazy" decoding="async" />
+            </span>
+            <span class="text-[29px] font-semibold tracking-tight text-slate-900">Visa <span class="text-[#3b70fe]">Nest</span></span>
+          </a>
+          <p class="mt-4 max-w-md text-[15px] leading-relaxed text-slate-600">
+            Explore amazing destinations with ease. We plan everything for you, from flights to stays,
+            so you can travel stress-free and enjoy unforgettable adventures.
+          </p>
+          <div class="mt-6">
+            <p class="text-[16px] font-semibold text-slate-800">Follow Us On</p>
+                        <div class="mt-3 flex items-center gap-3">
+              <a href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.96 1.96 0 1 0 5.3 6.9 1.96 1.96 0 0 0 5.25 3Zm14.19 9.72c0-3.01-1.6-4.4-3.73-4.4-1.72 0-2.49.94-2.92 1.6V8.5H9.41c.04.94 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20h3.38v-7.28Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/mubeen.ahmad.developer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.2h2.4l.36-2.8H13.5V9.22c0-.8.22-1.34 1.37-1.34h1.47V5.37A19.47 19.47 0 0 0 14.2 5c-2.13 0-3.6 1.3-3.6 3.7V11H8.2v2.8h2.4V21h2.9Z"/></svg>
+              </a>
+              <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
+              </a>
+              <a href="https://www.upwork.com/freelancers/~0173f9182814d1e8fd" target="_blank" rel="noopener noreferrer" aria-label="Upwork" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-[11px] font-bold tracking-[0.08em] text-slate-700 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">UP</a>
+              <a href="https://discord.com/users/1440685400053256293" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A17.7 17.7 0 0 0 16 3l-.2.4a15 15 0 0 1 4.2 2.1 14.7 14.7 0 0 0-5.3-2.5 17.3 17.3 0 0 0-5.4 0A14.7 14.7 0 0 0 4 5.5 15 15 0 0 1 8.2 3.4L8 3a17.7 17.7 0 0 0-4.3 1.4C1.2 8.1.6 11.6.8 15c1.6 1.2 3.2 1.9 4.8 2.4l1.1-1.8c-.6-.2-1.2-.5-1.8-.8l.4-.3c3.5 1.7 7.4 1.7 10.9 0l.4.3c-.6.3-1.2.6-1.8.8l1.1 1.8c1.6-.5 3.2-1.2 4.8-2.4.3-4-.5-7.4-3.4-10.6ZM9 13.3c-1 0-1.9-.9-1.9-1.9S8 9.5 9 9.5s1.9.9 1.9 1.9S10.1 13.3 9 13.3Zm6 0c-1 0-1.9-.9-1.9-1.9S14 9.5 15 9.5s1.9.9 1.9 1.9-.8 1.9-1.9 1.9Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="min-w-0 lg:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Quick Links</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
+            <li><a href="index.html" class="transition hover:text-[#3b70fe]">Home</a></li>
+            <li><a href="about.html" class="transition hover:text-[#3b70fe]">About Us</a></li>
+            <li><a href="destinations.html" class="transition hover:text-[#3b70fe]">Destination</a></li>
+            <li><a href="blog.html" class="transition hover:text-[#3b70fe]">Blog &amp; Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="min-w-0 lg:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Support</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
+            <li><a href="contact.html" class="transition hover:text-[#3b70fe]">Contact Us</a></li>
+            <li><a href="contact.html#contact-form" class="transition hover:text-[#3b70fe]">Support Center</a></li>
+            <li><a href="services.html" class="transition hover:text-[#3b70fe]">Services</a></li>
+            <li><a href="privacy.html" class="transition hover:text-[#3b70fe]">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div id="contact" class="col-span-2 min-w-0 lg:col-span-3" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Contact Us</h3>
+          <ul class="mt-4 space-y-3.5">
+            <li class="group flex items-center gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
+              </span>
+              <a href="tel:+923269325096" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">+92 326 9325096</a>
+            </li>
+            <li class="group flex items-center gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <a href="mailto:mubeenahmad3377@gmail.com" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">mubeenahmad3377@gmail.com</a>
+            </li>
+            <li class="group flex items-center gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <p class="min-w-0 break-words text-[15px] leading-relaxed text-slate-600">Lahore, Pakistan</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-300/70 bg-[#3b70fe]" data-footer-anim>
+      <div class="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-3 px-5 py-8 text-white sm:flex-row sm:px-8 sm:py-6 lg:px-14 lg:py-7 xl:px-20">
+        <p class="w-full text-center text-[14px] text-white/95 sm:w-auto sm:text-left">© Copyrights 2026 Visa Nest. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-[14px]">
+          <a href="terms.html" class="text-white/95 transition hover:text-white">Terms &amp; Agreements</a>
+          <a href="privacy.html" class="text-white/95 transition hover:text-white">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="quick-contact-fab" class="fixed bottom-4 right-4 z-[80] sm:bottom-5 sm:right-5">
+    <div id="quick-contact-list" class="pointer-events-none mb-3 flex origin-bottom-right translate-y-2 scale-95 flex-col items-center gap-2 opacity-0 transition duration-300">
+      <a href="tel:+923269325096" aria-label="Call Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#1ed760] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
+      </a>
+      <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#27d66f] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
+      </a>
+      <a href="mailto:mubeenahmad3377@gmail.com" aria-label="Email Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#ff4d68] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      <a href="contact.html#contact-form" aria-label="Open contact form" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#113e7a] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.33 0-7 1.67-7 4v2h14v-2c0-2.33-3.67-4-7-4Z"/></svg>
+      </a>
+    </div>
+    <button
+      id="quick-contact-toggle"
+      type="button"
+      aria-label="Open quick contact options"
+      aria-expanded="false"
+      class="quick-contact-toggle inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#2f8f63] bg-[#9be6ab] text-white shadow-[0_16px_30px_-12px_rgba(47,158,81,0.65)] ring-1 ring-[#2f8f63]/45 transition hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f8f63] focus-visible:ring-offset-2"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm4 5h8v2H8V9Zm0 4h5v2H8v-2Z"/></svg>
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const navEls = document.querySelectorAll(".load-nav");
+      const heroEls = document.querySelectorAll("#blog-hero .load-hero");
+      const allEls = [...navEls, ...heroEls];
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isNarrow = window.matchMedia("(max-width: 1023px)").matches;
+
+      if (typeof gsap === "undefined" || reduceMotion) {
+        document.documentElement.classList.add("load-anim-skip");
+        document.documentElement.classList.add("hero-heading-shimmer-on");
+        return;
+      }
+
+      try {
+        gsap.set(allEls, { force3D: true, willChange: "transform, opacity" });
+
+        const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+        const finishIntro = () => {
+          document.documentElement.classList.add("load-anim-done");
+          document.documentElement.classList.add("hero-heading-shimmer-on");
+          gsap.set(allEls, { opacity: 1, y: 0, scale: 1 });
+          gsap.set(allEls, { clearProps: "transform,opacity,willChange" });
+        };
+
+        if (isNarrow) {
+          tl.to(navEls, {
+            opacity: 1,
+            y: 0,
+            duration: 0.52,
+            stagger: 0.05,
+            ease: "power2.out",
+          })
+            .to(
+              heroEls,
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.62,
+                stagger: 0.07,
+                ease: "power2.out",
+              },
+              "+=0.1"
+            )
+            .add(finishIntro);
+        } else {
+          tl.to(navEls, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.78,
+            stagger: 0.09,
+            ease: "power3.out",
+          })
+            .to(
+              heroEls,
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.92,
+                stagger: 0.1,
+                ease: "power4.out",
+              },
+              "+=0.18"
+            )
+            .add(finishIntro);
+        }
+      } catch {
+        document.documentElement.classList.add("load-anim-skip");
+        document.documentElement.classList.add("hero-heading-shimmer-on");
+      }
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const fab = document.getElementById("quick-contact-fab");
+      const toggleBtn = document.getElementById("quick-contact-toggle");
+      const list = document.getElementById("quick-contact-list");
+      if (!fab || !toggleBtn || !list) return;
+
+      const setOpen = (open) => {
+        toggleBtn.setAttribute("aria-expanded", String(open));
+        list.classList.toggle("pointer-events-none", !open);
+        list.classList.toggle("opacity-0", !open);
+        list.classList.toggle("translate-y-2", !open);
+        list.classList.toggle("scale-95", !open);
+        list.classList.toggle("pointer-events-auto", open);
+        list.classList.toggle("opacity-100", open);
+        list.classList.toggle("translate-y-0", open);
+        list.classList.toggle("scale-100", open);
+        fab.classList.toggle("is-open", open);
+      };
+
+      setOpen(false);
+
+      toggleBtn.addEventListener("click", () => {
+        const willOpen = toggleBtn.getAttribute("aria-expanded") !== "true";
+        setOpen(willOpen);
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!fab.contains(e.target)) setOpen(false);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setOpen(false);
+      });
+    });
+  </script>
+  <script type="module" src="./src/media-performance.js"></script>
+  <script type="module" src="./src/site-header.js"></script>
+  <script type="module" src="./src/newsletter-footer.js"></script>
+  <script type="module" src="./src/blog-posts-scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,1698 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Visa Nest — trusted travel and visa assistance since 2000.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="./src/output.css" rel="stylesheet">
+  <title>About Us | Visa Nest</title>
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body
+  class="bg-white font-['Poppins',sans-serif] text-slate-900 antialiased"
+  data-active-nav="about"
+>
+  <header id="site-header" class="site-header-bar fixed top-0 w-full isolate bg-white lg:bg-slate-900 transition-shadow duration-500" style="z-index: 100;">
+    <nav id="site-nav" class="flex w-full items-center justify-between px-5 py-4 sm:px-8 sm:py-5 lg:px-12 xl:px-20" aria-label="Primary navigation">
+      <a href="index.html" class="load-nav flex items-center gap-2">
+        <span class="inline-flex h-11 w-11 items-center justify-center overflow-hidden sm:h-12 sm:w-12">
+          <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="eager">
+        </span>
+        <span class="leading-tight">
+          <span id="brand-main" class="block text-[23px] font-semibold tracking-tight text-slate-900 sm:text-[30px] lg:text-white">Visa <span id="brand-accent" class="text-[#3b70fe]">Nest</span></span>
+          <span id="brand-subtitle" class="ml-1 block text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500 lg:text-slate-300">Visa & Travel Assistance</span>
+        </span>
+      </a>
+
+      <button id="menu-btn" type="button" class="relative inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-lg transition-colors lg:hidden focus-visible:outline-none" style="touch-action: manipulation;" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="menu-btn-icon menu-btn-icon--bars pointer-events-none absolute inset-0 flex items-center justify-center transition duration-300 ease-out" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </span>
+        <span class="menu-btn-icon menu-btn-icon--close pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 ease-out" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" d="M6 6l12 12M18 6L6 18"/>
+          </svg>
+        </span>
+      </button>
+
+      <div class="hidden items-center gap-8 lg:flex">
+        <ul id="desktop-nav-links" class="flex items-center gap-8 text-[14px] font-medium text-white">
+          <li class="load-nav"><a href="index.html" data-nav="home" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
+          <li class="load-nav"><a href="destinations.html" data-nav="destinations" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Destination</a></li>
+          <li class="load-nav"><a href="services.html" data-nav="service" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Service</a></li>
+          <li class="load-nav"><a href="about.html" data-nav="about" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
+          <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+        </ul>
+        <a href="contact.html" class="load-nav inline-flex items-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">
+          Contact
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M10.5 4.5 16 10l-5.5 5.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="mobile-menu-outer lg:hidden"
+      role="navigation"
+      aria-label="Mobile"
+      aria-hidden="true"
+      inert
+    >
+      <div class="mobile-menu-inner min-h-0 overflow-hidden">
+        <div class="mobile-menu-surface bg-white shadow-[0_18px_40px_-24px_rgba(15,23,42,0.2)]">
+          <ul class="mobile-menu-list space-y-1 px-4 py-4 text-sm font-medium text-slate-700">
+            <li><a href="index.html" data-nav="home" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Home</a></li>
+            <li><a href="destinations.html" data-nav="destinations" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Destination</a></li>
+            <li><a href="services.html" data-nav="service" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Service</a></li>
+            <li><a href="about.html" data-nav="about" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">About</a></li>
+            <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+            <li class="pt-2">
+              <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section
+      id="about-showcase"
+      class="bg-[#dbdbdb] pb-14 pt-[88px] sm:pb-16 sm:pt-[96px] lg:pb-20 lg:pt-44"
+      aria-labelledby="about-showcase-heading"
+    >
+      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div class="mx-auto max-w-3xl text-center">
+          <h1
+            id="about-showcase-heading"
+            class="load-hero text-[1.85rem] font-bold leading-[1.15] tracking-tight text-[#1a1a1a] sm:text-4xl lg:text-[2.65rem]"
+          >
+            Trusted Travel Partner Since 2000
+          </h1>
+          <p class="load-hero mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-[#555555] sm:mt-6 sm:text-lg sm:leading-relaxed">
+            Find your next adventure with Visa Nest. From relaxing retreats to exciting explorations, we&apos;ve got the perfect destination for you!
+          </p>
+          <div class="load-hero mt-8 flex justify-center sm:mt-10">
+            <a
+              href="destinations.html"
+              class="inline-flex items-center gap-2 rounded-full bg-[#0f172a] px-8 py-3.5 text-[15px] font-semibold text-white transition-colors duration-500 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe]/40 focus-visible:ring-offset-2"
+            >
+              Explore Now
+              <span class="text-lg leading-none" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          id="about-gallery-track"
+          class="about-gallery-track mx-auto mt-12 max-w-[1320px] max-md:flex-col max-md:gap-4 max-md:!h-auto sm:mt-14 md:mt-16 md:h-[380px] lg:mt-20 lg:h-[440px] h-[240px] sm:h-[300px]"
+          role="group"
+          aria-label="Destination highlights"
+        >
+          <article
+            class="about-gallery-card"
+            data-about-gallery-entrance
+            data-about-card
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="Lake district, New Zealand. Expand to view details."
+          >
+            <img
+              src="./assets/images/destination-02-tongariro.jpg"
+              alt="Mountain trail above clouds in New Zealand"
+              width="400"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about-gallery-overlay">
+              <div class="about-gallery-meta text-white">
+                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Tongariro, New Zealand
+                </p>
+                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Alpine Ridge Trails</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="about-gallery-card"
+            data-about-gallery-entrance
+            data-about-card
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="Kyoto gardens. Expand to view details."
+          >
+            <img
+              src="./assets/images/flowers.png"
+              alt="Lush garden paths and seasonal color"
+              width="400"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about-gallery-overlay">
+              <div class="about-gallery-meta text-white">
+                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Kyoto, Japan
+                </p>
+                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Garden &amp; Forest Walks</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="about-gallery-card about-gallery-card--expanded"
+            data-about-gallery-entrance
+            data-about-card
+            tabindex="0"
+            role="button"
+            aria-expanded="true"
+            aria-label="Sydney harbour. Expanded."
+          >
+            <img
+              src="./assets/images/boat.png"
+              alt="Sydney harbour with boats and iconic skyline"
+              width="400"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about-gallery-overlay">
+              <div class="about-gallery-meta text-white">
+                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Sydney, Australia
+                </p>
+                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Sydney Opera House</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="about-gallery-card"
+            data-about-gallery-entrance
+            data-about-card
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="Coastal beach. Expand to view details."
+          >
+            <img
+              src="./assets/images/man-at-beach.png"
+              alt="Bright coastal beach and shoreline"
+              width="400"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about-gallery-overlay">
+              <div class="about-gallery-meta text-white">
+                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Gold Coast, Australia
+                </p>
+                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Sunrise Beach Escapes</p>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="about-gallery-card"
+            data-about-gallery-entrance
+            data-about-card
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="Alpine peaks. Expand to view details."
+          >
+            <img
+              src="./assets/images/destination-05-alpine-highlands.jpg"
+              alt="Alpine summit and mountain ridges"
+              width="400"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="about-gallery-overlay">
+              <div class="about-gallery-meta text-white">
+                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Swiss Alps, Switzerland
+                </p>
+                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Highland Panoramas</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- UK story (same block as home #about) -->
+    <section
+      id="about"
+      class="about-section relative overflow-hidden bg-white py-10 sm:py-14 md:py-18 lg:py-24"
+      aria-labelledby="about-heading"
+    >
+      <div class="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div
+          class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:items-center lg:gap-12"
+        >
+          <div class="order-1 lg:col-span-5 lg:pt-2">
+            <p
+              class="about-anim-left text-[11px] font-bold uppercase tracking-[0.2em] text-[#0a2540] sm:text-xs"
+            >
+              About us
+            </p>
+            <h2 id="about-heading" class="about-anim-left about-heading-premium mt-3 max-w-xl">
+              <span class="about-heading-accent">Simplifying Global Travel</span>
+              <span class="about-heading-accent">for <br class="lg:block hidden"> UK Residents.</span>
+            </h2>
+            <div class="about-anim-left mt-6 flex gap-4">
+              <div class="min-w-0 flex-1">
+                <p class="text-[15px] leading-relaxed text-slate-700 sm:text-base xl:w-[92%]">
+                  We are a UK-registered travel agency dedicated to turning your travel plans into
+                  reality. We specialize in assisting UK residents (Non-British passport holders)
+                  with Schengen, USA, Canada, and global tourist visas. Beyond visas, we provide
+                  complete travel solutions including flight bookings, hotel reservations, and
+                  holiday packages.
+                </p>
+                <p class="about-disclaimer mt-4 sm:text-base lg:max-w-[92%]">
+                  Not an immigration firm — we provide professional administrative assistance.
+                </p>
+              </div>
+            </div>
+            <a
+              href="services.html"
+              class="about-anim-left bg-black hover:bg-[#3b70fe] duration-300 mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[14px] font-semibold text-white"
+            >
+              Read more
+              <span aria-hidden="true" class="text-lg leading-none">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="order-2 lg:col-span-5 lg:pl-8 xl:pl-0">
+            <div class="relative w-full max-w-none">
+              <div
+                class="pointer-events-none absolute -bottom-6 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-[#c9a227]/35 to-[#3b70fe]/25 blur-2xl sm:h-48 sm:w-48"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="about-visual-grid relative grid min-h-[276px]
+                 grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] grid-rows-2 gap-3 
+                 sm:min-h-[316px] sm:gap-4 md:min-h-[352px] lg:h-[456px]"
+              >
+                <div
+                  class="about-anim-img relative col-start-1 row-start-1 overflow-hidden rounded-2xl "
+                >
+                  <img
+                    src="./src/assets/images/flowers.png"
+                    alt="Airplane wing above the clouds"
+                    class="h-full min-h-[7.75rem] 
+                    w-full object-cover sm:min-h-[8.75rem] lg:min-h-[7rem] hover:brightness-90 hover:contrast-125 hover:scale-110 duration-500"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div
+                  class="about-anim-img relative col-start-2 row-span-2 row-start-1 overflow-hidden rounded-2xl"
+                >
+                  <img
+                    src="./assets/images/man-at-beach.png"
+                    alt="Traveler with backpack on a tropical coastline"
+                    class="h-full min-h-[15.75rem] w-full object-cover hover:scale-110 duration-500 hover:brightness-90 hover:contrast-125 sm:min-h-[17.25rem] md:min-h-[19.25rem] lg:min-h-[15rem]"
+                    width="700"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div
+                  class="about-anim-img col-start-1 row-start-2 overflow-hidden rounded-2xl  "
+                >
+                  <img
+                    src="./assets/images/destination-01-bali.jpg"
+                    alt="Passport, map and travel essentials on a desk"
+                    class="h-full min-h-[7.75rem] w-full object-cover hover:scale-110 duration-500 hover:brightness-90 hover:contrast-125 sm:min-h-[8.75rem] lg:min-h-[7rem]"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="order-3 flex lg:flex-col justify-center gap-10 py-0 sm:gap-12
+             sm:py-4 lg:col-span-2 lg:py-0 lg:gap-y-[72px]"
+          >
+            <div class="about-stat">
+              <p class="about-stat-value" data-count="12" data-suffix="+">3+</p>
+              <p class="about-stat-label">Years of experience</p>
+            </div>
+            <div class="about-stat">
+              <p class="about-stat-value" data-count="120" data-suffix="+">50+</p>
+              <p class="about-stat-label xl:whitespace-nowrap">Destination countries</p>
+            </div>
+            <div class="about-stat">
+              <p class="about-stat-value" data-count="15000" data-format="k" data-suffix="+">5K+</p>
+              <p class="about-stat-label">Satisfied clients</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted brands: grid (About page) -->
+    <section
+      id="about-trusted-brands"
+      class="relative overflow-hidden border-t border-slate-200/80 bg-[#f8fafc] py-10 sm:py-14 lg:py-20"
+      aria-labelledby="about-trusted-heading"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_80%_at_50%_15%,rgba(255,255,255,0.92)_0%,transparent_55%)]"
+        aria-hidden="true"
+      ></div>
+      <div class="relative mx-auto w-full max-w-[1200px] px-5 sm:px-8 lg:px-12">
+        <h2
+          id="about-trusted-heading"
+          class="text-center text-[1.35rem] font-bold tracking-tight text-slate-800 sm:text-2xl md:text-[1.75rem]"
+          data-trusted-anim
+        >
+          Trusted by Top Brands Worldwide
+        </h2>
+        <p
+          class="mx-auto mt-3 max-w-2xl text-center text-[14px] leading-relaxed text-slate-600 sm:text-[15px]"
+          data-trusted-anim
+        >
+          At Visa Nest, we&apos;re proud to work alongside some of the most recognised names in travel, payments, and reviews.
+        </p>
+        <div
+          class="about-trusted-grid mx-auto mt-10 grid max-w-[1040px] grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4 md:gap-6"
+        >
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <span class="brand-logo-shell brand-logo-shell--google flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11" aria-hidden="true">
+                <svg class="h-full w-full" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+              </span>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">Google</span>
+            </span>
+          </div>
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <img src="https://cdn.simpleicons.org/trustpilot/00B67A" width="36" height="36" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" alt="" loading="lazy" decoding="async"/>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">Trustpilot</span>
+            </span>
+          </div>
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <span class="brand-logo-shell brand-logo-shell--visasure flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11" aria-hidden="true">
+                <svg class="h-full w-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+                </svg>
+              </span>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">VisaSure UK</span>
+            </span>
+          </div>
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <img src="https://cdn.simpleicons.org/visa/1A1F71" width="44" height="44" class="h-11 w-11 shrink-0" alt="Visa" loading="lazy" decoding="async"/>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">Visa</span>
+            </span>
+          </div>
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <img src="https://cdn.simpleicons.org/mastercard/EB001B" width="44" height="44" class="h-11 w-11 shrink-0" alt="" loading="lazy" decoding="async"/>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">Mastercard</span>
+            </span>
+          </div>
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <span class="brand-logo-shell brand-logo-shell--skyscanner flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11" aria-hidden="true">
+                <svg class="h-full w-full" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#077ACE" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
+                </svg>
+              </span>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">Skyscanner</span>
+            </span>
+          </div>
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <img src="https://cdn.simpleicons.org/tripadvisor/00AF87" width="44" height="44" class="h-11 w-11 shrink-0" alt="" loading="lazy" decoding="async"/>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">Tripadvisor</span>
+            </span>
+          </div>
+          <div class="about-trusted-card" data-trusted-anim>
+            <span class="about-trusted-card__inner">
+              <img src="https://cdn.simpleicons.org/expedia/FFC72C" width="44" height="44" class="h-11 w-11 shrink-0" alt="" loading="lazy" decoding="async"/>
+              <span class="text-sm font-semibold tracking-tight text-slate-700">Expedia</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="services-why-section"
+      class="bg-white py-12 sm:py-16 lg:py-20"
+      aria-labelledby="services-why-heading"
+    >
+      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-10 lg:gap-14">
+          <div class="max-w-xl md:max-w-2xl lg:max-w-[40rem]">
+            <h2
+              id="services-why-heading"
+              class="text-[1.75rem] font-bold leading-tight tracking-tight text-[#1a1a1a] sm:text-4xl lg:text-[2.5rem]"
+            >
+              Why Choose Visa Nest?
+            </h2>
+            <p
+              id="services-why-description"
+              class="mt-4 text-base leading-relaxed text-[#555555] sm:mt-5 sm:text-lg sm:leading-relaxed"
+            >
+              We partner with trusted operators and clear-eyed visa guidance so every step of your journey feels planned, supported, and built around you.
+            </p>
+          </div>
+          <a
+            id="services-why-contact"
+            href="contact.html"
+            class="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-black px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-500 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe]/40 focus-visible:ring-offset-2 md:mt-1"
+          >
+            Contact Us
+            <span class="text-lg leading-none" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+
+        <div
+          id="services-why-media"
+          class="relative lg:mt-0 mt-10 aspect-video overflow-hidden rounded-2xl bg-slate-900 shadow-[0_25px_80px_-30px_rgba(15,23,42,0.4)] sm:mt-12 sm:rounded-3xl lg:mt-14 lg:rounded-[2rem]"
+        >
+          <video
+            id="services-why-video"
+            class="h-full w-full object-cover"
+            loop
+            muted
+            playsinline
+            preload="metadata"
+            poster="./src/assets/images/mirror.webp"
+          >
+            <source
+              src="https://framerusercontent.com/assets/0OHtSMgrBACOp6V9EqV3e6KtlSQ.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-slate-950/10" aria-hidden="true"></div>
+
+          <button
+            type="button"
+            id="services-why-play"
+            class="group absolute inset-0 z-[1] flex items-center justify-center bg-black/30 opacity-100 transition-[background-color,opacity] duration-300 hover:bg-black/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/90 [.is-playing]:bg-transparent [.is-playing]:opacity-0 [.is-playing]:hover:opacity-100 [.is-playing]:hover:bg-black/35"
+            aria-controls="services-why-video"
+            aria-label="Play video"
+          >
+            <span class="pointer-events-none relative grid place-items-center">
+              <svg
+                id="services-why-icon-play"
+                class="col-start-1 row-start-1 h-16 w-16 text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)] transition duration-300 group-hover:scale-105 sm:h-20 sm:w-20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M8 5v14l11-7L8 5z" />
+              </svg>
+              <svg
+                id="services-why-icon-pause"
+                class="col-start-1 row-start-1 hidden h-14 w-14 text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)] transition duration-300 group-hover:scale-105 sm:h-16 sm:w-16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discover the moments: dual infinite image rows -->
+    <section
+      id="moments"
+      class="moments-section relative overflow-hidden py-10 sm:py-14 lg:py-20"
+      aria-labelledby="moments-heading"
+    >
+      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <h2 id="moments-heading" class="our-heading font-[600] text-slate-900" data-moments-anim>
+          Discover the Moments
+        </h2>
+        <p class="mt-3 max-w-3xl text-[16px] leading-relaxed text-slate-600" data-moments-anim>
+          A glimpse of journeys planned with Visa Nest — from quiet escapes to bold adventures across the globe.
+        </p>
+      </div>
+
+      <div class="moments-marquee-viewport mt-10 w-full overflow-hidden" data-moments-anim>
+        <div
+          data-moments-track
+          data-moments-direction="ltr"
+          class="flex w-max gap-3 will-change-transform sm:gap-4 md:gap-4"
+        >
+          <div class="moments-marquee-set flex shrink-0 items-end gap-3 sm:gap-4 md:gap-4">
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=480&q=82"
+                alt=""
+                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[102px] w-[198px] object-cover sm:h-[118px] sm:w-[228px] md:h-[132px] md:w-[256px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=520&q=82"
+                alt=""
+                class="h-[168px] w-[152px] object-cover sm:h-[188px] sm:w-[170px] md:h-[200px] md:w-[182px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=640&q=82"
+                alt=""
+                class="h-[128px] w-[178px] object-cover sm:h-[146px] sm:w-[202px] md:h-[158px] md:w-[218px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=520&q=82"
+                alt=""
+                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[108px] w-[208px] object-cover sm:h-[124px] sm:w-[238px] md:h-[138px] md:w-[268px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+          <div class="moments-marquee-set flex shrink-0 items-end gap-3 sm:gap-4 md:gap-4" aria-hidden="true">
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=480&q=82"
+                alt=""
+                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[102px] w-[198px] object-cover sm:h-[118px] sm:w-[228px] md:h-[132px] md:w-[256px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=520&q=82"
+                alt=""
+                class="h-[168px] w-[152px] object-cover sm:h-[188px] sm:w-[170px] md:h-[200px] md:w-[182px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=640&q=82"
+                alt=""
+                class="h-[128px] w-[178px] object-cover sm:h-[146px] sm:w-[202px] md:h-[158px] md:w-[218px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=520&q=82"
+                alt=""
+                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[108px] w-[208px] object-cover sm:h-[124px] sm:w-[238px] md:h-[138px] md:w-[268px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="moments-marquee-viewport mt-4 w-full overflow-hidden sm:mt-5 md:mt-5" data-moments-anim>
+        <div
+          data-moments-track
+          data-moments-direction="rtl"
+          class="flex w-max gap-3 will-change-transform sm:gap-4 md:gap-4"
+        >
+          <div class="moments-marquee-set flex shrink-0 items-start gap-3 sm:gap-4 md:gap-4">
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[108px] w-[228px] object-cover sm:h-[124px] sm:w-[258px] md:h-[138px] md:w-[288px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=520&q=82"
+                alt=""
+                class="h-[178px] w-[138px] object-cover sm:h-[198px] sm:w-[154px] md:h-[208px] md:w-[168px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=640&q=82"
+                alt=""
+                class="h-[128px] w-[188px] object-cover sm:h-[146px] sm:w-[212px] md:h-[158px] md:w-[228px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=480&q=82"
+                alt=""
+                class="h-[198px] w-[148px] object-cover sm:h-[218px] sm:w-[162px] md:h-[228px] md:w-[172px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[118px] w-[218px] object-cover sm:h-[134px] sm:w-[248px] md:h-[148px] md:w-[278px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=560&q=82"
+                alt=""
+                class="h-[168px] w-[158px] object-cover sm:h-[188px] sm:w-[176px] md:h-[198px] md:w-[188px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+          <div class="moments-marquee-set flex shrink-0 items-start gap-3 sm:gap-4 md:gap-4" aria-hidden="true">
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[108px] w-[228px] object-cover sm:h-[124px] sm:w-[258px] md:h-[138px] md:w-[288px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=520&q=82"
+                alt=""
+                class="h-[178px] w-[138px] object-cover sm:h-[198px] sm:w-[154px] md:h-[208px] md:w-[168px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=640&q=82"
+                alt=""
+                class="h-[128px] w-[188px] object-cover sm:h-[146px] sm:w-[212px] md:h-[158px] md:w-[228px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=480&q=82"
+                alt=""
+                class="h-[198px] w-[148px] object-cover sm:h-[218px] sm:w-[162px] md:h-[228px] md:w-[172px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=720&q=82"
+                alt=""
+                class="h-[118px] w-[218px] object-cover sm:h-[134px] sm:w-[248px] md:h-[148px] md:w-[278px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+              <img
+                src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=560&q=82"
+                alt=""
+                class="h-[168px] w-[158px] object-cover sm:h-[188px] sm:w-[176px] md:h-[198px] md:w-[188px]"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                referrerpolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section
+      id="newsletter"
+      class="relative overflow-hidden bg-white py-10 sm:py-14 lg:py-20"
+      aria-labelledby="newsletter-heading"
+    >
+      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 xl:gap-16">
+          <div class="min-w-0 lg:max-w-[46rem] lg:pr-4">
+            <h2
+              id="newsletter-heading"
+              class="our-heading font-[600] leading-tight text-slate-900"
+              data-newsletter-anim
+            >
+              Stay Updated on the Latest Adventures, Tips, and Exclusive Offers.
+            </h2>
+            <p
+              class="mt-4 max-w-lg text-[15px] leading-relaxed text-slate-600 sm:mt-5 sm:text-[16px]"
+              data-newsletter-anim
+            >
+              Never miss out on travel tips, exclusive offers, and inspiring destinations. Subscribe to our
+              newsletter and let the adventure come straight to your inbox!
+            </p>
+            <form
+              class="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-3"
+              data-newsletter-anim
+              action="#"
+              method="post"
+              onsubmit="event.preventDefault()"
+            >
+              <label class="sr-only" for="newsletter-email">Email address</label>
+              <input
+                id="newsletter-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="Enter your email"
+                class="min-h-12 w-full min-w-0 flex-1 rounded-full border border-slate-300 bg-white px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-[#3b70fe] focus:ring-2 focus:ring-[#3b70fe]/25"
+              />
+              <button
+                type="submit"
+                class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-slate-900 px-8 py-3 text-[15px] font-semibold text-white transition duration-300 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe] focus-visible:ring-offset-2 sm:px-10"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+
+          <div
+            class="relative mx-auto w-full max-w-[320px] sm:max-w-[350px] lg:mx-0 lg:ml-auto lg:max-w-[380px]"
+            data-newsletter-anim
+          >
+            <div
+              class="relative h-[250px] w-full 
+               rounded-xl bg-[#c6984f]  sm:h-[290px] lg:h-[340px] lg:overflow-visible"
+            >
+              <img
+                src="./src/assets/images/man.png"
+                alt="Traveler with backpack"
+                class="pointer-events-none absolute bottom-0 left-1/2 z-[1]
+                 h-[128%] w-auto max-w-none -translate-x-1/2 object-contain object-bottom"
+                width="400"
+                height="500"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div
+              class="absolute bottom-2 right-2 z-[2] w-[min(calc(100%-0.75rem),220px)] rounded-xl bg-white p-3.5 shadow-lg shadow-slate-900/10 ring-1 ring-slate-200/90 sm:bottom-3 sm:right-3 sm:p-4 lg:bottom-0 lg:right-0 lg:translate-x-[6%] lg:translate-y-[28%]"
+            >
+              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">50+</p>
+              <p class="mt-1 text-xs leading-snug text-slate-600 sm:text-[13px]">Countries to Explore</p>
+              <div
+                class="pointer-events-none absolute bottom-0 right-0 h-8 w-12 overflow-hidden rounded-br-xl"
+                aria-hidden="true"
+              >
+                <svg
+                  class="absolute -bottom-0.5 -right-0.5 h-10 w-14 text-[#3b70fe]"
+                  viewBox="0 0 80 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M80 48V28c-8 2-16-1-22-6-4-3-9-5-14-5-8 0-15 4-20 10-5 6-12 10-20 11L0 48h80Z"
+                    opacity="0.9"
+                  />
+                  <path
+                    fill="currentColor"
+                    d="M80 48V36c-6 1-12-1-16-5-5-4-11-6-18-6-7 0-13 3-17 8-4 5-10 8-17 9L0 48h80Z"
+                    opacity="0.55"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative overflow-hidden border-t border-slate-200 bg-[#f6f7fb]">
+    <div class="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 sm:py-12 lg:px-14 xl:px-20">
+        <div class="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+        <div class="col-span-2 min-w-0 lg:col-span-5" data-footer-anim>
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <span class="inline-flex h-10 w-10 items-center justify-center overflow-hidden sm:h-11 sm:w-11">
+              <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="lazy" decoding="async" />
+            </span>
+            <span class="text-[29px] font-semibold tracking-tight text-slate-900">Visa <span class="text-[#3b70fe]">Nest</span></span>
+          </a>
+          <p class="mt-4 max-w-md text-[15px] leading-relaxed text-slate-600">
+            Explore amazing destinations with ease. We plan everything for you, from flights to stays,
+            so you can travel stress-free and enjoy unforgettable adventures.
+          </p>
+          <div class="mt-6">
+            <p class="text-[16px] font-semibold text-slate-800">Follow Us On</p>
+                        <div class="mt-3 flex items-center gap-3">
+              <a href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.96 1.96 0 1 0 5.3 6.9 1.96 1.96 0 0 0 5.25 3Zm14.19 9.72c0-3.01-1.6-4.4-3.73-4.4-1.72 0-2.49.94-2.92 1.6V8.5H9.41c.04.94 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20h3.38v-7.28Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/mubeen.ahmad.developer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.2h2.4l.36-2.8H13.5V9.22c0-.8.22-1.34 1.37-1.34h1.47V5.37A19.47 19.47 0 0 0 14.2 5c-2.13 0-3.6 1.3-3.6 3.7V11H8.2v2.8h2.4V21h2.9Z"/></svg>
+              </a>
+              <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
+              </a>
+              <a href="https://www.upwork.com/freelancers/~0173f9182814d1e8fd" target="_blank" rel="noopener noreferrer" aria-label="Upwork" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-[11px] font-bold tracking-[0.08em] text-slate-700 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">UP</a>
+              <a href="https://discord.com/users/1440685400053256293" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A17.7 17.7 0 0 0 16 3l-.2.4a15 15 0 0 1 4.2 2.1 14.7 14.7 0 0 0-5.3-2.5 17.3 17.3 0 0 0-5.4 0A14.7 14.7 0 0 0 4 5.5 15 15 0 0 1 8.2 3.4L8 3a17.7 17.7 0 0 0-4.3 1.4C1.2 8.1.6 11.6.8 15c1.6 1.2 3.2 1.9 4.8 2.4l1.1-1.8c-.6-.2-1.2-.5-1.8-.8l.4-.3c3.5 1.7 7.4 1.7 10.9 0l.4.3c-.6.3-1.2.6-1.8.8l1.1 1.8c1.6-.5 3.2-1.2 4.8-2.4.3-4-.5-7.4-3.4-10.6ZM9 13.3c-1 0-1.9-.9-1.9-1.9S8 9.5 9 9.5s1.9.9 1.9 1.9S10.1 13.3 9 13.3Zm6 0c-1 0-1.9-.9-1.9-1.9S14 9.5 15 9.5s1.9.9 1.9 1.9-.8 1.9-1.9 1.9Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="min-w-0 lg:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Quick Links</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
+            <li><a href="index.html" class="transition hover:text-[#3b70fe]">Home</a></li>
+            <li><a href="about.html" class="transition hover:text-[#3b70fe]">About Us</a></li>
+            <li><a href="destinations.html" class="transition hover:text-[#3b70fe]">Destination</a></li>
+            <li><a href="blog.html" class="transition hover:text-[#3b70fe]">Blog & Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="min-w-0 lg:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Support</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
+            <li><a href="#contact" class="transition hover:text-[#3b70fe]">Contact Us</a></li>
+            <li><a href="contact.html#contact-form" class="transition hover:text-[#3b70fe]">Support Center</a></li>
+            <li><a href="services.html" class="transition hover:text-[#3b70fe]">Services</a></li>
+            <li><a href="privacy.html" class="transition hover:text-[#3b70fe]">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div id="contact" class="col-span-2 min-w-0 lg:col-span-3" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Contact Us</h3>
+          <ul class="mt-4 space-y-3.5">
+            <li class="group flex items-center gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
+              </span>
+              <a href="tel:+923269325096" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">+92 326 9325096</a>
+            </li>
+            
+            <li class="group flex items-center gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <a href="mailto:mubeenahmad3377@gmail.com" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">mubeenahmad3377@gmail.com</a>
+            </li>
+            <li class="group flex items-center gap-3">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <p class="min-w-0 break-words text-[15px] leading-relaxed text-slate-600">Lahore, Pakistan</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-300/70 bg-[#3b70fe]" data-footer-anim>
+      <div class="mx-auto flex w-full max-w-[1440px] flex-col items-center  justify-between gap-3
+       px-5 py-8 text-white sm:flex-row sm:px-8 sm:py-6 lg:px-14 lg:py-7 xl:px-20">
+        <p class="w-full text-center text-[14px] text-white/95 sm:w-auto sm:text-left">© Copyrights 2026 Visa Nest. All rights reserved.</p>
+        <div class="flex items-center gap-6 text-[14px]">
+          <a href="terms.html" class="text-white/95 transition hover:text-white">Terms &amp; Agreements</a>
+          <a href="privacy.html" class="text-white/95 transition hover:text-white">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed contact launcher -->
+  <div id="quick-contact-fab" class="fixed bottom-4 right-4 z-[80] sm:bottom-5 sm:right-5">
+    <div id="quick-contact-list" class="pointer-events-none mb-3 flex origin-bottom-right translate-y-2 scale-95 flex-col items-center gap-2 opacity-0 transition duration-300">
+      <a href="tel:+923269325096" aria-label="Call Visa Nest" class="inline-flex h-12
+       w-12 items-center justify-center rounded-full border border-white/90 bg-[#1ed760]
+        text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
+      </a>
+      <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#27d66f] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
+      </a>
+      <a href="mailto:mubeenahmad3377@gmail.com" aria-label="Email Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#ff4d68] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      </a>
+      <a href="contact.html#contact-form" aria-label="Open contact form" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#113e7a] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.33 0-7 1.67-7 4v2h14v-2c0-2.33-3.67-4-7-4Z"/></svg>
+      </a>
+    </div>
+    <button
+      id="quick-contact-toggle"
+      type="button"
+      aria-label="Open quick contact options"
+      aria-expanded="false"
+      class="quick-contact-toggle inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#2f8f63] bg-[#9be6ab] text-white shadow-[0_16px_30px_-12px_rgba(47,158,81,0.65)] ring-1 ring-[#2f8f63]/45 transition hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f8f63] focus-visible:ring-offset-2"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm4 5h8v2H8V9Zm0 4h5v2H8v-2Z"/></svg>
+    </button>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const navEls = document.querySelectorAll(".load-nav");
+      const showcase = document.getElementById("about-showcase");
+      const heroTitle = showcase?.querySelector("#about-showcase-heading");
+      const heroSub = showcase?.querySelector(".mx-auto.max-w-3xl > p.load-hero");
+      const heroCta = showcase?.querySelector(".mx-auto.max-w-3xl > div.load-hero");
+      const galleryCards = showcase?.querySelectorAll("[data-about-gallery-entrance]");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isNarrow = window.matchMedia("(max-width: 1023px)").matches;
+
+      const heroChain = [heroTitle, heroSub, heroCta].filter(Boolean);
+
+      if (typeof gsap === "undefined" || reduceMotion) {
+        document.documentElement.classList.add("load-anim-skip");
+        document.documentElement.classList.add("hero-heading-shimmer-on");
+        return;
+      }
+
+      try {
+        const allNavHero = [...navEls, ...heroChain];
+        gsap.set(allNavHero, { force3D: true, willChange: "transform, opacity" });
+        if (galleryCards?.length) {
+          gsap.set(galleryCards, { opacity: 0, y: 36, force3D: true, willChange: "opacity, transform" });
+        }
+
+        const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+        const finishIntro = () => {
+          document.documentElement.classList.add("load-anim-done");
+          document.documentElement.classList.add("hero-heading-shimmer-on");
+          gsap.set(allNavHero, { opacity: 1, y: 0, scale: 1 });
+          gsap.set(allNavHero, { clearProps: "transform,opacity,willChange" });
+          if (galleryCards?.length) {
+            gsap.set(galleryCards, { clearProps: "willChange" });
+          }
+        };
+
+        if (isNarrow) {
+          tl.to(navEls, {
+            opacity: 1,
+            y: 0,
+            duration: 0.52,
+            stagger: 0.05,
+            ease: "power2.out",
+          });
+          if (heroChain.length) {
+            tl.to(
+              heroChain,
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.52,
+                stagger: 0,
+                ease: "power2.out",
+              },
+              "+=0.08"
+            );
+          }
+          if (galleryCards?.length) {
+            tl.to(
+              galleryCards,
+              { opacity: 1, y: 0, duration: 0.52, stagger: 0.08, ease: "power2.out" },
+              "+=0.14"
+            );
+          }
+          tl.add(finishIntro);
+        } else {
+          tl.to(navEls, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.78,
+            stagger: 0.09,
+            ease: "power3.out",
+          });
+          if (heroChain.length) {
+            tl.to(
+              heroChain,
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.58,
+                stagger: 0,
+                ease: "power3.out",
+              },
+              "+=0.1"
+            );
+          }
+          if (galleryCards?.length) {
+            tl.to(
+              galleryCards,
+              { opacity: 1, y: 0, scale: 1, duration: 0.58, stagger: 0.09, ease: "power3.out" },
+              "+=0.14"
+            );
+          }
+          tl.add(finishIntro);
+        }
+      } catch {
+        document.documentElement.classList.add("load-anim-skip");
+        document.documentElement.classList.add("hero-heading-shimmer-on");
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+        return;
+      }
+
+      const section = document.getElementById("about");
+      if (!section) return;
+
+      const leftItems = section.querySelectorAll(".about-anim-left");
+      const imgs = section.querySelectorAll(".about-anim-img");
+      const statEls = section.querySelectorAll(".about-stat-value");
+
+      if (!leftItems.length && !imgs.length && !statEls.length) return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const formatStat = (value, format, suffix) => {
+        if (format === "k") {
+          const k = Math.max(0, Math.round(value / 1000));
+          return `${k}K${suffix || ""}`;
+        }
+        const n = Math.max(0, Math.round(value));
+        return `${n}${suffix || ""}`;
+      };
+
+      const resetStatsToZero = () => {
+        statEls.forEach((el) => {
+          const format = el.dataset.format || "";
+          const suffix = el.dataset.suffix || "";
+          el.textContent = formatStat(0, format, suffix);
+        });
+      };
+
+      try {
+        gsap.set(leftItems, { opacity: 0, y: 48, filter: "blur(10px)", force3D: true });
+        gsap.set(imgs, { opacity: 0, y: 42, scale: 0.94, filter: "blur(12px)", force3D: true });
+        gsap.set(statEls, { opacity: 0, y: 24, filter: "blur(8px)", force3D: true });
+        resetStatsToZero();
+
+        const visualTl = gsap.timeline({
+          defaults: { ease: "power3.out" },
+          scrollTrigger: {
+            trigger: section,
+            start: "top 98%",
+            end: "bottom 68%",
+            scrub: 1.1,
+            invalidateOnRefresh: true,
+          },
+          onComplete: () => {
+            gsap.set([leftItems, imgs, statEls], { clearProps: "filter" });
+          },
+        });
+
+        visualTl
+          .to(leftItems, {
+            opacity: 1,
+            y: 0,
+            filter: "blur(0px)",
+            duration: 0.8,
+            stagger: 0.16,
+          })
+          .to(
+            imgs,
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              filter: "blur(0px)",
+              duration: 0.82,
+              stagger: 0.12,
+              ease: "power4.out",
+            },
+            "-=0.55"
+          )
+          .to(
+            statEls,
+            {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              duration: 0.62,
+              stagger: 0.12,
+              ease: "power3.out",
+            },
+            "-=0.4"
+          );
+
+        const activeCounterTweens = [];
+        const stopCounterTweens = () => {
+          activeCounterTweens.forEach((t) => t.kill());
+          activeCounterTweens.length = 0;
+        };
+
+        const playCountUp = () => {
+          stopCounterTweens();
+          resetStatsToZero();
+          statEls.forEach((el, idx) => {
+            const target = Number(el.dataset.count || "0") || 0;
+            const format = el.dataset.format || "";
+            const suffix = el.dataset.suffix || "";
+            const step = format === "k" ? 1000 : 1;
+            const counter = { v: 0 };
+            const tween = gsap.to(counter, {
+              v: target,
+              duration: 2.2 + idx * 0.25,
+              ease: "power1.out",
+              snap: { v: step },
+              onUpdate: () => {
+                el.dataset.current = String(counter.v);
+                el.textContent = formatStat(counter.v, format, suffix);
+              },
+            });
+            activeCounterTweens.push(tween);
+          });
+        };
+
+        const playCountDown = () => {
+          stopCounterTweens();
+          statEls.forEach((el, idx) => {
+            const format = el.dataset.format || "";
+            const suffix = el.dataset.suffix || "";
+            const step = format === "k" ? 1000 : 1;
+            const startVal = Number(el.dataset.current || "0") || 0;
+            const counter = { v: startVal };
+            const tween = gsap.to(counter, {
+              v: 0,
+              duration: 1.0 + idx * 0.12,
+              ease: "power1.in",
+              snap: { v: step },
+              onUpdate: () => {
+                el.dataset.current = String(counter.v);
+                el.textContent = formatStat(counter.v, format, suffix);
+              },
+              onComplete: () => {
+                el.dataset.current = "0";
+              },
+            });
+            activeCounterTweens.push(tween);
+          });
+        };
+
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top 98%",
+          invalidateOnRefresh: true,
+          onEnter: () => playCountUp(),
+          onEnterBack: () => playCountUp(),
+          onLeaveBack: () => playCountDown(),
+        });
+      } catch {
+        if (typeof gsap !== "undefined") {
+          gsap.set([leftItems, imgs, statEls], { clearProps: "opacity,transform,filter" });
+        }
+      }
+
+      window.addEventListener("load", () => {
+        if (typeof ScrollTrigger !== "undefined") {
+          ScrollTrigger.refresh();
+        }
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const section = document.getElementById("services-why-section");
+      const heading = document.getElementById("services-why-heading");
+      const desc = document.getElementById("services-why-description");
+      const contact = document.getElementById("services-why-contact");
+      const media = document.getElementById("services-why-media");
+      if (!section || !heading || !desc || !contact || !media) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+        return;
+      }
+
+      const g = window.gsap;
+      const ST = window.ScrollTrigger;
+      g.registerPlugin(ST);
+
+      g.set([heading, desc, contact], { opacity: 0, y: 40, force3D: true });
+      g.set(media, { opacity: 0, y: 52, scale: 0.985, force3D: true });
+
+      g.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 78%",
+          end: "+=360",
+          scrub: 0.58,
+          invalidateOnRefresh: true,
+        },
+      })
+        .to(heading, { opacity: 1, y: 0, ease: "power2.out", duration: 0.28 })
+        .to(desc, { opacity: 1, y: 0, ease: "power2.out", duration: 0.26 }, "<0.05")
+        .to(contact, { opacity: 1, y: 0, ease: "power2.out", duration: 0.24 }, "<0.08")
+        .to(media, { opacity: 1, y: 0, scale: 1, ease: "power2.out", duration: 0.42 }, "+=0.14");
+
+      if (!window.__visaNestWhyScrollRefresh) {
+        window.__visaNestWhyScrollRefresh = true;
+        window.addEventListener("resize", () => ST.refresh());
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const video = document.getElementById("services-why-video");
+      const btn = document.getElementById("services-why-play");
+      const iconPause = document.getElementById("services-why-icon-pause");
+      const iconPlay = document.getElementById("services-why-icon-play");
+      if (!video || !btn || !iconPause || !iconPlay) return;
+
+      video.pause();
+
+      function syncControls() {
+        const paused = video.paused;
+        iconPause.classList.toggle("hidden", paused);
+        iconPlay.classList.toggle("hidden", !paused);
+        btn.classList.toggle("is-playing", !paused);
+        btn.setAttribute("aria-label", paused ? "Play video" : "Pause video");
+      }
+
+      video.addEventListener("play", syncControls);
+      video.addEventListener("pause", syncControls);
+      video.addEventListener("ended", syncControls);
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (video.paused) {
+          void video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      syncControls();
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+        return;
+      }
+
+      const section = document.getElementById("moments");
+      if (!section) return;
+
+      const animEls = section.querySelectorAll("[data-moments-anim]");
+      if (!animEls.length) return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      try {
+        gsap.set(animEls, {
+          opacity: 0,
+          y: 40,
+          filter: "blur(10px)",
+          force3D: true,
+        });
+
+        const tl = gsap.timeline({
+          paused: true,
+          defaults: { ease: "power3.out" },
+          onComplete: () => {
+            gsap.set(animEls, { clearProps: "filter" });
+          },
+        });
+
+        tl.to(animEls, {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.78,
+          stagger: 0.12,
+        });
+
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top 40%",
+          invalidateOnRefresh: true,
+          onEnter: () => tl.play(0),
+          onEnterBack: () => tl.play(),
+          onLeaveBack: () => tl.reverse(),
+        });
+
+        const syncMomentsIfInView = () => {
+          const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+          const r = section.getBoundingClientRect();
+          const margin = Math.min(64, vh * 0.08);
+          const onScreen = r.bottom > margin && r.top < vh - margin;
+          const scrolledPast = r.bottom < margin;
+          if (onScreen || scrolledPast) {
+            tl.pause().progress(1, false);
+            gsap.set(animEls, { clearProps: "filter" });
+          }
+        };
+
+        const scheduleMomentsSync = () => {
+          if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.refresh();
+          }
+          syncMomentsIfInView();
+          requestAnimationFrame(syncMomentsIfInView);
+          requestAnimationFrame(() => requestAnimationFrame(syncMomentsIfInView));
+          [100, 350, 800].forEach((ms) => {
+            setTimeout(() => {
+              if (typeof ScrollTrigger !== "undefined") {
+                ScrollTrigger.refresh();
+              }
+              syncMomentsIfInView();
+            }, ms);
+          });
+        };
+
+        window.addEventListener("load", scheduleMomentsSync);
+        window.addEventListener("pageshow", scheduleMomentsSync);
+      } catch {
+        if (typeof gsap !== "undefined") {
+          gsap.set(section.querySelectorAll("[data-moments-anim]"), {
+            clearProps: "opacity,transform,filter",
+          });
+        }
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener("load", () => {
+      const section = document.querySelector(".moments-section");
+      const tracks = document.querySelectorAll("[data-moments-track]");
+      if (!section || tracks.length === 0) return;
+
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (prefersReduced || typeof gsap === "undefined") {
+        section.classList.add("moments-marquee--static");
+        return;
+      }
+
+      const activeTweens = [];
+
+      tracks.forEach((track, idx) => {
+        const direction = track.getAttribute("data-moments-direction");
+        const viewport = track.closest(".moments-marquee-viewport");
+        let tween = null;
+        let resizeTimer = null;
+
+        const build = () => {
+          const sets = track.querySelectorAll(".moments-marquee-set");
+          if (sets.length < 2) return;
+          const loopDistance = sets[1].offsetLeft - sets[0].offsetLeft;
+          if (loopDistance <= 0) return;
+
+          tween?.kill();
+          const pxPerSec = 52;
+          const duration = Math.max(12, loopDistance / pxPerSec);
+
+          if (direction === "rtl") {
+            tween = gsap.fromTo(
+              track,
+              { x: -loopDistance },
+              {
+                x: 0,
+                duration,
+                ease: "none",
+                repeat: -1,
+                immediateRender: true,
+              }
+            );
+          } else {
+            gsap.set(track, { x: 0 });
+            tween = gsap.to(track, {
+              x: -loopDistance,
+              duration,
+              ease: "none",
+              repeat: -1,
+            });
+          }
+
+          activeTweens[idx] = tween;
+
+          if (viewport) {
+            viewport.onmouseenter = () => activeTweens[idx]?.timeScale(0.35);
+            viewport.onmouseleave = () => activeTweens[idx]?.timeScale(1);
+          }
+        };
+
+        build();
+
+        const ro = new ResizeObserver(() => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(build, 100);
+        });
+        ro.observe(track);
+      });
+
+      document.addEventListener("visibilitychange", () => {
+        activeTweens.forEach((tw) => {
+          if (!tw) return;
+          if (document.hidden) tw.pause();
+          else tw.resume();
+        });
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const fab = document.getElementById("quick-contact-fab");
+      const toggleBtn = document.getElementById("quick-contact-toggle");
+      const list = document.getElementById("quick-contact-list");
+      if (!fab || !toggleBtn || !list) return;
+
+      const setOpen = (open) => {
+        toggleBtn.setAttribute("aria-expanded", String(open));
+        list.classList.toggle("pointer-events-none", !open);
+        list.classList.toggle("opacity-0", !open);
+        list.classList.toggle("translate-y-2", !open);
+        list.classList.toggle("scale-95", !open);
+        list.classList.toggle("pointer-events-auto", open);
+        list.classList.toggle("opacity-100", open);
+        list.classList.toggle("translate-y-0", open);
+        list.classList.toggle("scale-100", open);
+        fab.classList.toggle("is-open", open);
+      };
+
+      setOpen(false);
+
+      toggleBtn.addEventListener("click", () => {
+        const willOpen = toggleBtn.getAttribute("aria-expanded") !== "true";
+        setOpen(willOpen);
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!fab.contains(e.target)) setOpen(false);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setOpen(false);
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const sec = document.getElementById("about-trusted-brands");
+      if (!sec) return;
+      const els = sec.querySelectorAll("[data-trusted-anim]");
+      if (!els.length) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      try {
+        gsap.set(els, { opacity: 0, y: 36, filter: "blur(8px)", force3D: true });
+
+        gsap.to(els, {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.68,
+          stagger: 0.075,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sec,
+            start: "top 40%",
+            toggleActions: "play none none none",
+            invalidateOnRefresh: true,
+          },
+          onComplete: () => {
+            gsap.set(els, { clearProps: "filter" });
+          },
+        });
+
+        window.addEventListener("load", () => {
+          if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+        });
+      } catch {
+        if (typeof gsap !== "undefined") {
+          gsap.set(els, { clearProps: "opacity,transform,filter" });
+        }
+      }
+    });
+  </script>
+  <script type="module" src="./src/about-gallery.js"></script>
+  <script type="module" src="./src/newsletter-footer.js"></script>
+  <script type="module" src="./src/media-performance.js"></script>
+  <script type="module" src="./src/site-header.js"></script>
+</body>
+</html>

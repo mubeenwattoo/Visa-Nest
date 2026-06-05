@@ -1,0 +1,20 @@
+/*
+  X-Content-Type-Options: nosniff
+
+/src/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/src/assets/videos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/src/assets/images/*.mp4
+  Cache-Control: public, max-age=31536000, immutable
+
+/src/assets/images/*.webm
+  Cache-Control: public, max-age=31536000, immutable
+
+/src/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/src/*.js
+  Cache-Control: public, max-age=31536000, immutable

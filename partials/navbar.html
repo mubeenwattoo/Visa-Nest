@@ -1,0 +1,67 @@
+<header id="site-header" class="site-header-bar fixed top-0 w-full isolate bg-white lg:bg-slate-900 transition-shadow duration-500" style="z-index: 100;">
+  <nav id="site-nav" class="flex w-full items-center justify-between px-5 py-4
+     sm:px-8 sm:py-5 lg:px-12 xl:px-20" aria-label="Primary navigation">
+    <a href="index.html" class="load-nav flex items-center gap-2">
+      <span class="inline-flex h-11 w-11 items-center justify-center overflow-hidden  sm:h-12 sm:w-12">
+        <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="eager">
+      </span>
+      <span class="leading-tight">
+        <span id="brand-main" class="block text-[23px] font-semibold tracking-tight text-slate-900 sm:text-[30px] lg:text-white">Visa <span id="brand-accent" class="text-[#3b70fe]">Nest</span></span>
+        <span id="brand-subtitle" class="ml-1 block text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500 lg:text-slate-300">Visa & Travel Assistance</span>
+      </span>
+    </a>
+
+    <button id="menu-btn" type="button" class="relative inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-lg transition-colors lg:hidden focus-visible:outline-none" style="touch-action: manipulation;" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="menu-btn-icon menu-btn-icon--bars pointer-events-none absolute inset-0 flex items-center justify-center transition duration-300 ease-out" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </span>
+      <span class="menu-btn-icon menu-btn-icon--close pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition duration-300 ease-out" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </span>
+    </button>
+
+    <div class="hidden items-center gap-8 lg:flex">
+      <ul id="desktop-nav-links" class="flex items-center gap-8 text-[14px] font-medium text-white">
+        <li class="load-nav"><a href="index.html" data-nav="home" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
+        <li class="load-nav"><a href="destinations.html" data-nav="destinations" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Destination</a></li>
+        <li class="load-nav"><a href="index.html#destinations" data-nav="service" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Service</a></li>
+        <li class="load-nav"><a href="about.html" data-nav="about" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
+        <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+      </ul>
+      <a href="contact.html" class="load-nav inline-flex items-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">
+        Contact
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 10h12M10.5 4.5 16 10l-5.5 5.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <div
+    id="mobile-menu"
+    class="mobile-menu-outer lg:hidden"
+    role="navigation"
+    aria-label="Mobile"
+    aria-hidden="true"
+    inert
+  >
+    <div class="mobile-menu-inner min-h-0 overflow-hidden">
+      <div class="mobile-menu-surface bg-white shadow-[0_18px_40px_-24px_rgba(15,23,42,0.2)]">
+        <ul class="mobile-menu-list space-y-1 px-4 py-4 text-sm font-medium text-slate-700">
+          <li><a href="index.html" data-nav="home" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Home</a></li>
+          <li><a href="destinations.html" data-nav="destinations" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Destination</a></li>
+          <li><a href="index.html#destinations" data-nav="service" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Service</a></li>
+          <li><a href="about.html" data-nav="about" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">About</a></li>
+          <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+          <li class="pt-2">
+            <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
