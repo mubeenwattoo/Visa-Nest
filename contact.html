@@ -22,31 +22,51 @@
     .contact-textarea,
     .contact-select {
       width: 100%;
-      border-radius: 0.9rem;
-      border: 1px solid #dbe4ef;
-      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
-      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-      padding: 0.8rem 0.95rem;
+      min-height: 2.875rem;
+      border-radius: 0.875rem;
+      border: 1px solid var(--color-primary-blue, #0047ab);
+      background: #fff;
+      box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.96), 0 1px 2px rgb(15 23 42 / 0.045);
+      padding: 0.75rem 1rem;
       font-size: 15px;
       color: #0f172a;
       outline: none;
-      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .contact-textarea {
+      min-height: 9rem;
+      line-height: 1.55;
+      resize: vertical;
+    }
+
+    .contact-input::placeholder,
+    .contact-textarea::placeholder {
+      color: #94a3b8;
+    }
+
+    .contact-input:hover,
+    .contact-textarea:hover,
+    .contact-select:hover {
+      border-color: var(--color-primary-yellow, #f4b400);
     }
 
     .contact-input:focus,
     .contact-textarea:focus,
     .contact-select:focus {
-      border-color: #0047ab;
-      box-shadow: 0 0 0 3px rgba(59, 112, 254, 0.18);
-      transform: translateY(-1px);
+      border-color: var(--color-primary-yellow, #f4b400);
+      box-shadow: 0 0 0 3px rgb(244 180 0 / 0.28), inset 0 1px 0 rgb(255 255 255 / 0.98);
+      background: #fff;
     }
 
     .contact-select {
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
-      padding-right: 3rem;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      cursor: pointer;
+      padding-right: 2.85rem;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%230047ab' stroke-width='2.15' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 0.95rem center;
       background-size: 18px 18px;
@@ -94,24 +114,24 @@
       </button>
 
       <div class="hidden  items-center gap-8 xl:gap-12 lg:flex border-[#F4B400] 
-      border-t-1 border-b-1 border-l-2 border-r-2 bg-transparent
-       xl:ml-20 lg:ml-6 hover:backdrop-blur-sm duration-500  
+      border-2 bg-transparent
+       xl:ml-20 lg:ml-6 hover:backdrop-blur-sm backdrop-blur-[4px] duration-500  
        rounded-full hover:px-10 px-6 py-3.5">
         <ul id="desktop-nav-links" class="flex items-center uppercase gap-8 text-[14px] font-medium text-white">
           <li class="load-nav"><a href="index.html" data-nav="home" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
           <li class="load-nav"><a href="destinations.html" data-nav="destinations" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Destination</a></li>
-          <li class="load-nav"><a href="services.html" data-nav="service" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Service</a></li>
           <li class="load-nav"><a href="about.html" data-nav="about" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
+          <li class="load-nav"><a href="faq.html" data-nav="faq" class="nav-link normal-case relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">FAQ's</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
         </ul>
         
       </div>
       <div class="hidden items-center gap-4 lg:flex">
         <a
-          href="services.html"
+          href="contact.html#contact-form"
           data-nav-intro="cta"
           class="load-nav group relative inline-flex min-h-12
-        items-center justify-center overflow-hidden rounded-full border border-[#F4B400] 
+        items-center justify-center overflow-hidden rounded-full border-2 border-[#F4B400] 
           px-5 py-2 text-[14px] font-semibold tracking-[0.01em]
           text-white backdrop-blur-sm transition duration-500 
            hover:border-transparent focus-visible:outline-none
@@ -126,7 +146,7 @@
           href="contact.html"
           data-nav-intro="cta"
           class="load-nav inline-flex items-center 
-        justify-center rounded-full border border-[#F4B400] bg-[#F4B400]
+        justify-center rounded-full border-2 border-[#F4B400] bg-[#F4B400]
          px-6 py-3 text-[14px] font-semibold text-white
           shadow-sm shadow-amber-900/10 transition duration-500
            hover:bg-transparent "
@@ -151,8 +171,8 @@
           <ul class="mobile-menu-list space-y-1 px-4 py-4 text-sm font-medium text-slate-700">
             <li><a href="index.html" data-nav="home" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Home</a></li>
             <li><a href="destinations.html" data-nav="destinations" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Destination</a></li>
-            <li><a href="services.html" data-nav="service" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Service</a></li>
             <li><a href="about.html" data-nav="about" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">About</a></li>
+            <li><a href="faq.html" data-nav="faq" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">FAQ's</a></li>
             <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
             <li class="pt-2">
               <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
@@ -166,7 +186,8 @@
   <main>
     <section
       id="contact-hero"
-      class="relative isolate z-30 min-h-[min(420px,70vh)] overflow-hidden border-b border-white/10 bg-slate-950 pb-14 pt-[88px] lg:min-h-[500px]
+      class="relative isolate z-30 min-h-[min(420px,70vh)]
+       overflow-hidden border-b border-white/10 bg-slate-950 pb-14 pt-[88px] lg:min-h-[500px]
        sm:pb-20 sm:pt-[96px] lg:pb-24 lg:pt-48"
       aria-labelledby="contact-heading"
     >
@@ -175,7 +196,7 @@
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/30 to-slate-950/50" aria-hidden="true"></div>
       <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
         <div class="mx-auto max-w-3xl text-center">
-          <p class="load-hero text-[11px] font-bold uppercase tracking-[0.2em] text-sky-200/95 sm:text-xs">We are here to help</p>
+          <p class="load-hero text-[11px] font-bold uppercase tracking-[0.2em] text-primary-blue sm:text-xs">We are here to help</p>
           <h1 id="contact-heading" class="load-hero mt-3 text-[1.85rem] font-bold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.8rem]">
             Contact Visa Nest
           </h1>
@@ -188,124 +209,208 @@
 
     <section
       id="contact-form"
-      class="scroll-mt-28 bg-white py-12 sm:py-16 sm:scroll-mt-32 lg:py-20"
+      class="contact-form-section relative scroll-mt-28 border-t border-white/15 bg-primary-blue py-14 sm:scroll-mt-32 sm:py-16 lg:py-24"
       aria-labelledby="contact-form-heading"
     >
-      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 xl:gap-16">
+      <div class="relative mx-auto w-full max-w-[1200px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div class="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
           <div class="lg:col-span-7" data-contact-anim>
-            <h2 id="contact-form-heading" class="text-2xl font-bold tracking-tight text-slate-900 sm:text-[1.65rem]">Send us a message</h2>
-            <p class="mt-2 text-[15px] leading-relaxed text-slate-600">Fill in the form and our team will respond by email or phone.</p>
-            <form class="mt-8 space-y-5" data-contact-form data-contact-anim>
-              <div>
-                <label for="contact-name" class="mb-1.5 block text-[14px] font-medium text-slate-800">Full name</label>
-                <input id="contact-name" name="name" type="text" required autocomplete="name" class="contact-input" placeholder="Your name" />
+            <article
+              class="contact-form-card group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-6 shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] sm:rounded-3xl sm:p-8 lg:p-10"
+            >
+              <div class="relative">
+                <p
+                  class="inline-flex items-center gap-2 text-[13px] font-semibold tracking-tight text-primary-blue sm:text-[14px]"
+                >
+                  <span
+                    class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#0047ab]/25 bg-primary-blue/[0.07] text-[13px] font-bold text-primary-blue shadow-sm"
+                    aria-hidden="true"
+                  >✉</span>
+                  Get in touch
+                </p>
+                <h2
+                  id="contact-form-heading"
+                  class="mt-4 text-[1.65rem] font-bold leading-[1.2] tracking-tight text-primary-blue sm:text-3xl lg:text-[2.05rem]"
+                >
+                  Send us a message
+                </h2>
+                <p class="mt-3 max-w-xl text-[15px] leading-relaxed text-slate-600 sm:text-base">
+                  Tell us what you need—visa guidance, trip planning, or a quick question—and we will reply within one business day.
+                </p>
               </div>
-              <div class="grid gap-5 sm:grid-cols-2">
+              <form class="relative mt-8 space-y-6" data-contact-form data-contact-anim>
                 <div>
-                  <label for="contact-email" class="mb-1.5 block text-[14px] font-medium text-slate-800">Email</label>
-                  <input id="contact-email" name="email" type="email" required autocomplete="email" class="contact-input" placeholder="you@example.com" />
+                  <label for="contact-name" class="mb-2 block text-[13px] font-semibold uppercase tracking-wide text-slate-700">Full name</label>
+                  <input id="contact-name" name="name" type="text" required autocomplete="name" class="contact-input" placeholder="Your name" />
+                </div>
+                <div class="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label for="contact-email" class="mb-2 block text-[13px] font-semibold uppercase tracking-wide text-slate-700">Email</label>
+                    <input id="contact-email" name="email" type="email" required autocomplete="email" class="contact-input" placeholder="you@example.com" />
+                  </div>
+                  <div>
+                    <label for="contact-phone" class="mb-2 block text-[13px] font-semibold uppercase tracking-wide text-slate-700">
+                      Phone <span class="font-medium normal-case text-slate-500">(optional)</span>
+                    </label>
+                    <input id="contact-phone" name="phone" type="tel" autocomplete="tel" class="contact-input" placeholder="+44 …" />
+                  </div>
                 </div>
                 <div>
-                  <label for="contact-phone" class="mb-1.5 block text-[14px] font-medium text-slate-800">Phone <span class="font-normal text-slate-500">(optional)</span></label>
-                  <input id="contact-phone" name="phone" type="tel" autocomplete="tel" class="contact-input" placeholder="+92 …" />
+                  <label for="contact-topic" class="mb-2 block text-[13px] font-semibold uppercase tracking-wide text-slate-700">Topic</label>
+                  <select id="contact-topic" name="topic" class="contact-select">
+                    <option value="visa">Visa &amp; documentation</option>
+                    <option value="trip">Trip planning</option>
+                    <option value="general">General enquiry</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
-              </div>
-              <div>
-                <label for="contact-topic" class="mb-1.5 block text-[14px] font-medium text-slate-800">Topic</label>
-                <select id="contact-topic" name="topic" class="contact-select">
-                  <option value="visa">Visa &amp; documentation</option>
-                  <option value="trip">Trip planning</option>
-                  <option value="general">General enquiry</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label for="contact-message" class="mb-1.5 block text-[14px] font-medium text-slate-800">Message</label>
-                <textarea id="contact-message" name="message" rows="6" required class="contact-textarea w-full resize-y" placeholder="How can we help?"></textarea>
-              </div>
-              <div id="contact-form-error" class="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-[14px] text-red-900" hidden role="alert" tabindex="-1"></div>
-              <div id="contact-success" class="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-[14px] text-emerald-900" hidden role="status" tabindex="-1">Thank you — your message has been received. We will reply shortly.</div>
-              <button type="submit" class="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#0047ab] px-8 py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-blue-500/25 transition hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0047ab] focus-visible:ring-offset-2 sm:w-auto sm:min-w-[200px]">Send message</button>
-            </form>
+                <div>
+                  <label for="contact-message" class="mb-2 block text-[13px] font-semibold uppercase tracking-wide text-slate-700">Message</label>
+                  <textarea id="contact-message" name="message" rows="6" required class="contact-textarea w-full" placeholder="How can we help?"></textarea>
+                </div>
+                <div
+                  id="contact-form-error"
+                  class="rounded-2xl border border-red-200/90 bg-gradient-to-br from-red-50 to-white px-4 py-3.5 text-[14px] font-medium leading-snug text-red-900 shadow-sm"
+                  hidden
+                  role="alert"
+                  tabindex="-1"
+                ></div>
+                <div
+                  id="contact-success"
+                  class="rounded-2xl border border-emerald-200/90 bg-gradient-to-br from-emerald-50 to-white px-4 py-3.5 text-[14px] font-medium leading-snug text-emerald-900 shadow-sm"
+                  hidden
+                  role="status"
+                  tabindex="-1"
+                >
+                  Thank you — your message has been received. We will reply shortly.
+                </div>
+                <div class="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
+                  <button
+                    type="submit"
+                    class="group relative inline-flex min-h-[3.25rem] 
+                    
+                    w-full items-center justify-center overflow-hidden
+                     rounded-full border-2 border-[#F4B400] bg-primary-blue px-8 
+                     py-3.5 text-[15px] font-semibold text-white
+                      shadow-[0_14px_36px_-12px_rgba(0,71,171,0.45)] 
+                      transition duration-300 hover:border-[#e6ac00]
+                       hover:shadow-[0_18px_40px_-14px_rgba(0,71,171,0.5)] cursor-pointer hover:bg-transparent hover:text-primary-blue
+                       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F4B400] focus-visible:ring-offset-2 sm:w-auto sm:min-w-[220px]"
+                  >
+                    <span
+                      class="absolute inset-0 origin-left scale-x-0 bg-[#F4B400]/15 transition-transform duration-500 ease-out group-hover:scale-x-100"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="relative z-10 flex items-center ">
+                      Send message
+                     
+                    </span>
+                  </button>
+                  <p class="text-center text-[13px] leading-relaxed text-slate-500 sm:text-left">
+                    Prefer a call?
+                    <a href="tel:+447446230755" class="font-semibold text-primary-blue underline-offset-2 transition hover:underline">074 4623 0755</a>
+                  </p>
+                </div>
+              </form>
+            </article>
           </div>
           <aside class="lg:col-span-5" data-contact-anim>
-            <div class="space-y-4 rounded-2xl border border-slate-200/90 bg-[#f8fafc] p-6 sm:p-8">
-              <h3 class="text-lg font-semibold text-slate-900">Direct contact</h3>
-              <ul class="space-y-4 text-[15px] text-slate-600">
-                <li class="flex gap-3">
-                  <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-[#0047ab]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
-                  </span>
-                  <div>
-                    <p class="font-medium text-slate-900">Phone</p>
-                    <a href="tel:+447446230755" class="text-[#0047ab] transition hover:underline">074 4623 0755</a>
+            <div
+              class="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-6 shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] sm:rounded-3xl sm:p-8"
+            >
+              <div class="relative">
+                <h3 class="text-lg font-bold tracking-tight text-slate-900 sm:text-xl">Direct contact</h3>
+                <p class="mt-2 text-[14px] leading-relaxed text-slate-600">Reach us directly for urgent travel or visa questions.</p>
+                <ul class="mt-6 space-y-5 text-[15px] text-slate-600">
+                  <li class="flex gap-4">
+                    <span
+                      class="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue/25 bg-primary-blue/10 text-primary-blue shadow-sm"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p class="text-[13px] font-semibold uppercase tracking-wide text-slate-500">Phone</p>
+                      <a href="tel:+447446230755" class="mt-0.5 inline-block font-semibold text-primary-blue transition hover:underline">074 4623 0755</a>
+                    </div>
+                  </li>
+                  <li class="flex gap-4">
+                    <span
+                      class="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue/25 bg-primary-blue/10 text-primary-blue shadow-sm"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m3 7 9 6 9-6" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p class="text-[13px] font-semibold uppercase tracking-wide text-slate-500">Email</p>
+                      <a href="mailto:info@visanest.co.uk" class="mt-0.5 inline-block break-all font-semibold text-primary-blue transition hover:underline">info@visanest.co.uk</a>
+                    </div>
+                  </li>
+                  <li class="flex gap-4">
+                    <span
+                      class="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue/25 bg-primary-blue/10 text-primary-blue shadow-sm"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </span>
+                    <div>
+                      <p class="text-[13px] font-semibold uppercase tracking-wide text-slate-500">Office</p>
+                      <p class="mt-0.5 leading-relaxed text-slate-700">Office 211, Unit 5, Mayfair, London W1C 2BU, UK</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="mt-8 border-t border-slate-100 pt-6">
+                  <p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-slate-500">Connect</p>
+                  <div class="mt-3 flex flex-wrap items-center gap-3">
+                    <a
+                      href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#01004b] shadow-sm transition hover:border-primary-blue/40 hover:bg-primary-blue/[0.06] hover:text-primary-blue"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.96 1.96 0 1 0 5.3 6.9 1.96 1.96 0 0 0 5.25 3Zm14.19 9.72c0-3.01-1.6-4.4-3.73-4.4-1.72 0-2.49.94-2.92 1.6V8.5H9.41c.04.94 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20h3.38v-7.28Z" />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/mubeen.ahmad.developer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                      class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#01004b] shadow-sm transition hover:border-primary-blue/40 hover:bg-primary-blue/[0.06] hover:text-primary-blue"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M13.5 21v-7.2h2.4l.36-2.8H13.5V9.22c0-.8.22-1.34 1.37-1.34h1.47V5.37A19.47 19.47 0 0 0 14.2 5c-2.13 0-3.6 1.3-3.6 3.7V11H8.2v2.8h2.4V21h2.9Z" />
+                      </svg>
+                    </a>
+                    <a
+                      href="https://x.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="X (Twitter)"
+                      class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-[#01004b] shadow-sm transition hover:border-primary-blue/40 hover:bg-primary-blue/[0.06] hover:text-primary-blue"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      </svg>
+                    </a>
                   </div>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-[#0047ab]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-                  </span>
-                  <div>
-                    <p class="font-medium text-slate-900">Email</p>
-                    <a href="mailto:info@visanest.co.uk" class="break-all text-[#0047ab] transition hover:underline">info@visanest.co.uk</a>
-                  </div>
-                </li>
-                <li class="flex gap-3">
-                  <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-white text-[#0047ab]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  </span>
-                  <div>
-                    <p class="font-medium text-slate-900">Office</p>
-                    <p class="leading-relaxed">Office 211, Unit 5, Mayfair, London W1C 2BU, UK</p>
-                  </div>
-                </li>
-              </ul>
-              <div class="border-t border-slate-200/80 pt-4">
-                <p class="text-[13px] font-medium uppercase tracking-[0.12em] text-slate-500">Connect</p>
-                <div class="mt-3 flex items-center gap-3">
-              <a href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.96 1.96 0 1 0 5.3 6.9 1.96 1.96 0 0 0 5.25 3Zm14.19 9.72c0-3.01-1.6-4.4-3.73-4.4-1.72 0-2.49.94-2.92 1.6V8.5H9.41c.04.94 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20h3.38v-7.28Z"/></svg>
-              </a>
-              <a href="https://www.facebook.com/mubeen.ahmad.developer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.2h2.4l.36-2.8H13.5V9.22c0-.8.22-1.34 1.37-1.34h1.47V5.37A19.47 19.47 0 0 0 14.2 5c-2.13 0-3.6 1.3-3.6 3.7V11H8.2v2.8h2.4V21h2.9Z"/></svg>
-              </a>
-              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
+                </div>
+              </div>
             </div>
-          </div>
+          </aside>
         </div>
-
-  
+      </div>
+    </section>
 
   </main>
 
-  <div id="quick-contact-fab" class="fixed bottom-4 right-4 z-[80] sm:bottom-5 sm:right-5">
-    <div id="quick-contact-list" class="pointer-events-none mb-3 flex origin-bottom-right translate-y-2 scale-95 flex-col items-center gap-2 opacity-0 transition duration-300">
-      <a href="tel:+447446230755" aria-label="Call Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#1ed760] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
-      </a>
-      <a href="https://wa.me/447446230755" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#27d66f] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
-      </a>
-      <a href="mailto:info@visanest.co.uk" aria-label="Email Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#ff4d68] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-      </a>
-      <a href="#contact-form" aria-label="Open contact form" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#113e7a] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-3.33 0-7 1.67-7 4v2h14v-2c0-2.33-3.67-4-7-4Z"/></svg>
-      </a>
-    </div>
-    <button
-      id="quick-contact-toggle"
-      type="button"
-      aria-label="Open quick contact options"
-      aria-expanded="false"
-      class="quick-contact-toggle inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#2f8f63] bg-[#9be6ab] text-white shadow-[0_16px_30px_-12px_rgba(47,158,81,0.65)] ring-1 ring-[#2f8f63]/45 transition hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f8f63] focus-visible:ring-offset-2"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm4 5h8v2H8V9Zm0 4h5v2H8v-2Z"/></svg>
-    </button>
-  </div>
   <!-- Footer -->
   <footer class="relative overflow-hidden border-t border-slate-200 bg-primary-yellow ">
     <div class="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 sm:py-12 lg:px-14 xl:px-20">
@@ -346,8 +451,9 @@
           <h3 class="text-[20px] font-medium tracking-tight text-[#01004b]">Quick Links</h3>
           <ul class="mt-4 space-y-2.5 text-[15px] text-[#01004b]">
             <li><a href="index.html" class="transition hover:text-[#0047ab]">Home</a></li>
-            <li><a href="about.html" class="transition hover:text-[#0047ab]">About Us</a></li>
             <li><a href="destinations.html" class="transition hover:text-[#0047ab]">Destination</a></li>
+            <li><a href="about.html" class="transition hover:text-[#0047ab]">About Us</a></li>
+            <li><a href="faq.html" class="transition hover:text-[#0047ab]">FAQ's</a></li>
             <li><a href="blog.html" class="transition hover:text-[#0047ab]">Blog &amp; Articles</a></li>
           </ul>
         </div>
@@ -357,7 +463,6 @@
           <ul class="mt-4 space-y-2.5 text-[15px] text-[#01004b]">
             <li><a href="contact.html" class="transition hover:text-[#0047ab]">Contact Us</a></li>
             <li><a href="contact.html#contact-form" class="transition hover:text-[#0047ab]">Support Center</a></li>
-            <li><a href="services.html" class="transition hover:text-[#0047ab]">Services</a></li>
             <li><a href="privacy.html" class="transition hover:text-[#0047ab]">Privacy Policy</a></li>
           </ul>
         </div>
@@ -485,46 +590,12 @@
       }
     });
 
-    window.addEventListener("DOMContentLoaded", () => {
-      const fab = document.getElementById("quick-contact-fab");
-      const toggleBtn = document.getElementById("quick-contact-toggle");
-      const list = document.getElementById("quick-contact-list");
-      if (!fab || !toggleBtn || !list) return;
-
-      const setOpen = (open) => {
-        toggleBtn.setAttribute("aria-expanded", String(open));
-        list.classList.toggle("pointer-events-none", !open);
-        list.classList.toggle("opacity-0", !open);
-        list.classList.toggle("translate-y-2", !open);
-        list.classList.toggle("scale-95", !open);
-        list.classList.toggle("pointer-events-auto", open);
-        list.classList.toggle("opacity-100", open);
-        list.classList.toggle("translate-y-0", open);
-        list.classList.toggle("scale-100", open);
-        fab.classList.toggle("is-open", open);
-      };
-
-      setOpen(false);
-
-      toggleBtn.addEventListener("click", () => {
-        const willOpen = toggleBtn.getAttribute("aria-expanded") !== "true";
-        setOpen(willOpen);
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!fab.contains(e.target)) setOpen(false);
-      });
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") setOpen(false);
-      });
-    });
-
   </script>
   <script type="module" src="./src/contact-form-submit.js"></script>
   <script type="module" src="./src/media-performance.js"></script>
   <script type="module" src="./src/site-header.js"></script>
   <script type="module" src="./src/newsletter-footer.js"></script>
+  <script type="module" src="./src/quick-contact-strip.js"></script>
   <script type="module" src="./src/contact-page.js"></script>
 </body>
 </html>

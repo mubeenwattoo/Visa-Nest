@@ -184,32 +184,6 @@ body {
   }
 }
 
-/* Quick contact launcher: infinite pulse/float attention animation */
-@keyframes quickContactFloatPulse {
-  0% {
-    transform: translateY(0) scale(1);
-    box-shadow: 0 16px 30px -12px rgba(47, 158, 81, 0.62);
-  }
-  50% {
-    transform: translateY(-4px) scale(1.06);
-    box-shadow: 0 22px 38px -14px rgba(47, 158, 81, 0.74);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    box-shadow: 0 16px 30px -12px rgba(47, 158, 81, 0.62);
-  }
-}
-
-.quick-contact-toggle {
-  animation: quickContactFloatPulse 2.2s ease-in-out infinite;
-}
-
-#quick-contact-fab.is-open .quick-contact-toggle {
-  animation-play-state: paused;
-}
-
-
-
 /* Brand trust strip: reduced motion = one row, no duplicate, no GSAP */
 .brand-trust-section.brand-marquee--static .brand-marquee-viewport {
   overflow: visible;
