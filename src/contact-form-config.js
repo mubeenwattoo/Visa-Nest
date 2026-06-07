@@ -1,7 +1,7 @@
 /**
  * Visa Nest — contact form (Web3Forms)
  *
- * 1. Open https://web3forms.com and create a free account with mubeenahmad3377@gmail.com
+ * 1. Open https://web3forms.com and create a free account with info@visanest.co.uk
  * 2. Copy your Access Key from the dashboard
  * 3. Paste it below (replace the placeholder)
  *

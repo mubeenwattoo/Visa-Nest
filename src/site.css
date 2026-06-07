@@ -6,7 +6,7 @@
    :root duplicates tokens so they always exist in the bundle (Tailwind may omit unused @theme colors). */
 :root {
   --color-primary-yellow: #f4b400;
-  --color-primary-blue: rgb(10, 47, 99);
+  --color-primary-blue: #0047ab;
 }
 
 /* Single vertical scrollbar: document scroll lives on <html> only.
@@ -322,7 +322,7 @@ body {
 }
 
 .brand-trust-section .brand-logo-shell--visasure svg {
-  stroke: #3b70fe;
+  stroke: #0047ab;
 }
 
 /* Slightly larger marks: Mastercard, Skyscanner, Tripadvisor */
@@ -374,7 +374,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.45;
   font-weight: 600;
-  color: #3b70fe;
+  color: #0047ab;
 }
 
 /* Buttons: premium SaaS feel (gradient + lift + crisp ring) */
@@ -393,12 +393,12 @@ body {
 
 .btn-primary:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 112, 254, 0.28), 0 24px 56px -28px rgba(10, 37, 64, 0.7);
+  box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.28), 0 24px 56px -28px rgba(10, 37, 64, 0.7);
 }
 
 .btn-hero-primary {
-  background: linear-gradient(135deg, #3b70fe 0%, #2f6df6 45%, #0a2540 130%);
-  box-shadow: 0 18px 48px -28px rgba(59, 112, 254, 0.7);
+  background: linear-gradient(135deg, #0047ab 0%, #0066d4 45%, #0a2540 130%);
+  box-shadow: 0 18px 48px -28px rgba(0, 71, 171, 0.7);
   transition: transform 260ms ease, box-shadow 260ms ease, filter 260ms ease;
   will-change: transform;
 }
@@ -419,7 +419,7 @@ body {
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.02em;
-  color: #3b70fe;
+  color: #0047ab;
 }
 
 .about-section .about-stat-label {
@@ -437,10 +437,144 @@ body {
   }
 }
 
+/* About on primary (home #about): heading stays white; other copy dark until GSAP scrubs over blue */
+.about-section.about-on-primary .about-heading-premium,
+.about-section.about-on-primary .about-heading-accent {
+  color: #ffffff;
+  text-shadow:
+    0 0 1px rgb(0 0 0 / 0.2),
+    0 1px 2px rgb(0 0 0 / 0.12),
+    0 4px 28px rgb(0 71 171 / 0.18);
+}
+
+.about-section.about-on-primary .about-about-lead {
+  color: #334155;
+}
+
+.about-section.about-on-primary .about-disclaimer {
+  color: #475569;
+}
+
+.about-section.about-on-primary .about-stat-value {
+  color: #0047ab;
+}
+
+.about-section.about-on-primary .about-stat-label {
+  color: #64748b;
+}
+
+.about-section.about-on-primary .about-on-primary__bg {
+  background-color: var(--color-primary-blue);
+  transform: scaleY(0);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section.about-on-primary .about-about-lead {
+    color: #ffffff;
+  }
+
+  .about-section.about-on-primary .about-disclaimer {
+    color: rgb(226 232 240);
+  }
+
+  .about-section.about-on-primary .about-stat-value {
+    color: var(--color-primary-yellow);
+  }
+
+  .about-section.about-on-primary .about-stat-label {
+    color: rgb(203 213 225);
+  }
+
+  .about-section.about-on-primary .about-on-primary__bg {
+    transform: scaleY(1);
+  }
+}
+
+/* Home #services-why-section: top-to-bottom blue reveal (same mechanic as #about) */
+.services-why-section.services-why-on-primary #services-why-heading {
+  color: #0f172a;
+}
+
+.services-why-section.services-why-on-primary #services-why-description {
+  color: #475569;
+}
+
+.services-why-section.services-why-on-primary .services-why-on-primary__bg {
+  background-color: var(--color-primary-blue);
+  transform: scaleY(0);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-why-section.services-why-on-primary #services-why-heading,
+  .services-why-section.services-why-on-primary #services-why-description {
+    color: #ffffff;
+  }
+
+  .services-why-section.services-why-on-primary .services-why-on-primary__bg {
+    transform: scaleY(1);
+  }
+}
+
+/* Home #newsletter: top-to-bottom blue reveal — heading + lead stay light on the panel */
+.newsletter-section.newsletter-on-primary #newsletter-heading {
+  color: #ffffff;
+}
+
+.newsletter-section.newsletter-on-primary #newsletter-description {
+  color: rgb(255 255 255 / 0.92);
+}
+
+.newsletter-section.newsletter-on-primary #newsletter-email::placeholder {
+  color: currentcolor;
+  opacity: 0.65;
+}
+
+/* Border driven by --nl-input-border (GSAP scrubs this). Hover/focus use !important so they beat scrubbed values. */
+.newsletter-section.newsletter-on-primary #newsletter-email {
+  border-color: var(--nl-input-border, #cbd5e1);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.newsletter-section.newsletter-on-primary #newsletter-email:hover,
+.newsletter-section.newsletter-on-primary #newsletter-email:focus-visible {
+  border-color: var(--color-primary-yellow) !important;
+}
+
+.newsletter-section.newsletter-on-primary .newsletter-on-primary__bg {
+  background-color: var(--color-primary-blue);
+  transform: scaleY(0);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .newsletter-section.newsletter-on-primary #newsletter-heading,
+  .newsletter-section.newsletter-on-primary #newsletter-description {
+    color: #ffffff;
+  }
+
+  .newsletter-section.newsletter-on-primary #newsletter-email {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: rgb(255 255 255 / 0.12);
+  }
+
+  .newsletter-section.newsletter-on-primary .newsletter-on-primary__bg {
+    transform: scaleY(1);
+  }
+}
+
 /* Page-load intro: hidden until GSAP runs (see index.html script) */
 .js .load-nav {
   opacity: 0;
-  transform: translate3d(0, 36px, 0) scale(0.94);
+  transform: translate3d(0, 44px, 0) scale(0.92);
 }
 
 .js .load-hero {
@@ -453,10 +587,10 @@ body {
   transform: translate3d(0, 36px, 0) scale(0.94);
 }
 
-/* Narrow viewports: no scale on intro (smoother with large text + background-clip) */
+/* Narrow viewports: more travel than desktop for nav/logo; hero keeps subtler motion (background-clip). */
 @media (max-width: 1023px) {
   .js .load-nav {
-    transform: translate3d(0, 18px, 0);
+    transform: translate3d(0, 42px, 0) scale(0.9);
   }
 
   .js .load-hero {
@@ -469,7 +603,8 @@ body {
 }
 
 /* Avoid Tailwind transition fighting GSAP opacity/transform during intro */
-.js:not(.load-anim-done) .load-hero {
+.js:not(.load-anim-done) .load-hero,
+.js:not(.load-anim-done) #menu-btn.load-nav {
   transition: none !important;
 }
 
@@ -622,6 +757,13 @@ body {
   background-color: rgb(0 0 0 / 0.7);
 }
 
+/* Mobile sheet open: solid bar behind logo + trigger (overrides scrolled dark on home hero). */
+@media (max-width: 1023px) {
+  #site-header.site-header-bar.mobile-nav-open {
+    background-color: #fff;
+  }
+}
+
 /*
   Mobile nav: grid 0fr → 1fr avoids max-height + clip-path jank (layout thrash on mobile).
   Surface uses only transform + opacity (compositor-friendly).
@@ -733,7 +875,7 @@ body {
 .services-faq-card.faq-card--open .faq-icon-plus {
   border-color: rgb(59 112 254 / 0.45);
   background: rgb(59 112 254 / 0.12);
-  color: #3b70fe;
+  color: #0047ab;
 }
 
 /* About page: expanding image row (flex-grow; one expanded at a time) */

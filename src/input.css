@@ -3,7 +3,7 @@
 /* Brand palette — utilities: bg-primary-yellow, text-primary-blue, border-primary-blue, etc. */
 @theme {
   --color-primary-yellow: #f4b400;
-  --color-primary-blue: rgb(10 47 99);
+  --color-primary-blue: #0047ab;
 }
 
 @source "../*.html";

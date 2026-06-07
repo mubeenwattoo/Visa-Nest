@@ -36,7 +36,7 @@
         </span>
       </a>
 
-      <button id="menu-btn" type="button" class="relative inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-lg transition-colors lg:hidden focus-visible:outline-none" style="touch-action: manipulation;" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="menu-btn" type="button" class="load-nav relative inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-lg transition-colors lg:hidden focus-visible:outline-none" style="touch-action: manipulation;" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="menu-btn-icon menu-btn-icon--bars pointer-events-none absolute inset-0 flex items-center justify-center transition duration-300 ease-out" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16"/>
@@ -63,22 +63,30 @@
         
       </div>
       <div class="hidden items-center gap-4 lg:flex">
-        <a href="services.html" class="load-hero hero-cta group relative inline-flex min-h-12
+        <a
+          href="services.html"
+          data-nav-intro="cta"
+          class="load-nav group relative inline-flex min-h-12
         items-center justify-center overflow-hidden rounded-full border border-[#F4B400] 
           px-5 py-2 text-[14px] font-semibold tracking-[0.01em]
           text-white backdrop-blur-sm transition duration-500 
            hover:border-transparent focus-visible:outline-none
             focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 
-            focus-visible:ring-offset-transparent">
+            focus-visible:ring-offset-transparent"
+        >
          <span class="absolute inset-0 origin-left scale-x-0 bg-[#F4B400] 
          transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
          <span class="relative z-10">Apply Now</span>
        </a>
-        <a href="contact.html" class="load-nav inline-flex items-center 
+        <a
+          href="contact.html"
+          data-nav-intro="cta"
+          class="load-nav inline-flex items-center 
         justify-center rounded-full border border-[#F4B400] bg-[#F4B400]
          px-6 py-3 text-[14px] font-semibold text-white
           shadow-sm shadow-amber-900/10 transition duration-500
-           hover:bg-transparent ">
+           hover:bg-transparent "
+        >
           Contact
         </a>
         
@@ -116,7 +124,7 @@
     <section
       class="hero-section relative z-40 isolate flex min-h-[520px] flex-col justify-start pt-24 sm:min-h-[600px] sm:pt-28 md:min-h-[680px] md:pt-32 lg:pt-28"
     >
-      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-slate-900" aria-hidden="true">
         <img
           src="./src/assets/images/hero-img.jpg"
           alt=""
@@ -259,7 +267,7 @@
       </div>
     </section>
 
-    <!-- Trusted brands: infinite marquee (GSAP), static grid if reduced motion -->
+    <!-- Trusted brands: infinite marquee (GSAP), static grid if reduced motion
     <section
       class="brand-trust-section relative z-0 overflow-hidden 
         bg-[var(--color-primary-blue)] pt-36 
@@ -288,7 +296,7 @@
         </p>
       </div>
 
-      <!-- Full-bleed marquee (edge-to-edge); heading stays in max-width column above -->
+      <!-- Full-bleed marquee (edge-to-edge); heading stays in max-width column above -- >
       <div class="relative mt-9 w-full min-w-0 md:mt-11">
         
       
@@ -393,7 +401,7 @@
                   class="brand-logo-shell brand-logo-shell--skyscanner brand-logo-shell--lg flex shrink-0 items-center justify-center"
                   aria-hidden="true"
                 >
-                  <!-- Flight-search mark in Skyscanner blue (#077ACE); inline SVG always renders -->
+                  <!-- Flight-search mark in Skyscanner blue (#077ACE); inline SVG always renders -- >
                   <svg
                     class="h-full w-full"
                     viewBox="0 0 24 24"
@@ -535,7 +543,7 @@
                   class="brand-logo-shell brand-logo-shell--skyscanner brand-logo-shell--lg flex shrink-0 items-center justify-center"
                   aria-hidden="true"
                 >
-                  <!-- Flight-search mark in Skyscanner blue (#077ACE); inline SVG always renders -->
+                  <!-- Flight-search mark in Skyscanner blue (#077ACE); inline SVG always renders -- >
                   <svg
                     class="h-full w-full"
                     viewBox="0 0 24 24"
@@ -583,49 +591,65 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- About: 3-column layout (text | image grid | stats), content aligned to brand story -->
     <section
       id="about"
-      class="about-section relative overflow-hidden bg-white py-10 sm:py-14 md:py-18 lg:py-24"
+      class="about-section about-on-primary relative overflow-hidden bg-white py-10 sm:py-14 md:py-18 lg:py-24 
+      lg:pt-48 md:pt-48 sm:pt-60 pt-48"
       aria-labelledby="about-heading"
     >
-      <div class="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+      <div
+        class="about-on-primary__bg pointer-events-none absolute inset-0 z-0"
+        data-about-bg-reveal
+        aria-hidden="true"
+      ></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
         <div
           class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:items-center lg:gap-12"
         >
           <!-- Column 1: copy + CTA -->
           <div class="order-1 lg:col-span-5 lg:pt-2">
             <p
-              class="about-anim-left text-[11px] font-bold uppercase tracking-[0.2em] text-[#0a2540] sm:text-xs"
+              class="about-anim-left text-[11px] font-bold uppercase tracking-[0.2em]
+               text-[var(--color-primary-yellow)] sm:text-xs"
             >
               About us
             </p>
-            <h2 id="about-heading" class="about-anim-left about-heading-premium mt-3 max-w-xl">
-              <span class="about-heading-accent">Simplifying Global Travel</span>
-              <span class="about-heading-accent">for <br class="lg:block hidden"> UK Residents.</span>
+            <h2 id="about-heading" class="about-anim-left about-heading-premium mt-3 max-w-xl text-white
+            ">
+              <span class="about-heading-accent">Simplifying Travel & Visa</span>
+              <span class="about-heading-accent"> <br class="lg:block hidden"> Services for UK Residents
+                .</span>
             </h2>
-            <div class="about-anim-left mt-6 flex gap-4">
+            <div class="mt-6 flex gap-4">
               
               <div class="min-w-0 flex-1">
-                <p class="text-[15px] leading-relaxed text-slate-700 sm:text-base xl:w-[92%]">
-                  We are a UK-registered travel agency dedicated to turning your travel plans into
-                  reality. We specialize in assisting UK residents (Non-British passport holders)
-                  with Schengen, USA, Canada, and global tourist visas. Beyond visas, we provide
-                  complete travel solutions including flight bookings, hotel reservations, and
-                  holiday packages.
+                <p
+                  class="about-anim-lead about-about-lead text-[15px] leading-relaxed sm:text-base xl:w-[92%]"
+                  data-about-lead
+                >
+                 
+
+                  We are a UK-based travel and visa assistance company helping residents with Schengen, UK, USA, Canada, and worldwide travel services. From visa guidance and appointment support to flights and hotel bookings, we make your travel process simple and stress-free.
                 </p>
-                <p class="about-disclaimer mt-4 sm:text-base lg:max-w-[92%]">
+                <p class="about-disclaimer about-anim-disclaimer mt-4 sm:text-base lg:max-w-[92%]">
                   Not an immigration firm — we provide professional administrative assistance.
                 </p>
               </div>
             </div>
             <a
               href="about.html"
-              class="about-anim-left bg-black hover:bg-[#3b70fe] duration-300 mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[14px] font-semibold text-white"
+              class="about-anim-cta load-nav mt-8 inline-flex items-center
+               justify-center gap-2 rounded-full border border-[#F4B400]
+                bg-[#F4B400] px-[21px] py-[14px] text-[16px] font-semibold text-[#01004b]
+                 shadow-sm shadow-amber-900/10 transition duration-500 
+                 hover:bg-transparent hover:text-white focus-visible:outline-none 
+                  focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2
+                  focus-visible:ring-offset-white"
             >
               Read more
-              <span aria-hidden="true" class="text-lg leading-none">&rarr;</span>
             </a>
           </div>
 
@@ -634,7 +658,7 @@
             <div class="relative w-full max-w-none">
               
               <div
-                class="pointer-events-none absolute -bottom-6 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-[#c9a227]/35 to-[#3b70fe]/25 blur-2xl sm:h-48 sm:w-48"
+                class="pointer-events-none absolute -bottom-6 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-[#c9a227]/35 to-[#0047ab]/25 blur-2xl sm:h-48 sm:w-48"
                 aria-hidden="true"
               ></div>
               <div
@@ -692,15 +716,15 @@
              sm:py-4 lg:col-span-2 lg:py-0 lg:gap-y-[72px]"
           >
             <div class="about-stat">
-              <p class="about-stat-value " data-count="12" data-suffix="+">3+</p>
+              <p class="about-stat-value " data-count="3" data-suffix="+">3+</p>
               <p class="about-stat-label">Years of experience</p>
             </div>
             <div class="about-stat">
-              <p class="about-stat-value " data-count="120" data-suffix="+">50+</p>
+              <p class="about-stat-value " data-count="50" data-suffix="+">50+</p>
               <p class="about-stat-label xl:whitespace-nowrap">Destination countries</p>
             </div>
             <div class="about-stat">
-              <p class="about-stat-value " data-count="15000" data-format="k" data-suffix="+">5K+</p>
+              <p class="about-stat-value " data-count="5000" data-format="k" data-suffix="+">5K+</p>
               <p class="about-stat-label">Satisfied clients</p>
             </div>
           </div>
@@ -718,122 +742,337 @@
         <div class="flex flex-col gap-6 lg:flex-row sm:items-start sm:justify-between">
           <div class="max-w-2xl">
             <h2
-              class="our-heading font-[600] "
+              class="text-[1.75rem] font-bold leading-tight tracking-tight text-primary-blue sm:text-4xl lg:text-[2.5rem]"
             >
-              Explore Popular Destinations
+            Popular Travel Packages For You
             </h2>
             <p class="mt-3 max-w-2xl text-[16px] leading-relaxed text-slate-600">
-              Find your next adventure with Visa Nest. From relaxing retreats to exciting explorations,
-              we have got the perfect destination for you.
+              
+
+              Discover affordable travel packages, hotel deals, flights, and holiday planning services tailored for your next trip across Europe and worldwide.
             </p>
           </div>
           <a
             href="destinations.html"
-            class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/70 px-7 py-3 text-[15px] font-medium text-slate-800 transition duration-500 hover:border-[#3b70fe] hover:bg-[#3b70fe] hover:text-white"
+            class="block rounded-full border-2 border-[#F4B400]
+            bg-[#F4B400] px-[21px] py-[14px] text-[16px] font-semibold text-[#01004b]
+             shadow-sm shadow-amber-900/10 transition duration-500 
+             hover:bg-transparent  focus-visible:outline-none 
+              focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2
+              focus-visible:ring-offset-white sm:w-auto w-[231px]"
           >
             Browse All Destination
-            <span class="ml-2 text-lg leading-none" aria-hidden="true">&rarr;</span>
           </a>
         </div>
 
         <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          <article class="group">
-            <div class="relative overflow-hidden rounded-2xl">
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
                 src="./src/assets/images/park.png"
-                alt="Tongariro National Park, New Zealand"
+                alt="Fiordland and Milford Sound scenic landscape, New Zealand"
                 class="h-[280px] w-full object-cover transition
                  duration-500 group-hover:scale-105 group-hover:brightness-90
                   group-hover:contrast-125"
                 loading="lazy"
                 decoding="async"
               />
-              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
               <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-                <div class="flex items-center justify-between rounded-full bg-white px-4 py-3 text-slate-800 shadow-lg">
-                  <span class="inline-flex items-center text-[15px] font-medium text-slate-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
                     </svg>
                     7 days 6 nights
                   </span>
-                  <span class="inline-flex items-center text-[16px] font-semibold">Explore Now <span class="ml-2">&rarr;</span></span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
                 </div>
               </div>
             </div>
-            <p class="mt-4 text-[17px] font-medium leading-none tracking-tight text-slate-900 sm:text-[18px]">$699.00 <span class="text-[13px] font-normal text-slate-500 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-2 text-[18px] font-medium tracking-tight text-slate-900 sm:text-[20px]">Tongariro National Park</h3>
-            <p class="mt-1 inline-flex items-center text-[17px] text-slate-500 sm:text-[18px]">
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">$849.00 <span class="text-[13px] font-normal
+                 sm:text-[14px]">/pp</span></p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Fiordland &amp; Milford Sound</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
               <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
               </svg>
-              New Zealand
+              South Island, New Zealand
             </p>
+            </div>
           </article>
-
-          <article class="group">
-            <div class="relative overflow-hidden rounded-2xl">
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
                 src="./src/assets/images/boat.png"
-                alt="Sydney Opera House, Australia"
-                class="h-[280px] w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-90 group-hover:contrast-125"
+                alt="Coastal boat and Mediterranean sea, Italy"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
                 loading="lazy"
                 decoding="async"
               />
-              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
               <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-                <div class="flex items-center justify-between rounded-full bg-white px-4 py-3 text-slate-800 shadow-lg">
-                  <span class="inline-flex items-center text-[15px] font-medium text-slate-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
                     </svg>
-                    7 days 6 nights
+                    6 days 5 nights
                   </span>
-                  <span class="inline-flex items-center text-[16px] font-semibold">Explore Now <span class="ml-2">&rarr;</span></span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
                 </div>
               </div>
             </div>
-            <p class="mt-4 text-[17px] font-medium leading-none tracking-tight text-slate-900 sm:text-[18px]">$425.00 <span class="text-[13px] font-normal text-slate-500 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-2 text-[18px] font-medium tracking-tight text-slate-900 sm:text-[20px]">Sydney Opera House</h3>
-            <p class="mt-1 inline-flex items-center text-[17px] text-slate-500 sm:text-[18px]">
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">$1,349.00 <span class="text-[13px] font-normal
+                 sm:text-[14px]">/pp</span></p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Amalfi Coast &amp; Capri</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
               <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
               </svg>
-              Sydney, Australia
+              Campania, Italy
             </p>
+            </div>
           </article>
 
-          <article class="group">
-            <div class="relative overflow-hidden rounded-2xl">
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
                 src="./src/assets/images/airport.png"
-                alt="Great Barrier Reef, Australia"
-                class="h-[280px] w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-90 group-hover:contrast-125"
+                alt="Modern airport terminal and runway, United Arab Emirates"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
                 loading="lazy"
                 decoding="async"
               />
-              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
               <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-                <div class="flex items-center justify-between rounded-full bg-white px-4 py-3 text-slate-800 shadow-lg">
-                  <span class="inline-flex items-center text-[15px] font-medium text-slate-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
                     </svg>
-                    7 days 6 nights
+                    5 days 4 nights
                   </span>
-                  <span class="inline-flex items-center text-[16px] font-semibold">Explore Now <span class="ml-2">&rarr;</span></span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
                 </div>
               </div>
             </div>
-            <p class="mt-4 text-[17px] font-medium leading-none tracking-tight text-slate-900 sm:text-[18px]">$699.00 <span class="text-[13px] font-normal text-slate-500 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-2 text-[18px] font-medium tracking-tight text-slate-900 sm:text-[20px]">Great Barrier Reef</h3>
-            <p class="mt-1 inline-flex items-center text-[17px] text-slate-500 sm:text-[18px]">
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">$979.00 <span class="text-[13px] font-normal
+                 sm:text-[14px]">/pp</span></p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Dubai City &amp; Desert</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
               <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
               </svg>
-              Queensland, Australia
+              Dubai, UAE
             </p>
+            </div>
           </article>
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+              <img
+                src="./assets/images/destination-01-bali.jpg"
+                alt="Tropical beach and temples in Bali, Indonesia"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+                    </svg>
+                    8 days 7 nights
+                  </span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">$1,199.00 <span class="text-[13px] font-normal
+                 sm:text-[14px]">/pp</span></p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Bali Beaches &amp; Temples</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Bali, Indonesia
+            </p>
+            </div>
+          </article>
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+              <img
+                src="./assets/images/destination-02-tongariro.jpg"
+                alt="Volcanic peaks and alpine trail at Tongariro, New Zealand"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+                    </svg>
+                    4 days 3 nights
+                  </span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">$729.00 <span class="text-[13px] font-normal
+                 sm:text-[14px]">/pp</span></p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Tongariro Alpine Trek</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Waikato, New Zealand
+            </p>
+            </div>
+          </article>
+
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+              <img
+                src="./assets/images/destination-12-maldives.jpg"
+                alt="Overwater villas and turquoise lagoon in the Maldives"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+                    </svg>
+                    6 days 5 nights
+                  </span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">$2,499.00 <span class="text-[13px] font-normal
+                 sm:text-[14px]">/pp</span></p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Maldives Lagoon Escape</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              North Malé Atoll, Maldives
+            </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section
+      id="services-why-section"
+      class="services-why-section services-why-on-primary relative overflow-hidden bg-white py-12 sm:py-16 lg:py-20"
+      aria-labelledby="services-why-heading"
+    >
+      <div
+        class="services-why-on-primary__bg pointer-events-none absolute inset-0 z-0"
+        data-services-why-bg-reveal
+        aria-hidden="true"
+      ></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+        <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-10 lg:gap-14">
+          <div class="max-w-xl md:max-w-2xl lg:max-w-[40rem]">
+            <h2
+              id="services-why-heading"
+              class="text-[1.75rem] font-bold leading-tight tracking-tight sm:text-4xl lg:text-[2.5rem]"
+            >
+              Why Choose Visa Nest?
+            </h2>
+            <p
+              id="services-why-description"
+              class="mt-4 text-base leading-relaxed sm:mt-5 sm:text-lg sm:leading-relaxed"
+            >
+            We provide reliable Schengen visa assistance and complete travel solutions across the UK. From visa documentation and appointment booking to flights, hotels, and travel planning — our experienced team ensures a smooth and stress-free journey for every client.
+
+            </p>
+          </div>
+
+          <a
+            href="contact.html"
+            class="block w-[140px] rounded-full border-2 border-[#F4B400] bg-[#F4B400] px-[21px] py-[14px] text-[16px] font-semibold text-[#01004b] shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:w-auto"
+          >
+            Contact Us
+          </a>
+        </div>
+
+        <div
+          id="services-why-media"
+          class="relative mt-10 aspect-[2.15/1] w-full overflow-hidden rounded-2xl bg-slate-900 shadow-[0_25px_80px_-30px_rgba(15,23,42,0.4)] sm:mt-12 sm:rounded-3xl lg:mt-14 lg:rounded-[2rem]"
+        >
+          <video
+            id="services-why-video"
+            class="absolute inset-0 z-[1] h-full w-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="https://i.ytimg.com/vi/3U1wvyFipBA/hqdefault.jpg"
+          >
+            <source
+              src="https://framerusercontent.com/assets/0OHtSMgrBACOp6V9EqV3e6KtlSQ.mp4"
+              type="video/mp4"
+            />
+          </video>
+         
+          <div
+            class="pointer-events-none absolute inset-0 z-[3] bg-gradient-to-t from-slate-950/25 via-transparent to-transparent"
+            aria-hidden="true"
+          ></div>
         </div>
       </div>
     </section>
@@ -847,7 +1086,8 @@
       <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
         <h2
           id="testimonials-heading"
-          class="our-heading font-[600] text-slate-900"
+          class="text-[1.75rem] font-bold leading-tight tracking-tight sm:text-4xl
+           lg:text-[2.5rem] text-primary-blue"
           data-test-anim="heading"
         >
         What Our Travelers Say
@@ -878,32 +1118,33 @@
 
           <div class="min-w-0" data-test-anim="content">
             <span class="inline-flex h-16 w-16 items-center justify-center rounded-full 
-             text-[#3b70fe] " aria-hidden="true">
+             text-primary-yellow " aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M9.62 7.89c-.44.36-.82.78-1.14 1.27-.46.68-.72 1.42-.8 2.23h2.55c.48 0 .88.16 1.2.47.32.31.48.7.48 1.17v2.03c0 .47-.16.86-.48 1.17-.32.31-.72.47-1.2.47H7.66c-.54 0-1-.19-1.37-.56-.37-.37-.56-.82-.56-1.35v-1.86c0-1.61.5-3.04 1.49-4.29.72-.9 1.63-1.62 2.74-2.15l1.06 1.19zm8 0c-.44.36-.82.78-1.14 1.27-.46.68-.72 1.42-.8 2.23h2.55c.48 0 .88.16 1.2.47.32.31.48.7.48 1.17v2.03c0 .47-.16.86-.48 1.17-.32.31-.72.47-1.2.47h-2.57c-.54 0-1-.19-1.37-.56-.37-.37-.56-.82-.56-1.35v-1.86c0-1.61.5-3.04 1.49-4.29.72-.9 1.63-1.62 2.74-2.15l1.06 1.19z"/>
               </svg>
             </span>
             <p
               id="testimonial-quote"
-              class="max-w-3xl text-[1.35rem] leading-snug text-slate-700 sm:text-[1.85rem] sm:leading-relaxed md:text-[2rem] lg:text-[2.2rem]"
+              class="max-w-3xl text-[1.35rem] leading-snug text-primary-blue sm:text-[1.85rem] sm:leading-relaxed md:text-[2rem] lg:text-[2.2rem]"
             >
               Visa Nest made my visa process surprisingly easy. Every step was explained clearly and
               their travel planning support saved me hours.
             </p>
             <p
               id="testimonial-name"
-              class="mt-4 text-[18px] font-semibold uppercase tracking-tight text-slate-900 sm:text-[20px]"
+              class="mt-4 text-[18px] font-semibold uppercase tracking-tight text-primary-yellow sm:text-[20px]"
             >
               Olivia Mitchell
             </p>
-            <p id="testimonial-role" class="mt-1 text-[1.35rem] text-slate-500">Student</p>
+            <p id="testimonial-role" class="mt-1 text-[1.35rem] text-primary-blue">Student</p>
           </div>
 
           <div
-            class="mx-auto flex w-full max-w-[420px] flex-row items-center justify-center gap-3 rounded-2xl bg-[#3b70fe] p-3 lg:mx-0 lg:w-auto lg:max-w-none lg:flex-col"
+            class="mx-auto flex w-full max-w-[420px] flex-row items-center j
+            ustify-center gap-3 rounded-2xl bg-primary-blue p-3 lg:mx-0 lg:w-auto lg:max-w-none lg:flex-col"
             data-test-anim="thumbs"
           >
-            <button type="button" class="testimonial-thumb is-active h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#3b70fe] ring-offset-2 ring-offset-[#f1f0ee] transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="0" aria-label="Show feedback from Olivia Mitchell">
+            <button type="button" class="testimonial-thumb is-active h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#0047ab] ring-offset-2 ring-offset-[#f1f0ee] transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="0" aria-label="Show feedback from Olivia Mitchell">
               <img src="./src/assets/images/human-1.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
             <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="1" aria-label="Show feedback from Ethan Carter">
@@ -930,7 +1171,8 @@
       aria-labelledby="moments-heading"
     >
       <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
-        <h2 id="moments-heading" class="our-heading font-[600] text-slate-900" data-moments-anim>
+        <h2 id="moments-heading" class="text-[1.75rem] font-bold leading-tight tracking-tight sm:text-4xl
+        lg:text-[2.5rem] text-primary-blue" data-moments-anim>
           Discover the Moments
         </h2>
         <p class="mt-3 max-w-3xl text-[16px] leading-relaxed text-slate-600" data-moments-anim>
@@ -945,7 +1187,8 @@
           class="flex w-max gap-3 will-change-transform sm:gap-4 md:gap-4"
         >
           <div class="moments-marquee-set flex shrink-0 items-end gap-3 sm:gap-4 md:gap-4">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden rounded-lg border-2 border-primary-yellow shadow-md 
+            shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=480&q=82"
                 alt=""
@@ -956,7 +1199,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -967,7 +1210,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=520&q=82"
                 alt=""
@@ -978,7 +1221,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=640&q=82"
                 alt=""
@@ -989,7 +1232,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=520&q=82"
                 alt=""
@@ -1000,7 +1243,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -1013,7 +1256,7 @@
             </div>
           </div>
           <div class="moments-marquee-set flex shrink-0 items-end gap-3 sm:gap-4 md:gap-4" aria-hidden="true">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden rounded-lg shadow-md border-2 border-primary-yellow shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=480&q=82"
                 alt=""
@@ -1024,7 +1267,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -1035,7 +1278,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=520&q=82"
                 alt=""
@@ -1046,7 +1289,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=640&q=82"
                 alt=""
@@ -1057,7 +1300,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=520&q=82"
                 alt=""
@@ -1068,7 +1311,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -1090,7 +1333,7 @@
           class="flex w-max gap-3 will-change-transform sm:gap-4 md:gap-4"
         >
           <div class="moments-marquee-set flex shrink-0 items-start gap-3 sm:gap-4 md:gap-4">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -1101,7 +1344,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=520&q=82"
                 alt=""
@@ -1112,7 +1355,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=640&q=82"
                 alt=""
@@ -1123,7 +1366,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=480&q=82"
                 alt=""
@@ -1134,7 +1377,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -1145,7 +1388,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=560&q=82"
                 alt=""
@@ -1158,7 +1401,7 @@
             </div>
           </div>
           <div class="moments-marquee-set flex shrink-0 items-start gap-3 sm:gap-4 md:gap-4" aria-hidden="true">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -1169,7 +1412,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=520&q=82"
                 alt=""
@@ -1180,7 +1423,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=640&q=82"
                 alt=""
@@ -1191,7 +1434,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=480&q=82"
                 alt=""
@@ -1202,7 +1445,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=720&q=82"
                 alt=""
@@ -1213,7 +1456,7 @@
                 referrerpolicy="no-referrer-when-downgrade"
               />
             </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
+            <div class="shrink-0 overflow-hidden border-2 border-primary-yellow rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
               <img
                 src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=560&q=82"
                 alt=""
@@ -1232,21 +1475,28 @@
     <!-- Newsletter -->
     <section
       id="newsletter"
-      class="relative overflow-hidden bg-white py-10 sm:py-14 lg:py-20"
+      class="newsletter-section newsletter-on-primary relative overflow-hidden bg-white py-10 sm:py-14 lg:py-20"
       aria-labelledby="newsletter-heading"
     >
-      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+      <div
+        class="newsletter-on-primary__bg pointer-events-none absolute inset-0 z-0"
+        data-newsletter-bg-reveal
+        aria-hidden="true"
+      ></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
         <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 xl:gap-16">
           <div class="min-w-0 lg:max-w-[46rem] lg:pr-4">
             <h2
               id="newsletter-heading"
-              class="our-heading font-[600] leading-tight text-slate-900"
+              class="text-[1.75rem] font-bold leading-tight tracking-tight
+               sm:text-4xl lg:text-[2.5rem] text-white"
               data-newsletter-anim
             >
               Stay Updated on the Latest Adventures, Tips, and Exclusive Offers.
             </h2>
             <p
-              class="mt-4 max-w-lg text-[15px] leading-relaxed text-slate-600 sm:mt-5 sm:text-[16px]"
+              id="newsletter-description"
+              class="mt-4 max-w-lg text-[15px] leading-relaxed sm:mt-5 sm:text-[16px] text-white"
               data-newsletter-anim
             >
               Never miss out on travel tips, exclusive offers, and inspiring destinations. Subscribe to our
@@ -1267,11 +1517,14 @@
                 autocomplete="email"
                 required
                 placeholder="Enter your email"
-                class="min-h-12 w-full min-w-0 flex-1 rounded-full border border-slate-300 bg-white px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-[#3b70fe] focus:ring-2 focus:ring-[#3b70fe]/25"
+                class="min-h-12 w-full min-w-0 flex-1 rounded-full border-2 bg-transparent px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition focus:ring-2 focus:ring-[#0047ab]/25"
               />
               <button
                 type="submit"
-                class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-slate-900 px-8 py-3 text-[15px] font-semibold text-white transition duration-300 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe] focus-visible:ring-offset-2 sm:px-10"
+                class="inline-flex min-h-12 shrink-0 cursor-pointer items-center
+                 justify-center rounded-full border-2 border-primary-yellow
+                  bg-primary-yellow px-8 py-3 text-[15px] font-semibold text-white
+                   transition duration-300 hover:bg-transparent  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0047ab] focus-visible:ring-offset-2 sm:px-10"
               >
                 Subscribe
               </button>
@@ -1284,7 +1537,7 @@
           >
             <div
               class="relative h-[250px] w-full 
-               rounded-xl bg-[#c6984f]  sm:h-[290px] lg:h-[340px] lg:overflow-visible"
+               rounded-xl bg-primary-yellow  sm:h-[290px] lg:h-[340px] lg:overflow-visible"
             >
               <img
                 src="./src/assets/images/man.png"
@@ -1307,7 +1560,7 @@
                 aria-hidden="true"
               >
                 <svg
-                  class="absolute -bottom-0.5 -right-0.5 h-10 w-14 text-[#3b70fe]"
+                  class="absolute -bottom-0.5 -right-0.5 h-10 w-14 text-[#0047ab]"
                   viewBox="0 0 80 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1333,87 +1586,95 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative overflow-hidden border-t border-slate-200 bg-[#f6f7fb]">
+  <footer class="relative overflow-hidden border-t border-slate-200 bg-primary-yellow ">
     <div class="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 sm:py-12 lg:px-14 xl:px-20">
-        <div class="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
-        <div class="col-span-2 min-w-0 lg:col-span-5" data-footer-anim>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-10  md:grid-cols-12 lg:gap-10">
+        <div class="col-span-2 min-w-0 md:col-span-5" data-footer-anim>
           <a href="index.html" class="inline-flex items-center gap-2">
-            <span class="inline-flex h-10 w-10 items-center justify-center overflow-hidden sm:h-11 sm:w-11">
-              <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="lazy" decoding="async" />
+            <span class="inline-flex shrink-0 items-center justify-center leading-none rounded-xl bg-white/95 shadow-[0_10px_28px_-12px_rgba(0,0,0,0.45)] ring-1 ring-white/70 px-2 backdrop-blur-sm">
+              <img
+                src="./src/assets/images/logo.png"
+                alt="Visa Nest logo"
+                class="w-[64px] sm:w-[90px] scale-125 [filter:drop-shadow(0_0_1px_rgba(255,255,255,0.95))_drop-shadow(0_0_10px_rgba(255,255,255,0.35))]"
+                loading="lazy"
+                decoding="async"
+              />
             </span>
-            <span class="text-[29px] font-semibold tracking-tight text-slate-900">Visa <span class="text-[#3b70fe]">Nest</span></span>
           </a>
-          <p class="mt-4 max-w-md text-[15px] leading-relaxed text-slate-600">
+          <p class="mt-4 max-w-md text-[15px] leading-relaxed text-[#01004b]">
             Explore amazing destinations with ease. We plan everything for you, from flights to stays,
             so you can travel stress-free and enjoy unforgettable adventures.
           </p>
           <div class="mt-6">
-            <p class="text-[16px] font-semibold text-slate-800">Follow Us On</p>
+            <p class="text-[16px] font-semibold text-[#01004b]">Follow Us On</p>
                         <div class="mt-3 flex items-center gap-3">
-              <a href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+              <a href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.96 1.96 0 1 0 5.3 6.9 1.96 1.96 0 0 0 5.25 3Zm14.19 9.72c0-3.01-1.6-4.4-3.73-4.4-1.72 0-2.49.94-2.92 1.6V8.5H9.41c.04.94 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20h3.38v-7.28Z"/></svg>
               </a>
-              <a href="https://www.facebook.com/mubeen.ahmad.developer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+              <a href="https://www.facebook.com/mubeen.ahmad.developer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.2h2.4l.36-2.8H13.5V9.22c0-.8.22-1.34 1.37-1.34h1.47V5.37A19.47 19.47 0 0 0 14.2 5c-2.13 0-3.6 1.3-3.6 3.7V11H8.2v2.8h2.4V21h2.9Z"/></svg>
               </a>
-              <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
-              </a>
-              <a href="https://www.upwork.com/freelancers/~0173f9182814d1e8fd" target="_blank" rel="noopener noreferrer" aria-label="Upwork" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-[11px] font-bold tracking-[0.08em] text-slate-700 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">UP</a>
-              <a href="https://discord.com/users/1440685400053256293" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A17.7 17.7 0 0 0 16 3l-.2.4a15 15 0 0 1 4.2 2.1 14.7 14.7 0 0 0-5.3-2.5 17.3 17.3 0 0 0-5.4 0A14.7 14.7 0 0 0 4 5.5 15 15 0 0 1 8.2 3.4L8 3a17.7 17.7 0 0 0-4.3 1.4C1.2 8.1.6 11.6.8 15c1.6 1.2 3.2 1.9 4.8 2.4l1.1-1.8c-.6-.2-1.2-.5-1.8-.8l.4-.3c3.5 1.7 7.4 1.7 10.9 0l.4.3c-.6.3-1.2.6-1.8.8l1.1 1.8c1.6-.5 3.2-1.2 4.8-2.4.3-4-.5-7.4-3.4-10.6ZM9 13.3c-1 0-1.9-.9-1.9-1.9S8 9.5 9 9.5s1.9.9 1.9 1.9S10.1 13.3 9 13.3Zm6 0c-1 0-1.9-.9-1.9-1.9S14 9.5 15 9.5s1.9.9 1.9 1.9-.8 1.9-1.9 1.9Z"/></svg>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="min-w-0 lg:col-span-2" data-footer-anim>
-          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Quick Links</h3>
-          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
-            <li><a href="index.html" class="transition hover:text-[#3b70fe]">Home</a></li>
-            <li><a href="about.html" class="transition hover:text-[#3b70fe]">About Us</a></li>
-            <li><a href="destinations.html" class="transition hover:text-[#3b70fe]">Destination</a></li>
-            <li><a href="blog.html" class="transition hover:text-[#3b70fe]">Blog & Articles</a></li>
+        <div class="min-w-0 md:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#01004b]">Quick Links</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-[#01004b]">
+            <li><a href="index.html" class="transition hover:text-[#0047ab]">Home</a></li>
+            <li><a href="about.html" class="transition hover:text-[#0047ab]">About Us</a></li>
+            <li><a href="destinations.html" class="transition hover:text-[#0047ab]">Destination</a></li>
+            <li><a href="blog.html" class="transition hover:text-[#0047ab]">Blog &amp; Articles</a></li>
           </ul>
         </div>
 
-        <div class="min-w-0 lg:col-span-2" data-footer-anim>
-          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Support</h3>
-          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
-            <li><a href="contact.html" class="transition hover:text-[#3b70fe]">Contact Us</a></li>
-            <li><a href="contact.html#contact-form" class="transition hover:text-[#3b70fe]">Support Center</a></li>
-            <li><a href="#newsletter" class="transition hover:text-[#3b70fe]">Services</a></li>
-            <li><a href="privacy.html" class="transition hover:text-[#3b70fe]">Privacy Policy</a></li>
+        <div class="min-w-0 md:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#01004b]">Support</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-[#01004b]">
+            <li><a href="contact.html" class="transition hover:text-[#0047ab]">Contact Us</a></li>
+            <li><a href="contact.html#contact-form" class="transition hover:text-[#0047ab]">Support Center</a></li>
+            <li><a href="services.html" class="transition hover:text-[#0047ab]">Services</a></li>
+            <li><a href="privacy.html" class="transition hover:text-[#0047ab]">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div id="contact" class="col-span-2 min-w-0 lg:col-span-3" data-footer-anim>
-          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Contact Us</h3>
+        <div id="contact" class="col-span-2 min-w-0 md:col-span-3" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#01004b]">Contact Us</h3>
           <ul class="mt-4 space-y-3.5">
             <li class="group flex items-center gap-3">
-              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#0047ab]/60 group-hover:bg-[#0047ab]/5 group-hover:text-[#0047ab]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
               </span>
-              <a href="tel:+923269325096" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">+92 326 9325096</a>
+              <a href="tel:+447446230755" class="min-w-0 break-words text-[15px] text-[#01004b] transition hover:text-[#0047ab]">074 4623 0755</a>
             </li>
             
             <li class="group flex items-center gap-3">
-              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center 
+              justify-center rounded-full border border-[#01004b] text-[#01004b] transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#0047ab]/60 group-hover:bg-[#0047ab]/5 group-hover:text-[#0047ab]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
               </span>
-              <a href="mailto:mubeenahmad3377@gmail.com" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">mubeenahmad3377@gmail.com</a>
+              <a href="mailto:info@visanest.co.uk" class="min-w-0 break-words text-[15px] text-[#01004b] transition hover:text-[#0047ab]">info@visanest.co.uk</a>
             </li>
             <li class="group flex items-center gap-3">
-              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#0047ab]/60 group-hover:bg-[#0047ab]/5 group-hover:text-[#0047ab]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.9" 
+                 aria-hidden="true"><path stroke-linecap="round" 
+                 stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/>
+                 <circle cx="12" cy="10" r="3"/></svg>
               </span>
-              <p class="min-w-0 break-words text-[15px] leading-relaxed text-slate-600">Lahore, Pakistan</p>
+              <p class="min-w-0 break-words text-[15px] leading-relaxed text-[#01004b]">Office 211, Unit 5, Mayfair, London W1C 2BU, UK</p>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="border-t border-slate-300/70 bg-[#3b70fe]" data-footer-anim>
+    <div class="border-t border-slate-300/70 bg-[#0047ab]" data-footer-anim>
       <div class="mx-auto flex w-full max-w-[1440px] flex-col items-center  justify-between gap-3
        px-5 py-8 text-white sm:flex-row sm:px-8 sm:py-6 lg:px-14 lg:py-7 xl:px-20">
         <p class="w-full text-center text-[14px] text-white/95 sm:w-auto sm:text-left">© Copyrights 2026 Visa Nest. All rights reserved.</p>
@@ -1428,15 +1689,15 @@
   <!-- Fixed contact launcher -->
   <div id="quick-contact-fab" class="fixed bottom-4 right-4 z-[80] sm:bottom-5 sm:right-5">
     <div id="quick-contact-list" class="pointer-events-none mb-3 flex origin-bottom-right translate-y-2 scale-95 flex-col items-center gap-2 opacity-0 transition duration-300">
-      <a href="tel:+923269325096" aria-label="Call Visa Nest" class="inline-flex h-12
+      <a href="tel:+447446230755" aria-label="Call Visa Nest" class="inline-flex h-12
        w-12 items-center justify-center rounded-full border border-white/90 bg-[#1ed760]
         text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
       </a>
-      <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#27d66f] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+      <a href="https://wa.me/447446230755" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#27d66f] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
       </a>
-      <a href="mailto:mubeenahmad3377@gmail.com" aria-label="Email Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#ff4d68] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+      <a href="mailto:info@visanest.co.uk" aria-label="Email Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#ff4d68] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
       </a>
       <a href="contact.html#contact-form" aria-label="Open contact form" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#113e7a] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
@@ -1458,12 +1719,19 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script>
-    // Page-load intro: navbar first, then hero. On narrow viewports avoid scale (WebKit + clip-text jank).
+    // Page-load intro: logo + in-bar nav links, then Apply+Contact immediately, other .load-nav in parallel, then hero.
     window.addEventListener("DOMContentLoaded", () => {
-      const navEls = document.querySelectorAll(".load-nav");
+      const siteNav = document.querySelector("#site-nav");
+      const navCtaPair = document.querySelectorAll("#site-nav [data-nav-intro='cta']");
+      const navBarIntroEls = siteNav
+        ? siteNav.querySelectorAll(".load-nav:not([data-nav-intro='cta'])")
+        : [];
+      const navRestEls = Array.from(
+        document.querySelectorAll(".load-nav:not([data-nav-intro='cta'])")
+      ).filter((el) => siteNav && !siteNav.contains(el));
       const heroCtaEls = document.querySelectorAll(".load-hero.hero-cta");
       const heroEls = document.querySelectorAll(".load-hero:not(.hero-cta)");
-      const allEls = [...navEls, ...heroEls, ...heroCtaEls];
+      const allEls = [...navBarIntroEls, ...navCtaPair, ...navRestEls, ...heroEls, ...heroCtaEls];
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const isNarrow = window.matchMedia("(max-width: 1023px)").matches;
 
@@ -1486,13 +1754,38 @@
         };
 
         if (isNarrow) {
-          tl.to(navEls, {
+          tl.to(navBarIntroEls, {
             opacity: 1,
             y: 0,
-            duration: 0.52,
-            stagger: 0.05,
-            ease: "power2.out",
+            scale: 1,
+            duration: 0.88,
+            stagger: 0.1,
+            ease: "power3.out",
           })
+            .to(
+              navCtaPair,
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.72,
+                stagger: 0,
+                ease: "power3.out",
+              },
+              "+=0.04"
+            )
+            .to(
+              navRestEls,
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.72,
+                stagger: 0.06,
+                ease: "power3.out",
+              },
+              "<"
+            )
             .to(
               heroEls,
               {
@@ -1502,7 +1795,7 @@
                 stagger: 0.07,
                 ease: "power2.out",
               },
-              "+=0.1"
+              "+=0.05"
             )
             .to(heroCtaEls, {
               opacity: 1,
@@ -1513,14 +1806,38 @@
             })
             .add(finishIntro);
         } else {
-          tl.to(navEls, {
+          tl.to(navBarIntroEls, {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.78,
-            stagger: 0.09,
+            duration: 0.95,
+            stagger: 0.12,
             ease: "power3.out",
           })
+            .to(
+              navCtaPair,
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.88,
+                stagger: 0,
+                ease: "power3.out",
+              },
+              "+=0.04"
+            )
+            .to(
+              navRestEls,
+              {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.88,
+                stagger: 0.1,
+                ease: "power3.out",
+              },
+              "<"
+            )
             .to(
               heroEls,
               {
@@ -1531,7 +1848,7 @@
                 stagger: 0.1,
                 ease: "power4.out",
               },
-              "+=0.18"
+              "+=0.05"
             )
             .to(heroCtaEls, {
               opacity: 1,
@@ -1623,162 +1940,120 @@
       });
     });
 
-    // About section: scroll-in (and reverse on scroll-up) + count-up stats
+    // Services "Why Choose" section: blue bg reveal top-to-bottom + text color scrub (matches #about)
     window.addEventListener("DOMContentLoaded", () => {
+      const whyVideo = document.getElementById("services-why-video");
+      if (whyVideo && whyVideo.tagName === "VIDEO") {
+        const reduceV = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        whyVideo.muted = true;
+        if (reduceV) {
+          whyVideo.pause();
+          whyVideo.removeAttribute("autoplay");
+        } else {
+          const tryPlay = () => {
+            const p = whyVideo.play();
+            if (p && typeof p.catch === "function") p.catch(() => {});
+          };
+          tryPlay();
+          if ("IntersectionObserver" in window) {
+            const io = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((e) => {
+                  if (e.isIntersecting) tryPlay();
+                });
+              },
+              { threshold: 0.15 }
+            );
+            io.observe(whyVideo);
+          }
+          document.addEventListener("visibilitychange", () => {
+            if (!document.hidden) tryPlay();
+          });
+        }
+      }
+
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+
+      const whySection = document.getElementById("services-why-section");
+      if (!whySection) return;
+
+      const whyBg = whySection.querySelector("[data-services-why-bg-reveal]");
+      const whyHead = document.getElementById("services-why-heading");
+      const whyDesc = document.getElementById("services-why-description");
+
+      if (reduceMotion) {
+        if (whyBg) {
+          whyBg.style.transform = "scaleY(1)";
+        }
         return;
       }
 
-      const section = document.getElementById("about");
-      if (!section) return;
+      if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+        if (whyBg) {
+          whyBg.style.transform = "scaleY(1)";
+        }
+        if (whyHead) {
+          whyHead.style.color = "#ffffff";
+        }
+        if (whyDesc) {
+          whyDesc.style.color = "#e2e8f0";
+        }
+        return;
+      }
 
-      const leftItems = section.querySelectorAll(".about-anim-left");
-      const imgs = section.querySelectorAll(".about-anim-img");
-      const statEls = section.querySelectorAll(".about-stat-value");
-
-      if (!leftItems.length && !imgs.length && !statEls.length) return;
+      if (!whyBg || !whyHead || !whyDesc) return;
 
       gsap.registerPlugin(ScrollTrigger);
 
-      const formatStat = (value, format, suffix) => {
-        if (format === "k") {
-          const k = Math.max(0, Math.round(value / 1000));
-          return `${k}K${suffix || ""}`;
-        }
-        const n = Math.max(0, Math.round(value));
-        return `${n}${suffix || ""}`;
-      };
-
-      const resetStatsToZero = () => {
-        statEls.forEach((el) => {
-          const format = el.dataset.format || "";
-          const suffix = el.dataset.suffix || "";
-          el.textContent = formatStat(0, format, suffix);
-        });
-      };
+      const colorEase = "sine.inOut";
+      const colorDur = 0.66;
+      const bgDur = 0.7;
 
       try {
-        // Initial hidden state (so reverse fully "disappears")
-        gsap.set(leftItems, { opacity: 0, y: 48, filter: "blur(10px)", force3D: true });
-        gsap.set(imgs, { opacity: 0, y: 42, scale: 0.94, filter: "blur(12px)", force3D: true });
-        gsap.set(statEls, { opacity: 0, y: 24, filter: "blur(8px)", force3D: true });
-        resetStatsToZero();
+        gsap.set(whyBg, { scaleY: 0, transformOrigin: "top center", force3D: true });
 
-        const visualTl = gsap.timeline({
-          defaults: { ease: "power3.out" },
-          scrollTrigger: {
-            trigger: section,
-            start: "top 98%",
-            end: "bottom 68%",
-            scrub: 1.1,
-            invalidateOnRefresh: true,
+        /* Finish wipe + text colors over ~40–50% of section height (scroll distance). */
+        const whyScroll = {
+          trigger: whySection,
+          start: "top 86%",
+          end: () => {
+            const h = whySection.offsetHeight || 0;
+            const px = Math.max(180, Math.round(h * 0.45));
+            return `+=${px}`;
           },
-          onComplete: () => {
-            gsap.set([leftItems, imgs, statEls], { clearProps: "filter" });
-          },
-        });
-
-        visualTl.to(leftItems, {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 0.8,
-          stagger: 0.16,
-        })
-          .to(
-            imgs,
-            {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              filter: "blur(0px)",
-              duration: 0.82,
-              stagger: 0.12,
-              ease: "power4.out",
-            },
-            "-=0.55"
-          )
-          .to(
-            statEls,
-            {
-              opacity: 1,
-              y: 0,
-              filter: "blur(0px)",
-              duration: 0.62,
-              stagger: 0.12,
-              ease: "power3.out",
-            },
-            "-=0.4"
-          );
-
-        // Count-up/count-down (separate trigger so pace can be slower and more legible).
-        const activeCounterTweens = [];
-        const stopCounterTweens = () => {
-          activeCounterTweens.forEach((t) => t.kill());
-          activeCounterTweens.length = 0;
-        };
-
-        const playCountUp = () => {
-          stopCounterTweens();
-          resetStatsToZero();
-          statEls.forEach((el, idx) => {
-            const target = Number(el.dataset.count || "0") || 0;
-            const format = el.dataset.format || "";
-            const suffix = el.dataset.suffix || "";
-            const step = format === "k" ? 1000 : 1;
-            const counter = { v: 0 };
-            const tween = gsap.to(counter, {
-              v: target,
-              duration: 2.2 + idx * 0.25,
-              ease: "power1.out",
-              snap: { v: step },
-              onUpdate: () => {
-                el.dataset.current = String(counter.v);
-                el.textContent = formatStat(counter.v, format, suffix);
-              },
-            });
-            activeCounterTweens.push(tween);
-          });
-        };
-
-        const playCountDown = () => {
-          stopCounterTweens();
-          statEls.forEach((el, idx) => {
-            const format = el.dataset.format || "";
-            const suffix = el.dataset.suffix || "";
-            const step = format === "k" ? 1000 : 1;
-            const startVal = Number(el.dataset.current || "0") || 0;
-            const counter = { v: startVal };
-            const tween = gsap.to(counter, {
-              v: 0,
-              duration: 1.0 + idx * 0.12,
-              ease: "power1.in",
-              snap: { v: step },
-              onUpdate: () => {
-                el.dataset.current = String(counter.v);
-                el.textContent = formatStat(counter.v, format, suffix);
-              },
-              onComplete: () => {
-                el.dataset.current = "0";
-              },
-            });
-            activeCounterTweens.push(tween);
-          });
-        };
-
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top 98%",
+          scrub: 0.45,
           invalidateOnRefresh: true,
-          onEnter: () => playCountUp(),
-          onEnterBack: () => playCountUp(),
-          onLeaveBack: () => playCountDown(),
+        };
+
+        const whyTl = gsap.timeline({
+          scrollTrigger: whyScroll,
+          onComplete: () => {
+            gsap.set(whyBg, { clearProps: "willChange" });
+          },
         });
+
+        whyTl.fromTo(
+          whyBg,
+          { scaleY: 0 },
+          { scaleY: 1, duration: bgDur, ease: colorEase },
+          0
+        );
+        whyTl.fromTo(
+          whyHead,
+          { color: "#0f172a" },
+          { color: "#ffffff", duration: colorDur, ease: colorEase },
+          0
+        );
+        whyTl.fromTo(
+          whyDesc,
+          { color: "#475569" },
+          { color: "#e2e8f0", duration: colorDur, ease: colorEase },
+          0
+        );
       } catch {
-        // If anything fails after gsap.set, restore visibility.
         if (typeof gsap !== "undefined") {
-          gsap.set([leftItems, imgs, statEls], { clearProps: "opacity,transform,filter" });
+          gsap.set(whyBg, { scaleY: 1, clearProps: "willChange" });
+          gsap.set([whyHead, whyDesc], { clearProps: "color" });
         }
       }
 
@@ -2254,7 +2529,7 @@
         thumbs.forEach((btn, idx) => {
           const active = idx === nextIndex;
           btn.classList.toggle("is-active", active);
-          btn.classList.toggle("ring-[#3b70fe]", active);
+          btn.classList.toggle("ring-[#0047ab]", active);
           btn.classList.toggle("ring-2", active);
           btn.classList.toggle("ring-offset-2", active);
           btn.classList.toggle("ring-offset-[#f1f0ee]", active);
@@ -2490,6 +2765,7 @@
     });
   </script>
   <script type="module" src="./src/hero-quote-form.js"></script>
+  <script type="module" src="./src/about-on-primary.js"></script>
   <script type="module" src="./src/newsletter-footer.js"></script>
   <script type="module" src="./src/media-performance.js"></script>
   <script type="module" src="./src/site-header.js"></script>

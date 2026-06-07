@@ -132,11 +132,11 @@ const DESTINATIONS = [
 ];
 
 const TAB_BASE =
-  "cursor-pointer rounded-full border px-4 py-2.5 text-[13px] font-medium transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe]/40 focus-visible:ring-offset-2 sm:px-5 sm:text-sm";
+  "cursor-pointer rounded-full border px-4 py-2.5 text-[13px] font-medium transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0047ab]/40 focus-visible:ring-offset-2 sm:px-5 sm:text-sm";
 const TAB_IDLE =
-  " border-slate-200 bg-white text-slate-800 hover:border-[#3b70fe] hover:bg-[#3b70fe] hover:text-white";
+  " border-slate-200 bg-white text-slate-800 hover:border-[#0047ab] hover:bg-[#0047ab] hover:text-white";
 const TAB_ACTIVE =
-  " border-[#3b70fe] bg-[#3b70fe] text-white hover:border-[#2f62e6] hover:bg-[#2f62e6] hover:text-white";
+  " border-[#0047ab] bg-[#0047ab] text-white hover:border-[#003a91] hover:bg-[#003a91] hover:text-white";
 
 function filterByCategory(cat) {
   if (cat === "all") return DESTINATIONS;
@@ -149,8 +149,9 @@ function durationLabel(d) {
 
 function cardHtml(d) {
   const dur = durationLabel(d);
-  return `<article class="group" data-destination-id="${d.id}">
-    <div class="relative overflow-hidden rounded-2xl">
+  /* Markup aligned with index.html #destinations “Popular Travel Packages For You” cards */
+  return `<article class="group bg-[var(--color-primary-blue)] rounded-2xl" data-destination-id="${d.id}">
+    <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
       <img
         src="${d.img}"
         alt="${escapeAttr(d.alt)}"
@@ -160,25 +161,27 @@ function cardHtml(d) {
       />
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
       <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-        <div class="flex items-center justify-between rounded-full bg-white px-4 py-3 text-slate-800 shadow-lg">
-          <span class="inline-flex items-center text-[15px] font-medium text-slate-600">
+        <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+          <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
             </svg>
             ${escapeHtml(dur)}
           </span>
-          <span class="inline-flex items-center text-[16px] font-semibold">Explore Now <span class="ml-2">&rarr;</span></span>
+          <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
         </div>
       </div>
     </div>
-    <p class="mt-4 text-[17px] font-medium leading-none tracking-tight text-slate-900 sm:text-[18px]">$${escapeHtml(d.price)} <span class="text-[13px] font-normal text-slate-500 sm:text-[14px]">/pp</span></p>
-    <h3 class="mt-2 text-[18px] font-medium tracking-tight text-slate-900 sm:text-[20px]">${escapeHtml(d.title)}</h3>
-    <p class="mt-1 inline-flex items-center text-[17px] text-slate-500 sm:text-[18px]">
-      <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
-      </svg>
-      ${escapeHtml(d.location)}
-    </p>
+    <div class="px-4 pt-4 pb-6 text-white">
+      <p class="mt-4 text-[17px] font-medium leading-none tracking-tight text-white sm:text-[18px]">$${escapeHtml(d.price)} <span class="text-[13px] font-normal sm:text-[14px]">/pp</span></p>
+      <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight sm:text-[20px]">${escapeHtml(d.title)}</h3>
+      <p class="mt-1 inline-flex items-center text-[17px] sm:text-[18px]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        ${escapeHtml(d.location)}
+      </p>
+    </div>
   </article>`;
 }
 

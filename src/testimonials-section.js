@@ -167,7 +167,7 @@ function initTestimonialsCarousel() {
     thumbs.forEach((btn, idx) => {
       const active = idx === nextIndex;
       btn.classList.toggle("is-active", active);
-      btn.classList.toggle("ring-[#3b70fe]", active);
+      btn.classList.toggle("ring-[#0047ab]", active);
       btn.classList.toggle("ring-2", active);
       btn.classList.toggle("ring-offset-2", active);
       btn.classList.toggle("ring-offset-[#f1f0ee]", active);

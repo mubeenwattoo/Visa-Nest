@@ -130,8 +130,125 @@ function createScrollReveal({
   window.addEventListener("pageshow", runSync, { passive: true });
 }
 
+/**
+ * Newsletter: blue bg top-to-bottom reveal + email field colors (scrub).
+ * Shared across pages; was previously inline on index.html only.
+ */
+function initNewsletterBgReveal() {
+  const nlSection = document.getElementById("newsletter");
+  if (!nlSection) return;
+
+  const nlBg = nlSection.querySelector("[data-newsletter-bg-reveal]");
+  const nlHead = document.getElementById("newsletter-heading");
+  const nlDesc = document.getElementById("newsletter-description");
+  const nlEmail = document.getElementById("newsletter-email");
+
+  const reduceMotion = globalThis.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    if (nlBg) {
+      nlBg.style.transform = "scaleY(1)";
+    }
+    return;
+  }
+
+  const gsap = globalThis.gsap;
+  const ScrollTrigger = globalThis.ScrollTrigger;
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+    if (nlBg) {
+      nlBg.style.transform = "scaleY(1)";
+    }
+    if (nlHead) {
+      nlHead.style.color = "#ffffff";
+    }
+    if (nlDesc) {
+      nlDesc.style.color = "#e2e8f0";
+    }
+    if (nlEmail) {
+      nlEmail.style.setProperty("--nl-input-border", "#ffffff");
+      nlEmail.style.color = "#ffffff";
+      nlEmail.style.backgroundColor = "rgba(255, 255, 255, 0.12)";
+    }
+    return;
+  }
+
+  if (!nlBg || !nlHead || !nlDesc) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const colorEase = "sine.inOut";
+  const colorDur = 0.66;
+  const bgDur = 0.7;
+
+  try {
+    gsap.set(nlBg, { scaleY: 0, transformOrigin: "top center", force3D: true });
+
+    const nlScroll = {
+      trigger: nlSection,
+      start: "top 86%",
+      end: () => {
+        const h = nlSection.offsetHeight || 0;
+        const px = Math.max(180, Math.round(h * 0.45));
+        return `+=${px}`;
+      },
+      scrub: 0.45,
+      invalidateOnRefresh: true,
+    };
+
+    const nlTl = gsap.timeline({
+      scrollTrigger: nlScroll,
+      onComplete: () => {
+        gsap.set(nlBg, { clearProps: "willChange" });
+      },
+    });
+
+    nlTl.fromTo(
+      nlBg,
+      { scaleY: 0 },
+      { scaleY: 1, duration: bgDur, ease: colorEase },
+      0
+    );
+    if (nlEmail) {
+      nlTl.fromTo(
+        nlEmail,
+        {
+          "--nl-input-border": "#cbd5e1",
+          color: "#0f172a",
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
+        },
+        {
+          "--nl-input-border": "#ffffff",
+          color: "#ffffff",
+          backgroundColor: "rgba(255, 255, 255, 0.12)",
+          duration: colorDur,
+          ease: colorEase,
+        },
+        0
+      );
+    }
+  } catch {
+    if (typeof globalThis.gsap !== "undefined") {
+      gsap.set(nlBg, { scaleY: 1, clearProps: "willChange" });
+      gsap.set([nlHead, nlDesc], { clearProps: "color" });
+      if (nlEmail) {
+        gsap.set(nlEmail, { clearProps: "--nl-input-border,color,backgroundColor" });
+      }
+    }
+  }
+
+  window.addEventListener(
+    "load",
+    () => {
+      if (typeof globalThis.ScrollTrigger !== "undefined") {
+        globalThis.ScrollTrigger.refresh();
+      }
+    },
+    { passive: true }
+  );
+}
+
 runWhenGsapReady(() => {
   const initReveals = () => {
+    initNewsletterBgReveal();
     createScrollReveal({
       getRoot: () => document.getElementById("newsletter"),
       selector: "[data-newsletter-anim]",

@@ -15,19 +15,30 @@
   class="bg-white font-['Poppins',sans-serif] text-slate-900 antialiased"
   data-active-nav="about"
 >
-  <header id="site-header" class="site-header-bar fixed top-0 w-full isolate bg-white lg:bg-slate-900 transition-shadow duration-500" style="z-index: 100;">
-    <nav id="site-nav" class="flex w-full items-center justify-between px-5 py-4 sm:px-8 sm:py-5 lg:px-12 xl:px-20" aria-label="Primary navigation">
-      <a href="index.html" class="load-nav flex items-center gap-2">
-        <span class="inline-flex h-11 w-11 items-center justify-center overflow-hidden sm:h-12 sm:w-12">
-          <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="eager">
-        </span>
-        <span class="leading-tight">
-          <span id="brand-main" class="block text-[23px] font-semibold tracking-tight text-slate-900 sm:text-[30px] lg:text-white">Visa <span id="brand-accent" class="text-[#3b70fe]">Nest</span></span>
-          <span id="brand-subtitle" class="ml-1 block text-[11px] font-medium uppercase tracking-[0.14em] text-slate-500 lg:text-slate-300">Visa & Travel Assistance</span>
+  <!-- Header -->
+  <header id="site-header" class="site-header-bar  fixed top-0 w-full isolate 
+   transition-shadow duration-500" style="z-index: 100;">
+    <nav id="site-nav" class="flex w-full items-center justify-between px-5 py-4 pt-0 sm:pt-0 mt-2 
+     sm:px-8 sm:py-0 lg:px-12 xl:px-20" aria-label="Primary navigation">
+      <a href="index.html" class="relative load-nav shrink-0 focus-visible:outline-none 
+      focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2
+       focus-visible:ring-offset-transparent rounded-xl">
+        <!-- White plate: px-3 only (no py). leading-none + block img removes inline baseline gap under the graphic. -->
+        <span class="inline-flex items-center justify-center leading-none rounded-xl
+         bg-white/95  shadow-[0_10px_28px_-12px_rgba(0,0,0,0.45)] ring-1
+          ring-white/70 px-2 backdrop-blur-sm mt-2">
+          <img
+            src="./src/assets/images/logo.png"
+            alt="Visa Nest logo"
+            class="sm:w-[90px] w-[64px] scale-125
+            [filter:drop-shadow(0_0_1px_rgba(255,255,255,0.95))_
+            drop-shadow(0_0_10px_rgba(255,255,255,0.35))]"
+            loading="eager"
+          />
         </span>
       </a>
 
-      <button id="menu-btn" type="button" class="relative inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-lg transition-colors lg:hidden focus-visible:outline-none" style="touch-action: manipulation;" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button id="menu-btn" type="button" class="load-nav relative inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-lg transition-colors lg:hidden focus-visible:outline-none" style="touch-action: manipulation;" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="menu-btn-icon menu-btn-icon--bars pointer-events-none absolute inset-0 flex items-center justify-center transition duration-300 ease-out" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6h16M4 12h16M4 18h16"/>
@@ -40,20 +51,48 @@
         </span>
       </button>
 
-      <div class="hidden items-center gap-8 lg:flex">
-        <ul id="desktop-nav-links" class="flex items-center gap-8 text-[14px] font-medium text-white">
+      <div class="hidden  items-center gap-8 xl:gap-12 lg:flex border-[#F4B400] 
+      border-2 bg-transparent
+       xl:ml-20 lg:ml-6 hover:backdrop-blur-sm backdrop-blur-[4px] duration-500  
+       rounded-full hover:px-10 px-6 py-3.5">
+        <ul id="desktop-nav-links" class="flex items-center uppercase gap-8 text-[14px] font-medium text-white">
           <li class="load-nav"><a href="index.html" data-nav="home" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
           <li class="load-nav"><a href="destinations.html" data-nav="destinations" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Destination</a></li>
           <li class="load-nav"><a href="services.html" data-nav="service" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Service</a></li>
           <li class="load-nav"><a href="about.html" data-nav="about" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
         </ul>
-        <a href="contact.html" class="load-nav inline-flex items-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">
+        
+      </div>
+      <div class="hidden items-center gap-4 lg:flex">
+        <a
+          href="services.html"
+          data-nav-intro="cta"
+          class="load-nav group relative inline-flex min-h-12
+        items-center justify-center overflow-hidden rounded-full border border-[#F4B400] 
+          px-5 py-2 text-[14px] font-semibold tracking-[0.01em]
+          text-white backdrop-blur-sm transition duration-500 
+           hover:border-transparent focus-visible:outline-none
+            focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 
+            focus-visible:ring-offset-transparent"
+        >
+         <span class="absolute inset-0 origin-left scale-x-0 bg-[#F4B400] 
+         transition-transform duration-500 ease-out group-hover:scale-x-100"></span>
+         <span class="relative z-10">Apply Now</span>
+       </a>
+        <a
+          href="contact.html"
+          data-nav-intro="cta"
+          class="load-nav inline-flex items-center 
+        justify-center rounded-full border border-[#F4B400] bg-[#F4B400]
+         px-6 py-3 text-[14px] font-semibold text-white
+          shadow-sm shadow-amber-900/10 transition duration-500
+           hover:bg-transparent "
+        >
           Contact
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M4 10h12M10.5 4.5 16 10l-5.5 5.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
         </a>
+        
+        
       </div>
     </nav>
 
@@ -85,242 +124,117 @@
   <main>
     <section
       id="about-showcase"
-      class="bg-[#dbdbdb] pb-14 pt-[88px] sm:pb-16 sm:pt-[96px] lg:pb-20 lg:pt-44"
+      class="relative z-30 isolate flex min-h-[max(16rem,54vh)] items-center
+       justify-center overflow-hidden pt-[104px] pb-14 sm:min-h-[max(22rem,68vh)] 
+       sm:pt-[100px] sm:pb-16 md:min-h-[max(30rem,70vh)] lg:min-h-[max(26rem,74vh)] 
+       lg:pt-[112px] lg:pb-20 xl:min-h-[max(30rem,75vh)]"
       aria-labelledby="about-showcase-heading"
     >
-      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
-        <div class="mx-auto max-w-3xl text-center">
-          <h1
-            id="about-showcase-heading"
-            class="load-hero text-[1.85rem] font-bold leading-[1.15] tracking-tight text-[#1a1a1a] sm:text-4xl lg:text-[2.65rem]"
-          >
-            Trusted Travel Partner Since 2000
-          </h1>
-          <p class="load-hero mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-[#555555] sm:mt-6 sm:text-lg sm:leading-relaxed">
-            Find your next adventure with Visa Nest. From relaxing retreats to exciting explorations, we&apos;ve got the perfect destination for you!
-          </p>
-          <div class="load-hero mt-8 flex justify-center sm:mt-10">
-            <a
-              href="destinations.html"
-              class="inline-flex items-center gap-2 rounded-full bg-[#0f172a] px-8 py-3.5 text-[15px] font-semibold text-white transition-colors duration-500 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe]/40 focus-visible:ring-offset-2"
-            >
-              Explore Now
-              <span class="text-lg leading-none" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
-
+      <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+        <img
+          src="./assets/images/destination-10-rainforest.jpg"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover object-center"
+          loading="eager"
+          decoding="async"
+        />
         <div
-          id="about-gallery-track"
-          class="about-gallery-track mx-auto mt-12 max-w-[1320px] max-md:flex-col max-md:gap-4 max-md:!h-auto sm:mt-14 md:mt-16 md:h-[380px] lg:mt-20 lg:h-[440px] h-[240px] sm:h-[300px]"
-          role="group"
-          aria-label="Destination highlights"
-        >
-          <article
-            class="about-gallery-card"
-            data-about-gallery-entrance
-            data-about-card
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-            aria-label="Lake district, New Zealand. Expand to view details."
-          >
-            <img
-              src="./assets/images/destination-02-tongariro.jpg"
-              alt="Mountain trail above clouds in New Zealand"
-              width="400"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="about-gallery-overlay">
-              <div class="about-gallery-meta text-white">
-                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  Tongariro, New Zealand
-                </p>
-                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Alpine Ridge Trails</p>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="about-gallery-card"
-            data-about-gallery-entrance
-            data-about-card
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-            aria-label="Kyoto gardens. Expand to view details."
-          >
-            <img
-              src="./assets/images/flowers.png"
-              alt="Lush garden paths and seasonal color"
-              width="400"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="about-gallery-overlay">
-              <div class="about-gallery-meta text-white">
-                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  Kyoto, Japan
-                </p>
-                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Garden &amp; Forest Walks</p>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="about-gallery-card about-gallery-card--expanded"
-            data-about-gallery-entrance
-            data-about-card
-            tabindex="0"
-            role="button"
-            aria-expanded="true"
-            aria-label="Sydney harbour. Expanded."
-          >
-            <img
-              src="./assets/images/boat.png"
-              alt="Sydney harbour with boats and iconic skyline"
-              width="400"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="about-gallery-overlay">
-              <div class="about-gallery-meta text-white">
-                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  Sydney, Australia
-                </p>
-                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Sydney Opera House</p>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="about-gallery-card"
-            data-about-gallery-entrance
-            data-about-card
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-            aria-label="Coastal beach. Expand to view details."
-          >
-            <img
-              src="./assets/images/man-at-beach.png"
-              alt="Bright coastal beach and shoreline"
-              width="400"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="about-gallery-overlay">
-              <div class="about-gallery-meta text-white">
-                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  Gold Coast, Australia
-                </p>
-                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Sunrise Beach Escapes</p>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="about-gallery-card"
-            data-about-gallery-entrance
-            data-about-card
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-            aria-label="Alpine peaks. Expand to view details."
-          >
-            <img
-              src="./assets/images/destination-05-alpine-highlands.jpg"
-              alt="Alpine summit and mountain ridges"
-              width="400"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="about-gallery-overlay">
-              <div class="about-gallery-meta text-white">
-                <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  Swiss Alps, Switzerland
-                </p>
-                <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Highland Panoramas</p>
-              </div>
-            </div>
-          </article>
+          class="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.38)_0%,rgba(15,23,42,0.14)_28%,rgba(15,23,42,0.04)_48%,transparent_62%)]"
+          aria-hidden="true"
+        ></div>
+      </div>
+      <div class="relative z-10 w-full px-5 pt-5 sm:px-8 sm:pt-0 lg:px-12 xl:px-20 xl:pt-20">
+        <div class="mx-auto flex w-full max-w-[1440px] justify-center">
+          <div class="w-full max-w-3xl text-center">
+            <h1
+              id="about-showcase-heading"
+              class="load-hero text-[32px] font-extrabold leading-[1.15] 
+              tracking-tight text-white
+               [text-shadow:0_2px_20px_rgba(0,0,0,0.55),0_1px_3px_rgba(0,0,0,0.4)]
+                sm:text-[42px] lg:text-[52px]"
+            >
+              Trusted Travel Partner <br class="xl:inline-flex hidden"> Since 2000
+            </h1>
+            <p
+              class="load-hero mx-auto mt-5 max-w-[586px] text-[15px] font-normal leading-relaxed text-white [text-shadow:0_1px_14px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.35)] sm:mt-6 sm:text-[17px] lg:text-[18px]"
+            >
+              Find your next adventure with Visa Nest. From relaxing retreats to exciting explorations, we&apos;ve got the perfect destination for you!
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- UK story (same block as home #about) -->
+   
+
+    <!-- About: same block + animations as index #about -->
     <section
       id="about"
-      class="about-section relative overflow-hidden bg-white py-10 sm:py-14 md:py-18 lg:py-24"
+      class="about-section about-on-primary relative overflow-hidden
+       bg-white py-10 sm:py-14 md:py-18 
+       "
       aria-labelledby="about-heading"
     >
-      <div class="relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+      <div
+        class="about-on-primary__bg pointer-events-none absolute inset-0 z-0"
+        data-about-bg-reveal
+        aria-hidden="true"
+      ></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
         <div
           class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:items-center lg:gap-12"
         >
+          <!-- Column 1: copy + CTA -->
           <div class="order-1 lg:col-span-5 lg:pt-2">
             <p
-              class="about-anim-left text-[11px] font-bold uppercase tracking-[0.2em] text-[#0a2540] sm:text-xs"
+              class="about-anim-left text-[11px] font-bold uppercase tracking-[0.2em]
+               text-[var(--color-primary-yellow)] sm:text-xs"
             >
               About us
             </p>
-            <h2 id="about-heading" class="about-anim-left about-heading-premium mt-3 max-w-xl">
-              <span class="about-heading-accent">Simplifying Global Travel</span>
-              <span class="about-heading-accent">for <br class="lg:block hidden"> UK Residents.</span>
+            <h2 id="about-heading" class="about-anim-left about-heading-premium mt-3 max-w-xl text-white
+            ">
+              <span class="about-heading-accent">Simplifying Travel & Visa</span>
+              <span class="about-heading-accent"> <br class="lg:block hidden"> Services for UK Residents
+                .</span>
             </h2>
-            <div class="about-anim-left mt-6 flex gap-4">
+            <div class="mt-6 flex gap-4">
               <div class="min-w-0 flex-1">
-                <p class="text-[15px] leading-relaxed text-slate-700 sm:text-base xl:w-[92%]">
-                  We are a UK-registered travel agency dedicated to turning your travel plans into
-                  reality. We specialize in assisting UK residents (Non-British passport holders)
-                  with Schengen, USA, Canada, and global tourist visas. Beyond visas, we provide
-                  complete travel solutions including flight bookings, hotel reservations, and
-                  holiday packages.
+                <p
+                  class="about-anim-lead about-about-lead text-[15px] leading-relaxed sm:text-base xl:w-[92%]"
+                  data-about-lead
+                >
+                  We are a UK-based travel and visa assistance company helping residents with Schengen, UK, USA, Canada, and worldwide travel services. From visa guidance and appointment support to flights and hotel bookings, we make your travel process simple and stress-free.
                 </p>
-                <p class="about-disclaimer mt-4 sm:text-base lg:max-w-[92%]">
+                <p class="about-disclaimer about-anim-disclaimer mt-4 sm:text-base lg:max-w-[92%]">
                   Not an immigration firm — we provide professional administrative assistance.
                 </p>
               </div>
             </div>
             <a
-              href="services.html"
-              class="about-anim-left bg-black hover:bg-[#3b70fe] duration-300 mt-8 inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-[14px] font-semibold text-white"
+              href="about.html"
+              class="about-anim-cta load-nav mt-8 inline-flex items-center
+               justify-center gap-2 rounded-full border border-[#F4B400]
+                bg-[#F4B400] px-[21px] py-[14px] text-[16px] font-semibold text-[#01004b]
+                 shadow-sm shadow-amber-900/10 transition duration-500
+                 hover:bg-transparent hover:text-white focus-visible:outline-none
+                  focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2
+                  focus-visible:ring-offset-white"
             >
               Read more
-              <span aria-hidden="true" class="text-lg leading-none">&rarr;</span>
             </a>
           </div>
 
+          <!-- Column 2: image grid -->
           <div class="order-2 lg:col-span-5 lg:pl-8 xl:pl-0">
             <div class="relative w-full max-w-none">
               <div
-                class="pointer-events-none absolute -bottom-6 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-[#c9a227]/35 to-[#3b70fe]/25 blur-2xl sm:h-48 sm:w-48"
+                class="pointer-events-none absolute -bottom-6 -right-4 h-40 w-40 rounded-full bg-gradient-to-tr from-[#c9a227]/35 to-[#0047ab]/25 blur-2xl sm:h-48 sm:w-48"
                 aria-hidden="true"
               ></div>
               <div
                 class="about-visual-grid relative grid min-h-[276px]
-                 grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] grid-rows-2 gap-3 
+                 grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] grid-rows-2 gap-3
                  sm:min-h-[316px] sm:gap-4 md:min-h-[352px] lg:h-[456px]"
               >
                 <div
@@ -329,7 +243,7 @@
                   <img
                     src="./src/assets/images/flowers.png"
                     alt="Airplane wing above the clouds"
-                    class="h-full min-h-[7.75rem] 
+                    class="h-full min-h-[7.75rem]
                     w-full object-cover sm:min-h-[8.75rem] lg:min-h-[7rem] hover:brightness-90 hover:contrast-125 hover:scale-110 duration-500"
                     width="600"
                     height="400"
@@ -341,7 +255,7 @@
                   class="about-anim-img relative col-start-2 row-span-2 row-start-1 overflow-hidden rounded-2xl"
                 >
                   <img
-                    src="./assets/images/man-at-beach.png"
+                    src="./src/assets/images/man-at-beach.png"
                     alt="Traveler with backpack on a tropical coastline"
                     class="h-full min-h-[15.75rem] w-full object-cover hover:scale-110 duration-500 hover:brightness-90 hover:contrast-125 sm:min-h-[17.25rem] md:min-h-[19.25rem] lg:min-h-[15rem]"
                     width="700"
@@ -354,7 +268,7 @@
                   class="about-anim-img col-start-1 row-start-2 overflow-hidden rounded-2xl  "
                 >
                   <img
-                    src="./assets/images/destination-01-bali.jpg"
+                    src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80"
                     alt="Passport, map and travel essentials on a desk"
                     class="h-full min-h-[7.75rem] w-full object-cover hover:scale-110 duration-500 hover:brightness-90 hover:contrast-125 sm:min-h-[8.75rem] lg:min-h-[7rem]"
                     width="600"
@@ -367,20 +281,21 @@
             </div>
           </div>
 
+          <!-- Column 3: stats -->
           <div
             class="order-3 flex lg:flex-col justify-center gap-10 py-0 sm:gap-12
              sm:py-4 lg:col-span-2 lg:py-0 lg:gap-y-[72px]"
           >
             <div class="about-stat">
-              <p class="about-stat-value" data-count="12" data-suffix="+">3+</p>
+              <p class="about-stat-value " data-count="3" data-suffix="+">3+</p>
               <p class="about-stat-label">Years of experience</p>
             </div>
             <div class="about-stat">
-              <p class="about-stat-value" data-count="120" data-suffix="+">50+</p>
+              <p class="about-stat-value " data-count="50" data-suffix="+">50+</p>
               <p class="about-stat-label xl:whitespace-nowrap">Destination countries</p>
             </div>
             <div class="about-stat">
-              <p class="about-stat-value" data-count="15000" data-format="k" data-suffix="+">5K+</p>
+              <p class="about-stat-value " data-count="5000" data-format="k" data-suffix="+">5K+</p>
               <p class="about-stat-label">Satisfied clients</p>
             </div>
           </div>
@@ -388,507 +303,218 @@
       </div>
     </section>
 
-    <!-- Trusted brands: grid (About page) -->
     <section
-      id="about-trusted-brands"
-      class="relative overflow-hidden border-t border-slate-200/80 bg-[#f8fafc] py-10 sm:py-14 lg:py-20"
-      aria-labelledby="about-trusted-heading"
-    >
-      <div
-        class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_80%_at_50%_15%,rgba(255,255,255,0.92)_0%,transparent_55%)]"
-        aria-hidden="true"
-      ></div>
-      <div class="relative mx-auto w-full max-w-[1200px] px-5 sm:px-8 lg:px-12">
-        <h2
-          id="about-trusted-heading"
-          class="text-center text-[1.35rem] font-bold tracking-tight text-slate-800 sm:text-2xl md:text-[1.75rem]"
-          data-trusted-anim
-        >
-          Trusted by Top Brands Worldwide
-        </h2>
-        <p
-          class="mx-auto mt-3 max-w-2xl text-center text-[14px] leading-relaxed text-slate-600 sm:text-[15px]"
-          data-trusted-anim
-        >
-          At Visa Nest, we&apos;re proud to work alongside some of the most recognised names in travel, payments, and reviews.
-        </p>
-        <div
-          class="about-trusted-grid mx-auto mt-10 grid max-w-[1040px] grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4 md:gap-6"
-        >
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <span class="brand-logo-shell brand-logo-shell--google flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11" aria-hidden="true">
-                <svg class="h-full w-full" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-              </span>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">Google</span>
-            </span>
-          </div>
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <img src="https://cdn.simpleicons.org/trustpilot/00B67A" width="36" height="36" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" alt="" loading="lazy" decoding="async"/>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">Trustpilot</span>
-            </span>
-          </div>
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <span class="brand-logo-shell brand-logo-shell--visasure flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11" aria-hidden="true">
-                <svg class="h-full w-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
-                </svg>
-              </span>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">VisaSure UK</span>
-            </span>
-          </div>
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <img src="https://cdn.simpleicons.org/visa/1A1F71" width="44" height="44" class="h-11 w-11 shrink-0" alt="Visa" loading="lazy" decoding="async"/>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">Visa</span>
-            </span>
-          </div>
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <img src="https://cdn.simpleicons.org/mastercard/EB001B" width="44" height="44" class="h-11 w-11 shrink-0" alt="" loading="lazy" decoding="async"/>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">Mastercard</span>
-            </span>
-          </div>
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <span class="brand-logo-shell brand-logo-shell--skyscanner flex h-10 w-10 shrink-0 items-center justify-center sm:h-11 sm:w-11" aria-hidden="true">
-                <svg class="h-full w-full" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="#077ACE" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                </svg>
-              </span>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">Skyscanner</span>
-            </span>
-          </div>
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <img src="https://cdn.simpleicons.org/tripadvisor/00AF87" width="44" height="44" class="h-11 w-11 shrink-0" alt="" loading="lazy" decoding="async"/>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">Tripadvisor</span>
-            </span>
-          </div>
-          <div class="about-trusted-card" data-trusted-anim>
-            <span class="about-trusted-card__inner">
-              <img src="https://cdn.simpleicons.org/expedia/FFC72C" width="44" height="44" class="h-11 w-11 shrink-0" alt="" loading="lazy" decoding="async"/>
-              <span class="text-sm font-semibold tracking-tight text-slate-700">Expedia</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="services-why-section"
-      class="bg-white py-12 sm:py-16 lg:py-20"
-      aria-labelledby="services-why-heading"
+      id="about-destination-highlights"
+      class="relative bg-white pb-12 pt-8 sm:pb-16 sm:pt-10 lg:pb-20 lg:pt-12"
+      aria-labelledby="about-destination-highlights-heading"
     >
       <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
-        <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-10 lg:gap-14">
-          <div class="max-w-xl md:max-w-2xl lg:max-w-[40rem]">
-            <h2
-              id="services-why-heading"
-              class="text-[1.75rem] font-bold leading-tight tracking-tight text-[#1a1a1a] sm:text-4xl lg:text-[2.5rem]"
-            >
-              Why Choose Visa Nest?
-            </h2>
-            <p
-              id="services-why-description"
-              class="mt-4 text-base leading-relaxed text-[#555555] sm:mt-5 sm:text-lg sm:leading-relaxed"
-            >
-              We partner with trusted operators and clear-eyed visa guidance so every step of your journey feels planned, supported, and built around you.
-            </p>
-          </div>
-          <a
-            id="services-why-contact"
-            href="contact.html"
-            class="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-black px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-500 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe]/40 focus-visible:ring-offset-2 md:mt-1"
+        <div class="mx-auto max-w-[1320px] text-center lg:text-left">
+          <p
+            class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary-yellow sm:text-xs"
+            data-destination-highlights-anim
           >
-            Contact Us
-            <span class="text-lg leading-none" aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-
-        <div
-          id="services-why-media"
-          class="relative lg:mt-0 mt-10 aspect-video overflow-hidden rounded-2xl bg-slate-900 shadow-[0_25px_80px_-30px_rgba(15,23,42,0.4)] sm:mt-12 sm:rounded-3xl lg:mt-14 lg:rounded-[2rem]"
-        >
-          <video
-            id="services-why-video"
-            class="h-full w-full object-cover"
-            loop
-            muted
-            playsinline
-            preload="metadata"
-            poster="./src/assets/images/mirror.webp"
+            Where we take you
+          </p>
+          <h2
+            id="about-destination-highlights-heading"
+            class="mt-3 text-[1.75rem] font-bold leading-tight tracking-tight text-primary-blue sm:text-4xl lg:mt-4 lg:text-[2.5rem] lg:max-w-[34rem]"
+            data-destination-highlights-anim
           >
-            <source
-              src="https://framerusercontent.com/assets/0OHtSMgrBACOp6V9EqV3e6KtlSQ.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-slate-950/10" aria-hidden="true"></div>
-
-          <button
-            type="button"
-            id="services-why-play"
-            class="group absolute inset-0 z-[1] flex items-center justify-center bg-black/30 opacity-100 transition-[background-color,opacity] duration-300 hover:bg-black/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/90 [.is-playing]:bg-transparent [.is-playing]:opacity-0 [.is-playing]:hover:opacity-100 [.is-playing]:hover:bg-black/35"
-            aria-controls="services-why-video"
-            aria-label="Play video"
+            From first idea to take-off—planned with care.
+          </h2>
+          <p
+            class="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-slate-600 sm:mt-5 sm:text-[16px] lg:mx-0 lg:max-w-2xl"
+            data-destination-highlights-anim
           >
-            <span class="pointer-events-none relative grid place-items-center">
-              <svg
-                id="services-why-icon-play"
-                class="col-start-1 row-start-1 h-16 w-16 text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)] transition duration-300 group-hover:scale-105 sm:h-20 sm:w-20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M8 5v14l11-7L8 5z" />
-              </svg>
-              <svg
-                id="services-why-icon-pause"
-                class="col-start-1 row-start-1 hidden h-14 w-14 text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.55)] transition duration-300 group-hover:scale-105 sm:h-16 sm:w-16"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z" />
-              </svg>
-            </span>
-          </button>
+            Visa Nest exists to make ambitious travel feel achievable. The places below are a glimpse of the
+            landscapes and cultures we help UK residents explore—always with clear guidance, careful planning,
+            and support that stays with you on the road.
+          </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Discover the moments: dual infinite image rows -->
-    <section
-      id="moments"
-      class="moments-section relative overflow-hidden py-10 sm:py-14 lg:py-20"
-      aria-labelledby="moments-heading"
-    >
-      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
-        <h2 id="moments-heading" class="our-heading font-[600] text-slate-900" data-moments-anim>
-          Discover the Moments
-        </h2>
-        <p class="mt-3 max-w-3xl text-[16px] leading-relaxed text-slate-600" data-moments-anim>
-          A glimpse of journeys planned with Visa Nest — from quiet escapes to bold adventures across the globe.
-        </p>
-      </div>
-
-      <div class="moments-marquee-viewport mt-10 w-full overflow-hidden" data-moments-anim>
         <div
-          data-moments-track
-          data-moments-direction="ltr"
-          class="flex w-max gap-3 will-change-transform sm:gap-4 md:gap-4"
+          id="about-gallery-track"
+          class="about-gallery-track mx-auto mt-10 max-w-[1320px] max-md:flex-col max-md:gap-4 max-md:!h-auto sm:mt-12 md:h-[380px] lg:h-[440px] h-[240px] sm:h-[300px]"
+          role="group"
+          aria-label="Destination highlight cards"
         >
-          <div class="moments-marquee-set flex shrink-0 items-end gap-3 sm:gap-4 md:gap-4">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=480&q=82"
-                alt=""
-                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[102px] w-[198px] object-cover sm:h-[118px] sm:w-[228px] md:h-[132px] md:w-[256px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=520&q=82"
-                alt=""
-                class="h-[168px] w-[152px] object-cover sm:h-[188px] sm:w-[170px] md:h-[200px] md:w-[182px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=640&q=82"
-                alt=""
-                class="h-[128px] w-[178px] object-cover sm:h-[146px] sm:w-[202px] md:h-[158px] md:w-[218px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=520&q=82"
-                alt=""
-                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[108px] w-[208px] object-cover sm:h-[124px] sm:w-[238px] md:h-[138px] md:w-[268px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-          <div class="moments-marquee-set flex shrink-0 items-end gap-3 sm:gap-4 md:gap-4" aria-hidden="true">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=480&q=82"
-                alt=""
-                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[102px] w-[198px] object-cover sm:h-[118px] sm:w-[228px] md:h-[132px] md:w-[256px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=520&q=82"
-                alt=""
-                class="h-[168px] w-[152px] object-cover sm:h-[188px] sm:w-[170px] md:h-[200px] md:w-[182px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=640&q=82"
-                alt=""
-                class="h-[128px] w-[178px] object-cover sm:h-[146px] sm:w-[202px] md:h-[158px] md:w-[218px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=520&q=82"
-                alt=""
-                class="h-[148px] w-[118px] object-cover sm:h-[168px] sm:w-[134px] md:h-[188px] md:w-[150px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[108px] w-[208px] object-cover sm:h-[124px] sm:w-[238px] md:h-[138px] md:w-[268px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="moments-marquee-viewport mt-4 w-full overflow-hidden sm:mt-5 md:mt-5" data-moments-anim>
-        <div
-          data-moments-track
-          data-moments-direction="rtl"
-          class="flex w-max gap-3 will-change-transform sm:gap-4 md:gap-4"
+        <article
+          class="about-gallery-card"
+          data-about-gallery-entrance
+          data-about-card
+          tabindex="0"
+          role="button"
+          aria-expanded="false"
+          aria-label="Lake district, New Zealand. Expand to view details."
         >
-          <div class="moments-marquee-set flex shrink-0 items-start gap-3 sm:gap-4 md:gap-4">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[108px] w-[228px] object-cover sm:h-[124px] sm:w-[258px] md:h-[138px] md:w-[288px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=520&q=82"
-                alt=""
-                class="h-[178px] w-[138px] object-cover sm:h-[198px] sm:w-[154px] md:h-[208px] md:w-[168px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=640&q=82"
-                alt=""
-                class="h-[128px] w-[188px] object-cover sm:h-[146px] sm:w-[212px] md:h-[158px] md:w-[228px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=480&q=82"
-                alt=""
-                class="h-[198px] w-[148px] object-cover sm:h-[218px] sm:w-[162px] md:h-[228px] md:w-[172px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[118px] w-[218px] object-cover sm:h-[134px] sm:w-[248px] md:h-[148px] md:w-[278px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=560&q=82"
-                alt=""
-                class="h-[168px] w-[158px] object-cover sm:h-[188px] sm:w-[176px] md:h-[198px] md:w-[188px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
+          <img
+            src="./assets/images/destination-02-tongariro.jpg"
+            alt="Mountain trail above clouds in New Zealand"
+            width="400"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="about-gallery-overlay">
+            <div class="about-gallery-meta text-white">
+              <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                Tongariro, New Zealand
+              </p>
+              <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Alpine Ridge Trails</p>
             </div>
           </div>
-          <div class="moments-marquee-set flex shrink-0 items-start gap-3 sm:gap-4 md:gap-4" aria-hidden="true">
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[108px] w-[228px] object-cover sm:h-[124px] sm:w-[258px] md:h-[138px] md:w-[288px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=520&q=82"
-                alt=""
-                class="h-[178px] w-[138px] object-cover sm:h-[198px] sm:w-[154px] md:h-[208px] md:w-[168px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=640&q=82"
-                alt=""
-                class="h-[128px] w-[188px] object-cover sm:h-[146px] sm:w-[212px] md:h-[158px] md:w-[228px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=480&q=82"
-                alt=""
-                class="h-[198px] w-[148px] object-cover sm:h-[218px] sm:w-[162px] md:h-[228px] md:w-[172px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=720&q=82"
-                alt=""
-                class="h-[118px] w-[218px] object-cover sm:h-[134px] sm:w-[248px] md:h-[148px] md:w-[278px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div class="shrink-0 overflow-hidden rounded-lg shadow-md shadow-slate-900/10 ring-1 ring-black/5 md:rounded-xl">
-              <img
-                src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=560&q=82"
-                alt=""
-                class="h-[168px] w-[158px] object-cover sm:h-[188px] sm:w-[176px] md:h-[198px] md:w-[188px]"
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                referrerpolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <!-- Newsletter -->
+        <article
+          class="about-gallery-card"
+          data-about-gallery-entrance
+          data-about-card
+          tabindex="0"
+          role="button"
+          aria-expanded="false"
+          aria-label="Kyoto gardens. Expand to view details."
+        >
+          <img
+            src="./assets/images/flowers.png"
+            alt="Lush garden paths and seasonal color"
+            width="400"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="about-gallery-overlay">
+            <div class="about-gallery-meta text-white">
+              <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                Kyoto, Japan
+              </p>
+              <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Garden &amp; Forest Walks</p>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="about-gallery-card"
+          data-about-gallery-entrance
+          data-about-card
+          tabindex="0"
+          role="button"
+          aria-expanded="false"
+          aria-label="Sydney harbour. Expand to view details."
+        >
+          <img
+            src="./assets/images/boat.png"
+            alt="Sydney harbour with boats and iconic skyline"
+            width="400"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="about-gallery-overlay">
+            <div class="about-gallery-meta text-white">
+              <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                Sydney, Australia
+              </p>
+              <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Sydney Opera House</p>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="about-gallery-card"
+          data-about-gallery-entrance
+          data-about-card
+          tabindex="0"
+          role="button"
+          aria-expanded="false"
+          aria-label="Coastal beach. Expand to view details."
+        >
+          <img
+            src="./assets/images/man-at-beach.png"
+            alt="Bright coastal beach and shoreline"
+            width="400"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="about-gallery-overlay">
+            <div class="about-gallery-meta text-white">
+              <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                Gold Coast, Australia
+              </p>
+              <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Sunrise Beach Escapes</p>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="about-gallery-card"
+          data-about-gallery-entrance
+          data-about-card
+          tabindex="0"
+          role="button"
+          aria-expanded="false"
+          aria-label="Alpine peaks. Expand to view details."
+        >
+          <img
+            src="./assets/images/destination-05-alpine-highlands.jpg"
+            alt="Alpine summit and mountain ridges"
+            width="400"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="about-gallery-overlay">
+            <div class="about-gallery-meta text-white">
+              <p class="inline-flex items-center gap-1.5 text-[12px] font-medium text-white/90 sm:text-[13px]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                Swiss Alps, Switzerland
+              </p>
+              <p class="mt-1.5 text-lg font-bold leading-tight tracking-tight sm:text-xl">Highland Panoramas</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+    <!-- Newsletter (same as index) -->
     <section
       id="newsletter"
-      class="relative overflow-hidden bg-white py-10 sm:py-14 lg:py-20"
+      class="newsletter-section newsletter-on-primary relative overflow-hidden bg-white py-10 sm:py-14 lg:py-20"
       aria-labelledby="newsletter-heading"
     >
-      <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
+      <div
+        class="newsletter-on-primary__bg pointer-events-none absolute inset-0 z-0"
+        data-newsletter-bg-reveal
+        aria-hidden="true"
+      ></div>
+      <div class="relative z-10 mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
         <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-12 xl:gap-16">
           <div class="min-w-0 lg:max-w-[46rem] lg:pr-4">
             <h2
               id="newsletter-heading"
-              class="our-heading font-[600] leading-tight text-slate-900"
+              class="text-[1.75rem] font-bold leading-tight tracking-tight
+               sm:text-4xl lg:text-[2.5rem] text-white"
               data-newsletter-anim
             >
               Stay Updated on the Latest Adventures, Tips, and Exclusive Offers.
             </h2>
             <p
-              class="mt-4 max-w-lg text-[15px] leading-relaxed text-slate-600 sm:mt-5 sm:text-[16px]"
+              id="newsletter-description"
+              class="mt-4 max-w-lg text-[15px] leading-relaxed sm:mt-5 sm:text-[16px] text-white"
               data-newsletter-anim
             >
               Never miss out on travel tips, exclusive offers, and inspiring destinations. Subscribe to our
@@ -909,11 +535,14 @@
                 autocomplete="email"
                 required
                 placeholder="Enter your email"
-                class="min-h-12 w-full min-w-0 flex-1 rounded-full border border-slate-300 bg-white px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition placeholder:text-slate-400 focus:border-[#3b70fe] focus:ring-2 focus:ring-[#3b70fe]/25"
+                class="min-h-12 w-full min-w-0 flex-1 rounded-full border-2 bg-transparent px-5 py-3 text-[15px] text-slate-900 shadow-sm outline-none transition focus:ring-2 focus:ring-[#0047ab]/25"
               />
               <button
                 type="submit"
-                class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-full bg-slate-900 px-8 py-3 text-[15px] font-semibold text-white transition duration-300 hover:bg-[#3b70fe] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3b70fe] focus-visible:ring-offset-2 sm:px-10"
+                class="inline-flex min-h-12 shrink-0 cursor-pointer items-center
+                 justify-center rounded-full border-2 border-primary-yellow
+                  bg-primary-yellow px-8 py-3 text-[15px] font-semibold text-white
+                   transition duration-300 hover:bg-transparent  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0047ab] focus-visible:ring-offset-2 sm:px-10"
               >
                 Subscribe
               </button>
@@ -925,8 +554,8 @@
             data-newsletter-anim
           >
             <div
-              class="relative h-[250px] w-full 
-               rounded-xl bg-[#c6984f]  sm:h-[290px] lg:h-[340px] lg:overflow-visible"
+              class="relative h-[250px] w-full
+               rounded-xl bg-primary-yellow  sm:h-[290px] lg:h-[340px] lg:overflow-visible"
             >
               <img
                 src="./src/assets/images/man.png"
@@ -949,7 +578,7 @@
                 aria-hidden="true"
               >
                 <svg
-                  class="absolute -bottom-0.5 -right-0.5 h-10 w-14 text-[#3b70fe]"
+                  class="absolute -bottom-0.5 -right-0.5 h-10 w-14 text-[#0047ab]"
                   viewBox="0 0 80 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -975,87 +604,96 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative overflow-hidden border-t border-slate-200 bg-[#f6f7fb]">
+  <!-- Footer -->
+  <footer class="relative overflow-hidden border-t border-slate-200 bg-primary-yellow ">
     <div class="mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-8 sm:py-12 lg:px-14 xl:px-20">
-        <div class="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
-        <div class="col-span-2 min-w-0 lg:col-span-5" data-footer-anim>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-10  md:grid-cols-12 lg:gap-10">
+        <div class="col-span-2 min-w-0 md:col-span-5" data-footer-anim>
           <a href="index.html" class="inline-flex items-center gap-2">
-            <span class="inline-flex h-10 w-10 items-center justify-center overflow-hidden sm:h-11 sm:w-11">
-              <img src="./src/assets/images/logo.png" alt="Visa Nest logo" class="h-full w-full object-contain" loading="lazy" decoding="async" />
+            <span class="inline-flex shrink-0 items-center justify-center leading-none rounded-xl bg-white/95 shadow-[0_10px_28px_-12px_rgba(0,0,0,0.45)] ring-1 ring-white/70 px-2 backdrop-blur-sm">
+              <img
+                src="./src/assets/images/logo.png"
+                alt="Visa Nest logo"
+                class="w-[64px] sm:w-[90px] scale-125 [filter:drop-shadow(0_0_1px_rgba(255,255,255,0.95))_drop-shadow(0_0_10px_rgba(255,255,255,0.35))]"
+                loading="lazy"
+                decoding="async"
+              />
             </span>
-            <span class="text-[29px] font-semibold tracking-tight text-slate-900">Visa <span class="text-[#3b70fe]">Nest</span></span>
           </a>
-          <p class="mt-4 max-w-md text-[15px] leading-relaxed text-slate-600">
+          <p class="mt-4 max-w-md text-[15px] leading-relaxed text-[#01004b]">
             Explore amazing destinations with ease. We plan everything for you, from flights to stays,
             so you can travel stress-free and enjoy unforgettable adventures.
           </p>
           <div class="mt-6">
-            <p class="text-[16px] font-semibold text-slate-800">Follow Us On</p>
+            <p class="text-[16px] font-semibold text-[#01004b]">Follow Us On</p>
                         <div class="mt-3 flex items-center gap-3">
-              <a href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+              <a href="https://www.linkedin.com/in/mubeen-ahmad-56509a293/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.96 1.96 0 1 0 5.3 6.9 1.96 1.96 0 0 0 5.25 3Zm14.19 9.72c0-3.01-1.6-4.4-3.73-4.4-1.72 0-2.49.94-2.92 1.6V8.5H9.41c.04.94 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20h3.38v-7.28Z"/></svg>
               </a>
-              <a href="https://www.facebook.com/mubeen.ahmad.developer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
+              <a href="https://www.facebook.com/mubeen.ahmad.developer" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.2h2.4l.36-2.8H13.5V9.22c0-.8.22-1.34 1.37-1.34h1.47V5.37A19.47 19.47 0 0 0 14.2 5c-2.13 0-3.6 1.3-3.6 3.7V11H8.2v2.8h2.4V21h2.9Z"/></svg>
               </a>
-              <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
-              </a>
-              <a href="https://www.upwork.com/freelancers/~0173f9182814d1e8fd" target="_blank" rel="noopener noreferrer" aria-label="Upwork" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-[11px] font-bold tracking-[0.08em] text-slate-700 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">UP</a>
-              <a href="https://discord.com/users/1440685400053256293" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition hover:border-[#3b70fe] hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A17.7 17.7 0 0 0 16 3l-.2.4a15 15 0 0 1 4.2 2.1 14.7 14.7 0 0 0-5.3-2.5 17.3 17.3 0 0 0-5.4 0A14.7 14.7 0 0 0 4 5.5 15 15 0 0 1 8.2 3.4L8 3a17.7 17.7 0 0 0-4.3 1.4C1.2 8.1.6 11.6.8 15c1.6 1.2 3.2 1.9 4.8 2.4l1.1-1.8c-.6-.2-1.2-.5-1.8-.8l.4-.3c3.5 1.7 7.4 1.7 10.9 0l.4.3c-.6.3-1.2.6-1.8.8l1.1 1.8c1.6-.5 3.2-1.2 4.8-2.4.3-4-.5-7.4-3.4-10.6ZM9 13.3c-1 0-1.9-.9-1.9-1.9S8 9.5 9 9.5s1.9.9 1.9 1.9S10.1 13.3 9 13.3Zm6 0c-1 0-1.9-.9-1.9-1.9S14 9.5 15 9.5s1.9.9 1.9 1.9-.8 1.9-1.9 1.9Z"/></svg>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition hover:border-[#0047ab] hover:text-[#0047ab]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
             </div>
           </div>
         </div>
 
-        <div class="min-w-0 lg:col-span-2" data-footer-anim>
-          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Quick Links</h3>
-          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
-            <li><a href="index.html" class="transition hover:text-[#3b70fe]">Home</a></li>
-            <li><a href="about.html" class="transition hover:text-[#3b70fe]">About Us</a></li>
-            <li><a href="destinations.html" class="transition hover:text-[#3b70fe]">Destination</a></li>
-            <li><a href="blog.html" class="transition hover:text-[#3b70fe]">Blog & Articles</a></li>
+        <div class="min-w-0 md:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#01004b]">Quick Links</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-[#01004b]">
+            <li><a href="index.html" class="transition hover:text-[#0047ab]">Home</a></li>
+            <li><a href="about.html" class="transition hover:text-[#0047ab]">About Us</a></li>
+            <li><a href="destinations.html" class="transition hover:text-[#0047ab]">Destination</a></li>
+            <li><a href="blog.html" class="transition hover:text-[#0047ab]">Blog &amp; Articles</a></li>
           </ul>
         </div>
 
-        <div class="min-w-0 lg:col-span-2" data-footer-anim>
-          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Support</h3>
-          <ul class="mt-4 space-y-2.5 text-[15px] text-slate-600">
-            <li><a href="#contact" class="transition hover:text-[#3b70fe]">Contact Us</a></li>
-            <li><a href="contact.html#contact-form" class="transition hover:text-[#3b70fe]">Support Center</a></li>
-            <li><a href="services.html" class="transition hover:text-[#3b70fe]">Services</a></li>
-            <li><a href="privacy.html" class="transition hover:text-[#3b70fe]">Privacy Policy</a></li>
+        <div class="min-w-0 md:col-span-2" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#01004b]">Support</h3>
+          <ul class="mt-4 space-y-2.5 text-[15px] text-[#01004b]">
+            <li><a href="contact.html" class="transition hover:text-[#0047ab]">Contact Us</a></li>
+            <li><a href="contact.html#contact-form" class="transition hover:text-[#0047ab]">Support Center</a></li>
+            <li><a href="services.html" class="transition hover:text-[#0047ab]">Services</a></li>
+            <li><a href="privacy.html" class="transition hover:text-[#0047ab]">Privacy Policy</a></li>
           </ul>
         </div>
 
-        <div id="contact" class="col-span-2 min-w-0 lg:col-span-3" data-footer-anim>
-          <h3 class="text-[20px] font-medium tracking-tight text-slate-900">Contact Us</h3>
+        <div id="contact" class="col-span-2 min-w-0 md:col-span-3" data-footer-anim>
+          <h3 class="text-[20px] font-medium tracking-tight text-[#01004b]">Contact Us</h3>
           <ul class="mt-4 space-y-3.5">
             <li class="group flex items-center gap-3">
-              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#0047ab]/60 group-hover:bg-[#0047ab]/5 group-hover:text-[#0047ab]">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
               </span>
-              <a href="tel:+923269325096" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">+92 326 9325096</a>
+              <a href="tel:+447446230755" class="min-w-0 break-words text-[15px] text-[#01004b] transition hover:text-[#0047ab]">074 4623 0755</a>
             </li>
             
             <li class="group flex items-center gap-3">
-              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center 
+              justify-center rounded-full border border-[#01004b] text-[#01004b] transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#0047ab]/60 group-hover:bg-[#0047ab]/5 group-hover:text-[#0047ab]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                 stroke-width="1.9" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
               </span>
-              <a href="mailto:mubeenahmad3377@gmail.com" class="min-w-0 break-words text-[15px] text-slate-600 transition hover:text-[#3b70fe]">mubeenahmad3377@gmail.com</a>
+              <a href="mailto:info@visanest.co.uk" class="min-w-0 break-words text-[15px] text-[#01004b] transition hover:text-[#0047ab]">info@visanest.co.uk</a>
             </li>
             <li class="group flex items-center gap-3">
-              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#3b70fe]/60 group-hover:bg-[#3b70fe]/5 group-hover:text-[#3b70fe]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#01004b] text-[#01004b] transition duration-300 group-hover:-translate-y-0.5 group-hover:border-[#0047ab]/60 group-hover:bg-[#0047ab]/5 group-hover:text-[#0047ab]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.9" 
+                 aria-hidden="true"><path stroke-linecap="round" 
+                 stroke-linejoin="round" d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/>
+                 <circle cx="12" cy="10" r="3"/></svg>
               </span>
-              <p class="min-w-0 break-words text-[15px] leading-relaxed text-slate-600">Lahore, Pakistan</p>
+              <p class="min-w-0 break-words text-[15px] leading-relaxed text-[#01004b]">Office 211, Unit 5, Mayfair, London W1C 2BU, UK</p>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="border-t border-slate-300/70 bg-[#3b70fe]" data-footer-anim>
+    <div class="border-t border-slate-300/70 bg-[#0047ab]" data-footer-anim>
       <div class="mx-auto flex w-full max-w-[1440px] flex-col items-center  justify-between gap-3
        px-5 py-8 text-white sm:flex-row sm:px-8 sm:py-6 lg:px-14 lg:py-7 xl:px-20">
         <p class="w-full text-center text-[14px] text-white/95 sm:w-auto sm:text-left">© Copyrights 2026 Visa Nest. All rights reserved.</p>
@@ -1070,15 +708,15 @@
   <!-- Fixed contact launcher -->
   <div id="quick-contact-fab" class="fixed bottom-4 right-4 z-[80] sm:bottom-5 sm:right-5">
     <div id="quick-contact-list" class="pointer-events-none mb-3 flex origin-bottom-right translate-y-2 scale-95 flex-col items-center gap-2 opacity-0 transition duration-300">
-      <a href="tel:+923269325096" aria-label="Call Visa Nest" class="inline-flex h-12
+      <a href="tel:+447446230755" aria-label="Call Visa Nest" class="inline-flex h-12
        w-12 items-center justify-center rounded-full border border-white/90 bg-[#1ed760]
         text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11l-.85.85a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></svg>
       </a>
-      <a href="https://wa.me/923269325096" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#27d66f] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+      <a href="https://wa.me/447446230755" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#27d66f] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.37 2 11.76c0 2.1.68 4.05 1.85 5.64L2.64 22l4.78-1.23A10.16 10.16 0 0 0 12.04 22C17.6 22 22 17.63 22 12.24 22 6.37 17.6 2 12.04 2Zm5.87 14.87c-.25.68-1.45 1.3-2 1.38-.52.08-1.17.12-1.88-.11-.43-.14-.99-.32-1.71-.62-3-.98-4.96-3.46-5.11-3.66-.15-.2-1.22-1.58-1.22-3.02 0-1.44.76-2.15 1.03-2.44.27-.28.58-.35.77-.35.2 0 .39 0 .56.01.18.01.41-.07.64.48.24.56.82 1.93.89 2.08.07.15.12.33.02.52-.1.2-.15.33-.3.5-.15.17-.31.38-.44.51-.15.15-.3.32-.13.63.17.3.75 1.21 1.61 1.96 1.1.95 2.04 1.24 2.34 1.38.3.15.47.13.65-.08.18-.2.74-.86.94-1.16.2-.3.4-.26.67-.16.28.1 1.74.8 2.04.94.3.14.5.21.57.33.08.12.08.71-.17 1.39Z"/></svg>
       </a>
-      <a href="mailto:mubeenahmad3377@gmail.com" aria-label="Email Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#ff4d68] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
+      <a href="mailto:info@visanest.co.uk" aria-label="Email Visa Nest" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#ff4d68] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
       </a>
       <a href="contact.html#contact-form" aria-label="Open contact form" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/90 bg-[#113e7a] text-white shadow-lg shadow-slate-900/25 ring-1 ring-white/45 transition hover:scale-105">
@@ -1105,13 +743,13 @@
       const navEls = document.querySelectorAll(".load-nav");
       const showcase = document.getElementById("about-showcase");
       const heroTitle = showcase?.querySelector("#about-showcase-heading");
-      const heroSub = showcase?.querySelector(".mx-auto.max-w-3xl > p.load-hero");
-      const heroCta = showcase?.querySelector(".mx-auto.max-w-3xl > div.load-hero");
-      const galleryCards = showcase?.querySelectorAll("[data-about-gallery-entrance]");
+      const heroSub = showcase?.querySelector("#about-showcase p.load-hero");
+      const galleryRoot = document.getElementById("about-destination-highlights");
+      const galleryCards = galleryRoot?.querySelectorAll("[data-about-gallery-entrance]");
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const isNarrow = window.matchMedia("(max-width: 1023px)").matches;
 
-      const heroChain = [heroTitle, heroSub, heroCta].filter(Boolean);
+      const heroChain = [heroTitle, heroSub].filter(Boolean);
 
       if (typeof gsap === "undefined" || reduceMotion) {
         document.documentElement.classList.add("load-anim-skip");
@@ -1142,9 +780,10 @@
           tl.to(navEls, {
             opacity: 1,
             y: 0,
-            duration: 0.52,
-            stagger: 0.05,
-            ease: "power2.out",
+            scale: 1,
+            duration: 0.88,
+            stagger: 0.1,
+            ease: "power3.out",
           });
           if (heroChain.length) {
             tl.to(
@@ -1172,8 +811,8 @@
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.78,
-            stagger: 0.09,
+            duration: 0.95,
+            stagger: 0.12,
             ease: "power3.out",
           });
           if (heroChain.length) {
@@ -1203,170 +842,6 @@
         document.documentElement.classList.add("load-anim-skip");
         document.documentElement.classList.add("hero-heading-shimmer-on");
       }
-    });
-  </script>
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
-        return;
-      }
-
-      const section = document.getElementById("about");
-      if (!section) return;
-
-      const leftItems = section.querySelectorAll(".about-anim-left");
-      const imgs = section.querySelectorAll(".about-anim-img");
-      const statEls = section.querySelectorAll(".about-stat-value");
-
-      if (!leftItems.length && !imgs.length && !statEls.length) return;
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      const formatStat = (value, format, suffix) => {
-        if (format === "k") {
-          const k = Math.max(0, Math.round(value / 1000));
-          return `${k}K${suffix || ""}`;
-        }
-        const n = Math.max(0, Math.round(value));
-        return `${n}${suffix || ""}`;
-      };
-
-      const resetStatsToZero = () => {
-        statEls.forEach((el) => {
-          const format = el.dataset.format || "";
-          const suffix = el.dataset.suffix || "";
-          el.textContent = formatStat(0, format, suffix);
-        });
-      };
-
-      try {
-        gsap.set(leftItems, { opacity: 0, y: 48, filter: "blur(10px)", force3D: true });
-        gsap.set(imgs, { opacity: 0, y: 42, scale: 0.94, filter: "blur(12px)", force3D: true });
-        gsap.set(statEls, { opacity: 0, y: 24, filter: "blur(8px)", force3D: true });
-        resetStatsToZero();
-
-        const visualTl = gsap.timeline({
-          defaults: { ease: "power3.out" },
-          scrollTrigger: {
-            trigger: section,
-            start: "top 98%",
-            end: "bottom 68%",
-            scrub: 1.1,
-            invalidateOnRefresh: true,
-          },
-          onComplete: () => {
-            gsap.set([leftItems, imgs, statEls], { clearProps: "filter" });
-          },
-        });
-
-        visualTl
-          .to(leftItems, {
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px)",
-            duration: 0.8,
-            stagger: 0.16,
-          })
-          .to(
-            imgs,
-            {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              filter: "blur(0px)",
-              duration: 0.82,
-              stagger: 0.12,
-              ease: "power4.out",
-            },
-            "-=0.55"
-          )
-          .to(
-            statEls,
-            {
-              opacity: 1,
-              y: 0,
-              filter: "blur(0px)",
-              duration: 0.62,
-              stagger: 0.12,
-              ease: "power3.out",
-            },
-            "-=0.4"
-          );
-
-        const activeCounterTweens = [];
-        const stopCounterTweens = () => {
-          activeCounterTweens.forEach((t) => t.kill());
-          activeCounterTweens.length = 0;
-        };
-
-        const playCountUp = () => {
-          stopCounterTweens();
-          resetStatsToZero();
-          statEls.forEach((el, idx) => {
-            const target = Number(el.dataset.count || "0") || 0;
-            const format = el.dataset.format || "";
-            const suffix = el.dataset.suffix || "";
-            const step = format === "k" ? 1000 : 1;
-            const counter = { v: 0 };
-            const tween = gsap.to(counter, {
-              v: target,
-              duration: 2.2 + idx * 0.25,
-              ease: "power1.out",
-              snap: { v: step },
-              onUpdate: () => {
-                el.dataset.current = String(counter.v);
-                el.textContent = formatStat(counter.v, format, suffix);
-              },
-            });
-            activeCounterTweens.push(tween);
-          });
-        };
-
-        const playCountDown = () => {
-          stopCounterTweens();
-          statEls.forEach((el, idx) => {
-            const format = el.dataset.format || "";
-            const suffix = el.dataset.suffix || "";
-            const step = format === "k" ? 1000 : 1;
-            const startVal = Number(el.dataset.current || "0") || 0;
-            const counter = { v: startVal };
-            const tween = gsap.to(counter, {
-              v: 0,
-              duration: 1.0 + idx * 0.12,
-              ease: "power1.in",
-              snap: { v: step },
-              onUpdate: () => {
-                el.dataset.current = String(counter.v);
-                el.textContent = formatStat(counter.v, format, suffix);
-              },
-              onComplete: () => {
-                el.dataset.current = "0";
-              },
-            });
-            activeCounterTweens.push(tween);
-          });
-        };
-
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top 98%",
-          invalidateOnRefresh: true,
-          onEnter: () => playCountUp(),
-          onEnterBack: () => playCountUp(),
-          onLeaveBack: () => playCountDown(),
-        });
-      } catch {
-        if (typeof gsap !== "undefined") {
-          gsap.set([leftItems, imgs, statEls], { clearProps: "opacity,transform,filter" });
-        }
-      }
-
-      window.addEventListener("load", () => {
-        if (typeof ScrollTrigger !== "undefined") {
-          ScrollTrigger.refresh();
-        }
-      });
     });
   </script>
   <script>
@@ -1690,7 +1165,60 @@
       }
     });
   </script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const sec = document.getElementById("about-destination-highlights");
+      if (!sec) return;
+      const els = sec.querySelectorAll("[data-destination-highlights-anim]");
+      if (!els.length) return;
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      try {
+        gsap.set(els, { opacity: 0, y: 36, filter: "blur(8px)", force3D: true });
+
+        gsap.to(els, {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 0.72,
+          stagger: 0.12,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sec,
+            start: "top 50%",
+            toggleActions: "play none none none",
+            invalidateOnRefresh: true,
+          },
+          onComplete: () => {
+            gsap.set(els, { clearProps: "filter" });
+          },
+        });
+
+        window.addEventListener("load", () => {
+          if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.refresh();
+          }
+        });
+        window.addEventListener("pageshow", () => {
+          if (typeof ScrollTrigger !== "undefined") {
+            ScrollTrigger.refresh();
+          }
+        });
+      } catch {
+        if (typeof gsap !== "undefined") {
+          gsap.set(els, { clearProps: "opacity,transform,filter" });
+        }
+      }
+    });
+  </script>
   <script type="module" src="./src/about-gallery.js"></script>
+  <script type="module" src="./src/about-on-primary.js"></script>
   <script type="module" src="./src/newsletter-footer.js"></script>
   <script type="module" src="./src/media-performance.js"></script>
   <script type="module" src="./src/site-header.js"></script>
