@@ -202,6 +202,11 @@ body {
   display: none;
 }
 
+/* Destinations page: photo cards need full width when marquee is static (reduced motion) */
+.brand-trust-section--dest-cards.brand-marquee--static [data-brand-marquee] {
+  max-width: none;
+}
+
 /* Discover the moments: reduced motion = static gallery, no duplicate strip */
 .moments-section.moments-marquee--static .moments-marquee-viewport {
   overflow-x: auto;

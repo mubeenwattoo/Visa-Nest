@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="./src/assets/images/hero-img.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="./src/assets/images/tower-bridge.png" fetchpriority="high">
   <link href="./src/output.css" rel="stylesheet">
   <title>Home | Visa Nest</title>
   <script>document.documentElement.classList.add("js");</script>
@@ -57,6 +57,7 @@
           <li class="load-nav"><a href="index.html" data-nav="home" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
           <li class="load-nav"><a href="destinations.html" data-nav="destinations" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Destination</a></li>
           <li class="load-nav"><a href="about.html" data-nav="about" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">About</a></li>
+          <li class="load-nav"><a href="services.html" data-nav="services" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
           <li class="load-nav"><a href="faq.html" data-nav="faq" class="nav-link normal-case relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">FAQ's</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
         </ul>
@@ -108,6 +109,7 @@
             <li><a href="index.html" data-nav="home" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Home</a></li>
             <li><a href="destinations.html" data-nav="destinations" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Destination</a></li>
             <li><a href="about.html" data-nav="about" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">About</a></li>
+            <li><a href="services.html" data-nav="services" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Services</a></li>
             <li><a href="faq.html" data-nav="faq" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">FAQ's</a></li>
             <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
             <li class="pt-2">
@@ -126,7 +128,7 @@
     >
       <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden bg-slate-900" aria-hidden="true">
         <img
-          src="./src/assets/images/hero-img.jpg"
+          src="./src/assets/images/tower-bridge.png"
           alt=""
           class="absolute inset-0 h-full w-full object-cover"
           loading="eager"
@@ -739,29 +741,29 @@
       aria-labelledby="destinations-heading"
     >
       <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-14 xl:px-20">
-        <div class="flex flex-col gap-6 lg:flex-row sm:items-start sm:justify-between">
-          <div class="max-w-2xl">
+        <div class="flex md:flex-row flex-col items-start justify-between gap-4 md:items-center
+         sm:gap-6 lg:gap-10">
+          <div class="min-w-0 max-w-2xl flex-1">
             <h2
+              id="destinations-heading"
               class="text-[1.75rem] font-bold leading-tight tracking-tight text-primary-blue sm:text-4xl lg:text-[2.5rem]"
             >
-            Popular Travel Packages For You
+              Popular Travel Packages For You
             </h2>
-            <p class="mt-3 max-w-2xl text-[16px] leading-relaxed text-slate-600">
-              
-
+            <p class="mt-3 text-[16px] leading-relaxed text-slate-600">
               Discover affordable travel packages, hotel deals, flights, and holiday planning services tailored for your next trip across Europe and worldwide.
             </p>
           </div>
           <a
             href="destinations.html"
-            class="block rounded-full border-2 border-[#F4B400]
+            class="inline-flex shrink-0 items-center justify-center rounded-full border-2 border-[#F4B400]
             bg-[#F4B400] px-[21px] py-[14px] text-[16px] font-semibold text-[#01004b]
              shadow-sm shadow-amber-900/10 transition duration-500 
              hover:bg-transparent  focus-visible:outline-none 
               focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2
-              focus-visible:ring-offset-white sm:w-auto w-[231px]"
+              focus-visible:ring-offset-white whitespace-nowrap"
           >
-            Browse All Destination
+            Browse All Destinations
           </a>
         </div>
 
@@ -1627,6 +1629,7 @@
             <li><a href="index.html" class="transition hover:text-[#0047ab]">Home</a></li>
             <li><a href="destinations.html" class="transition hover:text-[#0047ab]">Destination</a></li>
             <li><a href="about.html" class="transition hover:text-[#0047ab]">About Us</a></li>
+            <li><a href="services.html" class="transition hover:text-[#0047ab]">Visa Services</a></li>
             <li><a href="faq.html" class="transition hover:text-[#0047ab]">FAQ's</a></li>
             <li><a href="blog.html" class="transition hover:text-[#0047ab]">Blog &amp; Articles</a></li>
           </ul>
@@ -1638,6 +1641,7 @@
             <li><a href="contact.html" class="transition hover:text-[#0047ab]">Contact Us</a></li>
             <li><a href="contact.html#contact-form" class="transition hover:text-[#0047ab]">Support Center</a></li>
             <li><a href="privacy.html" class="transition hover:text-[#0047ab]">Privacy Policy</a></li>
+            <li><a href="refund-policy.html" class="transition hover:text-[#0047ab]">Refund Policy</a></li>
           </ul>
         </div>
 
@@ -1681,6 +1685,7 @@
         <div class="flex items-center gap-6 text-[14px]">
           <a href="terms.html" class="text-white/95 transition hover:text-white">Terms &amp; Agreements</a>
           <a href="privacy.html" class="text-white/95 transition hover:text-white">Privacy Policy</a>
+          <a href="refund-policy.html" class="text-white/95 transition hover:text-white">Refund Policy</a>
         </div>
       </div>
     </div>
