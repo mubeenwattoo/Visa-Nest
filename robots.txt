@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap (submit the same URL in Google Search Console)
+Sitemap: https://visanest.co.uk/sitemap.xml
