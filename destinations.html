@@ -151,6 +151,37 @@
           <li class="load-nav"><a href="services.html" data-nav="services" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
           <li class="load-nav"><a href="faq.html" data-nav="faq" class="nav-link normal-case relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">FAQ's</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+          <li class="load-nav nav-dropdown relative z-[130]" data-nav-dropdown>
+            <button
+              type="button"
+              class="nav-dropdown-trigger flex items-center gap-0.5 border-0 bg-transparent pb-1 text-[14px] font-medium uppercase text-white outline-none transition-colors duration-300 hover:text-primary-yellow focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="nav-policies-menu"
+              id="nav-policies-trigger"
+              data-nav-policies-trigger
+            >
+              Policies
+              <svg class="policies-nav-chevron h-3.5 w-3.5 shrink-0 opacity-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              id="nav-policies-menu"
+              class="nav-dropdown-panel absolute left-1/2 top-full z-[140] mt-2 w-[min(100vw-2rem,240px)]"
+              role="menu"
+              aria-labelledby="nav-policies-trigger"
+            >
+              <ul class="overflow-hidden rounded-xl border border-slate-200/90 bg-white py-1.5 text-left text-[13px] font-medium normal-case text-slate-800 shadow-lg shadow-slate-900/15 ring-1 ring-black/5">
+                <li role="none">
+                  <a href="privacy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="privacy">Privacy Policy</a>
+                </li>
+                <li role="none">
+                  <a href="refund-policy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="refund-policy">Refund &amp; Cancellation Policy</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
         
       </div>
@@ -203,6 +234,27 @@
             <li><a href="services.html" data-nav="services" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Services</a></li>
             <li><a href="faq.html" data-nav="faq" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">FAQ's</a></li>
             <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+            <li class="mt-0.5 list-none">
+              <button
+                type="button"
+                class="mobile-policies-toggle flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12"
+                aria-expanded="false"
+                aria-controls="mobile-policies-submenu"
+              >
+                <span>Policies</span>
+                <svg class="mobile-policies-chevron h-4 w-4 shrink-0 text-slate-500 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <ul id="mobile-policies-submenu" class="hidden space-y-0.5 border-l-2 border-[#F4B400]/35 py-1 pl-3 ml-1 mt-0.5" role="list">
+                <li>
+                  <a href="privacy.html" data-nav="privacy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="refund-policy.html" data-nav="refund-policy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Refund &amp; Cancellation</a>
+                </li>
+              </ul>
+            </li>
             <li class="pt-2">
               <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
             </li>
@@ -283,7 +335,7 @@
         <p
           class="brand-trust-intro-sub mx-auto mt-2 max-w-2xl text-sm text-slate-600 sm:text-base md:text-lg"
         >
-          From Europe to North America and the Pacific—get inspired by the kinds of routes and stays we help you plan.
+          From Western Europe and the Mediterranean to North America and the Pacific—get inspired by the kinds of routes and stays we help you plan.
         </p>
       </div>
 
@@ -324,9 +376,58 @@
               </div>
               <div class="brand-marquee-item flex shrink-0">
                 <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
-                  <img src="./assets/images/boat.png" alt="" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="eager" decoding="async" draggable="false" />
+                  <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&h=600&q=82" alt="Colosseum and historic centre of Rome, Italy" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="eager" decoding="async" draggable="false" />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
                   <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Italy</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=900&h=600&q=82" alt="Canal houses along the Amsterdam waterfront, Netherlands" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Netherlands</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/belgium.jpg" alt="Historic canals and gabled houses in Bruges, Belgium" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Belgium</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/germany.png" alt="Brandenburg Gate in Berlin, Germany" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Germany</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/greece.png" alt="Santorini caldera and whitewashed villages, Greece" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Greece</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/spain.jpg" alt="Barcelona architecture and Mediterranean light, Spain" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Spain</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/sweden.jpg" alt="Gamla Stan old town waterfront in Stockholm, Sweden" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Sweden</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/denmark.jpg" alt="Colourful Nyhavn harbour in Copenhagen, Denmark" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Denmark</p>
                 </div>
               </div>
               <div class="brand-marquee-item flex shrink-0">
@@ -338,12 +439,13 @@
               </div>
               <div class="brand-marquee-item flex shrink-0">
                 <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
-                  <img src="./assets/images/download.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="eager" decoding="async" draggable="false" />
+                  <img src="./assets/images/usa.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="eager" decoding="async" draggable="false" />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
                   <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">United States</p>
                 </div>
               </div>
               <div class="brand-marquee-item flex shrink-0">
+
                 <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
                   <img src="./assets/images/australia.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="eager" decoding="async" draggable="false" />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
@@ -392,9 +494,58 @@
               </div>
               <div class="brand-marquee-item flex shrink-0">
                 <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
-                  <img src="./assets/images/boat.png" alt="" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=900&h=600&q=82" alt="Colosseum and historic centre of Rome, Italy" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
                   <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Italy</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=900&h=600&q=82" alt="Canal houses along the Amsterdam waterfront, Netherlands" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Netherlands</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/belgium.jpg" alt="Historic canals and gabled houses in Bruges, Belgium" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Belgium</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/germany.png" alt="Brandenburg Gate in Berlin, Germany" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Germany</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/greece.png" alt="Santorini caldera and whitewashed villages, Greece" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Greece</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/spain.jpg" alt="Barcelona architecture and Mediterranean light, Spain" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Spain</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/sweden.jpg" alt="Gamla Stan old town waterfront in Stockholm, Sweden" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Sweden</p>
+                </div>
+              </div>
+              <div class="brand-marquee-item flex shrink-0">
+                <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
+                  <img src="./assets/images/denmark.jpg" alt="Colourful Nyhavn harbour in Copenhagen, Denmark" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
+                  <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">Denmark</p>
                 </div>
               </div>
               <div class="brand-marquee-item flex shrink-0">
@@ -406,7 +557,7 @@
               </div>
               <div class="brand-marquee-item flex shrink-0">
                 <div class="relative h-[168px] w-[220px] shrink-0 overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-200/90 sm:h-[184px] sm:w-[240px] md:h-[196px] md:w-[252px] lg:h-[200px] lg:w-[260px]">
-                  <img src="./assets/images/download.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
+                  <img src="./assets/images/usa.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" width="520" height="400" loading="lazy" decoding="async" draggable="false" />
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/55" aria-hidden="true"></div>
                   <p class="absolute inset-0 flex items-center justify-center px-3 text-center text-[1.25rem] font-bold tracking-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)] sm:text-2xl">United States</p>
                 </div>
@@ -490,8 +641,8 @@
             <div class="aspect-square overflow-hidden rounded-full border border-slate-200/90 bg-white shadow-[0_18px_38px_-28px_rgba(15,23,42,0.45)]">
               <img
                 id="testimonial-main-image"
-                src="./src/assets/images/human-1.png"
-                alt="Olivia Mitchell portrait"
+                src="./src/assets/images/indian.jpg"
+                alt="Arjun Menon portrait"
                 class="h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -519,7 +670,7 @@
               id="testimonial-name"
               class="mt-4 text-[18px] font-semibold uppercase tracking-tight text-primary-yellow sm:text-[20px]"
             >
-              Olivia Mitchell
+              Arjun Menon
             </p>
             <p id="testimonial-role" class="mt-1 text-[1.35rem] text-primary-blue">Student</p>
           </div>
@@ -528,20 +679,20 @@
             class="mx-auto flex w-full max-w-[420px] flex-row items-center justify-center gap-3 rounded-2xl bg-primary-blue p-3 lg:mx-0 lg:w-auto lg:max-w-none lg:flex-col"
             data-test-anim="thumbs"
           >
-            <button type="button" class="testimonial-thumb is-active h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#0047ab] ring-offset-2 ring-offset-[#f1f0ee] transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="0" aria-label="Show feedback from Olivia Mitchell">
-              <img src="./src/assets/images/human-1.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb is-active h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#0047ab] ring-offset-2 ring-offset-[#f1f0ee] transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="0" aria-label="Show feedback from Arjun Menon">
+              <img src="./src/assets/images/indian.jpg" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="1" aria-label="Show feedback from Ethan Carter">
-              <img src="./src/assets/images/human-2.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="1" aria-label="Show feedback from Hassan Malik">
+              <img src="./src/assets/images/pk-1.jpg" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="2" aria-label="Show feedback from Noah Williams">
-              <img src="./src/assets/images/human-3.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="2" aria-label="Show feedback from Bilal Qureshi">
+              <img src="./src/assets/images/pk-2.jpg" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="3" aria-label="Show feedback from Mia Thompson">
-              <img src="./src/assets/images/human-4.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="3" aria-label="Show feedback from Kwame Osei">
+              <img src="./src/assets/images/african-1.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="4" aria-label="Show feedback from Liam Davis">
-              <img src="./src/assets/images/human-5.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="4" aria-label="Show feedback from Chinedu Okonkwo">
+              <img src="./src/assets/images/african-2.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
           </div>
         </div>
@@ -629,7 +780,7 @@
             <div
               class="absolute bottom-2 right-2 z-[2] w-[min(calc(100%-0.75rem),220px)] rounded-xl bg-white p-3.5 shadow-lg shadow-slate-900/10 ring-1 ring-slate-200/90 sm:bottom-3 sm:right-3 sm:p-4 lg:bottom-0 lg:right-0 lg:translate-x-[6%] lg:translate-y-[28%]"
             >
-              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">50+</p>
+              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">75+</p>
               <p class="mt-1 text-xs leading-snug text-slate-600 sm:text-[13px]">Countries to Explore</p>
               <div
                 class="pointer-events-none absolute bottom-0 right-0 h-8 w-12 overflow-hidden rounded-br-xl"

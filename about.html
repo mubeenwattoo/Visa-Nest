@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Visa Nest — trusted travel and visa assistance since 2000.">
+  <meta name="description" content="About Visa Nest — trusted travel and visa assistance since 2020.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -64,6 +64,37 @@
           <li class="load-nav"><a href="services.html" data-nav="services" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
           <li class="load-nav"><a href="faq.html" data-nav="faq" class="nav-link normal-case relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">FAQ's</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+          <li class="load-nav nav-dropdown relative z-[130]" data-nav-dropdown>
+            <button
+              type="button"
+              class="nav-dropdown-trigger flex items-center gap-0.5 border-0 bg-transparent pb-1 text-[14px] font-medium uppercase text-white outline-none transition-colors duration-300 hover:text-primary-yellow focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="nav-policies-menu"
+              id="nav-policies-trigger"
+              data-nav-policies-trigger
+            >
+              Policies
+              <svg class="policies-nav-chevron h-3.5 w-3.5 shrink-0 opacity-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              id="nav-policies-menu"
+              class="nav-dropdown-panel absolute left-1/2 top-full z-[140] mt-2 w-[min(100vw-2rem,240px)]"
+              role="menu"
+              aria-labelledby="nav-policies-trigger"
+            >
+              <ul class="overflow-hidden rounded-xl border border-slate-200/90 bg-white py-1.5 text-left text-[13px] font-medium normal-case text-slate-800 shadow-lg shadow-slate-900/15 ring-1 ring-black/5">
+                <li role="none">
+                  <a href="privacy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="privacy">Privacy Policy</a>
+                </li>
+                <li role="none">
+                  <a href="refund-policy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="refund-policy">Refund &amp; Cancellation Policy</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
         
       </div>
@@ -116,6 +147,27 @@
             <li><a href="services.html" data-nav="services" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Services</a></li>
             <li><a href="faq.html" data-nav="faq" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">FAQ's</a></li>
             <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+            <li class="mt-0.5 list-none">
+              <button
+                type="button"
+                class="mobile-policies-toggle flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12"
+                aria-expanded="false"
+                aria-controls="mobile-policies-submenu"
+              >
+                <span>Policies</span>
+                <svg class="mobile-policies-chevron h-4 w-4 shrink-0 text-slate-500 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <ul id="mobile-policies-submenu" class="hidden space-y-0.5 border-l-2 border-[#F4B400]/35 py-1 pl-3 ml-1 mt-0.5" role="list">
+                <li>
+                  <a href="privacy.html" data-nav="privacy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="refund-policy.html" data-nav="refund-policy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Refund &amp; Cancellation</a>
+                </li>
+              </ul>
+            </li>
             <li class="pt-2">
               <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
             </li>
@@ -157,7 +209,7 @@
                [text-shadow:0_2px_20px_rgba(0,0,0,0.55),0_1px_3px_rgba(0,0,0,0.4)]
                 sm:text-[42px] lg:text-[52px]"
             >
-              Trusted Travel Partner <br class="xl:inline-flex hidden"> Since 2000
+              Trusted Travel Partner <br class="xl:inline-flex hidden"> Since 2020
             </h1>
             <p
               class="load-hero mx-auto mt-5 max-w-[586px] text-[15px] font-normal leading-relaxed text-white [text-shadow:0_1px_14px_rgba(0,0,0,0.5),0_1px_2px_rgba(0,0,0,0.35)] sm:mt-6 sm:text-[17px] lg:text-[18px]"
@@ -272,7 +324,7 @@
                   class="about-anim-img col-start-1 row-start-2 overflow-hidden rounded-2xl  "
                 >
                   <img
-                    src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80"
+                    src="./src/assets/images/family.jpeg"
                     alt="Passport, map and travel essentials on a desk"
                     class="h-full min-h-[7.75rem] w-full object-cover hover:scale-110 duration-500 hover:brightness-90 hover:contrast-125 sm:min-h-[8.75rem] lg:min-h-[7rem]"
                     width="600"
@@ -291,11 +343,11 @@
              sm:py-4 lg:col-span-2 lg:py-0 lg:gap-y-[72px]"
           >
             <div class="about-stat">
-              <p class="about-stat-value " data-count="3" data-suffix="+">3+</p>
+              <p class="about-stat-value " data-count="5" data-suffix="+">5+</p>
               <p class="about-stat-label">Years of experience</p>
             </div>
             <div class="about-stat">
-              <p class="about-stat-value " data-count="50" data-suffix="+">50+</p>
+              <p class="about-stat-value " data-count="75" data-suffix="+">75+</p>
               <p class="about-stat-label xl:whitespace-nowrap">Destination countries</p>
             </div>
             <div class="about-stat">
@@ -575,7 +627,7 @@
             <div
               class="absolute bottom-2 right-2 z-[2] w-[min(calc(100%-0.75rem),220px)] rounded-xl bg-white p-3.5 shadow-lg shadow-slate-900/10 ring-1 ring-slate-200/90 sm:bottom-3 sm:right-3 sm:p-4 lg:bottom-0 lg:right-0 lg:translate-x-[6%] lg:translate-y-[28%]"
             >
-              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">50+</p>
+              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">75+</p>
               <p class="mt-1 text-xs leading-snug text-slate-600 sm:text-[13px]">Countries to Explore</p>
               <div
                 class="pointer-events-none absolute bottom-0 right-0 h-8 w-12 overflow-hidden rounded-br-xl"

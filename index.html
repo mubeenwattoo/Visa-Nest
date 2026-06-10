@@ -117,7 +117,7 @@
       </button>
 
       <div class="hidden  items-center gap-8 xl:gap-12 lg:flex border-[#F4B400] 
-      border-t-1 border-b-1 border-l-2 border-r-2 bg-transparent
+      border-2 bg-transparent
        xl:ml-20 lg:ml-6 hover:backdrop-blur-sm duration-500  
        rounded-full hover:px-10 px-6 py-3.5">
         <ul id="desktop-nav-links" class="flex items-center uppercase gap-8 text-[14px] font-medium text-white">
@@ -127,6 +127,37 @@
           <li class="load-nav"><a href="services.html" data-nav="services" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
           <li class="load-nav"><a href="faq.html" data-nav="faq" class="nav-link normal-case relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">FAQ's</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+          <li class="load-nav nav-dropdown relative z-[130]" data-nav-dropdown>
+            <button
+              type="button"
+              class="nav-dropdown-trigger flex items-center gap-0.5 border-0 bg-transparent pb-1 text-[14px] font-medium uppercase text-white outline-none transition-colors duration-300 hover:text-primary-yellow focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="nav-policies-menu"
+              id="nav-policies-trigger"
+              data-nav-policies-trigger
+            >
+              Policies
+              <svg class="policies-nav-chevron h-3.5 w-3.5 shrink-0 opacity-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              id="nav-policies-menu"
+              class="nav-dropdown-panel absolute left-1/2 top-full z-[140] mt-2 w-[min(100vw-2rem,240px)]"
+              role="menu"
+              aria-labelledby="nav-policies-trigger"
+            >
+              <ul class="overflow-hidden rounded-xl border border-slate-200/90 bg-white py-1.5 text-left text-[13px] font-medium normal-case text-slate-800 shadow-lg shadow-slate-900/15 ring-1 ring-black/5">
+                <li role="none">
+                  <a href="privacy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="privacy">Privacy Policy</a>
+                </li>
+                <li role="none">
+                  <a href="refund-policy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="refund-policy">Refund &amp; Cancellation Policy</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
         
       </div>
@@ -135,7 +166,7 @@
           href="contact.html#contact-form"
           data-nav-intro="cta"
           class="load-nav group relative inline-flex min-h-12
-        items-center justify-center overflow-hidden rounded-full border border-[#F4B400] 
+        items-center justify-center overflow-hidden rounded-full border-2 border-[#F4B400] 
           px-5 py-2 text-[14px] font-semibold tracking-[0.01em]
           text-white backdrop-blur-sm transition duration-500 
            hover:border-transparent focus-visible:outline-none
@@ -150,7 +181,7 @@
           href="contact.html"
           data-nav-intro="cta"
           class="load-nav inline-flex items-center 
-        justify-center rounded-full border border-[#F4B400] bg-[#F4B400]
+        justify-center rounded-full border-2 border-[#F4B400] bg-[#F4B400]
          px-6 py-3 text-[14px] font-semibold text-white
           shadow-sm shadow-amber-900/10 transition duration-500
            hover:bg-transparent "
@@ -179,6 +210,27 @@
             <li><a href="services.html" data-nav="services" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Services</a></li>
             <li><a href="faq.html" data-nav="faq" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">FAQ's</a></li>
             <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+            <li class="mt-0.5 list-none">
+              <button
+                type="button"
+                class="mobile-policies-toggle flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12"
+                aria-expanded="false"
+                aria-controls="mobile-policies-submenu"
+              >
+                <span>Policies</span>
+                <svg class="mobile-policies-chevron h-4 w-4 shrink-0 text-slate-500 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <ul id="mobile-policies-submenu" class="hidden space-y-0.5 border-l-2 border-[#F4B400]/35 py-1 pl-3 ml-1 mt-0.5" role="list">
+                <li>
+                  <a href="privacy.html" data-nav="privacy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="refund-policy.html" data-nav="refund-policy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Refund &amp; Cancellation</a>
+                </li>
+              </ul>
+            </li>
             <li class="pt-2">
               <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
             </li>
@@ -209,9 +261,7 @@
       <div class="relative z-10 w-full shrink-0 px-5 pt-4 text-center sm:px-8  
       lg:px-10 lg:pt-8 xl:px-14">
         <div class="mx-auto w-full max-w-[860px]">
-          <p class="load-hero mb-3 text-center text-[11px] font-bold uppercase tracking-[0.22em] text-primary-yellow sm:mb-4 sm:text-xs">
-            Visa Nest — visanest.co.uk
-          </p>
+         
           <h1 class="text-[36px] font-extrabold leading-[1.18] tracking-[-0.001em] 
           sm:text-[50px] lg:text-[64px] ">
             <span class="load-hero block w-full text-center">
@@ -788,11 +838,11 @@
              sm:py-4 lg:col-span-2 lg:py-0 lg:gap-y-[72px]"
           >
             <div class="about-stat">
-              <p class="about-stat-value " data-count="3" data-suffix="+">3+</p>
+              <p class="about-stat-value " data-count="5" data-suffix="+">5+</p>
               <p class="about-stat-label">Years of experience</p>
             </div>
             <div class="about-stat">
-              <p class="about-stat-value " data-count="50" data-suffix="+">50+</p>
+              <p class="about-stat-value " data-count="75" data-suffix="+">75+</p>
               <p class="about-stat-label xl:whitespace-nowrap">Destination countries</p>
             </div>
             <div class="about-stat">
@@ -821,7 +871,7 @@
               Popular Travel Packages For You
             </h2>
             <p class="mt-3 text-[16px] leading-relaxed text-slate-600">
-              Discover affordable travel packages, hotel deals, flights, and holiday planning services tailored for your next trip across Europe and worldwide.
+              Curated packages across France, Switzerland, Greece, Spain, the USA, and Canada—clear package pricing, with flights and hotels arranged through Visa Nest.
             </p>
           </div>
           <a
@@ -841,8 +891,8 @@
           <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
             <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
-                src="./src/assets/images/park.png"
-                alt="Fiordland and Milford Sound scenic landscape, New Zealand"
+                src="./assets/images/schengen.jpg"
+                alt="Paris and French city architecture, France"
                 class="h-[280px] w-full object-cover transition
                  duration-500 group-hover:scale-105 group-hover:brightness-90
                   group-hover:contrast-125"
@@ -854,12 +904,12 @@
               <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
                 <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
                   <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
                     </svg>
-                    7 days 6 nights
+                    3 nights · 2 days
                   </span>
                   <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
                 </div>
@@ -867,54 +917,13 @@
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
               <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
-               text-white sm:text-[18px]">$849.00 <span class="text-[13px] font-normal
-                 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Fiordland &amp; Milford Sound</h3>
+               text-white sm:text-[18px]">£285</p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">France Explorer Package</h3>
             <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
               <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
               </svg>
-              South Island, New Zealand
-            </p>
-            </div>
-          </article>
-          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
-            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
-              <img
-                src="./src/assets/images/boat.png"
-                alt="Coastal boat and Mediterranean sea, Italy"
-                class="h-[280px] w-full object-cover transition
-                 duration-500 group-hover:scale-105 group-hover:brightness-90
-                  group-hover:contrast-125"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="pointer-events-none absolute
-               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
-              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
-                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
-                    </svg>
-                    6 days 5 nights
-                  </span>
-                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
-                </div>
-              </div>
-            </div>
-            <div class="px-4 pt-4 pb-6 text-white">
-              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
-               text-white sm:text-[18px]">$1,349.00 <span class="text-[13px] font-normal
-                 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Amalfi Coast &amp; Capri</h3>
-            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              Campania, Italy
+              Paris, France
             </p>
             </div>
           </article>
@@ -922,8 +931,8 @@
           <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
             <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
-                src="./src/assets/images/airport.png"
-                alt="Modern airport terminal and runway, United Arab Emirates"
+                src="./assets/images/switzerland.png"
+                alt="Swiss Alps peaks and mountain scenery"
                 class="h-[280px] w-full object-cover transition
                  duration-500 group-hover:scale-105 group-hover:brightness-90
                   group-hover:contrast-125"
@@ -935,12 +944,12 @@
               <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
                 <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
                   <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
                     </svg>
-                    5 days 4 nights
+                    4 nights · 3 days
                   </span>
                   <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
                 </div>
@@ -948,94 +957,13 @@
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
               <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
-               text-white sm:text-[18px]">$979.00 <span class="text-[13px] font-normal
-                 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Dubai City &amp; Desert</h3>
+               text-white sm:text-[18px]">£372</p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Switzerland Alpine Package</h3>
             <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
               <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
               </svg>
-              Dubai, UAE
-            </p>
-            </div>
-          </article>
-          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
-            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
-              <img
-                src="./assets/images/destination-01-bali.jpg"
-                alt="Tropical beach and temples in Bali, Indonesia"
-                class="h-[280px] w-full object-cover transition
-                 duration-500 group-hover:scale-105 group-hover:brightness-90
-                  group-hover:contrast-125"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="pointer-events-none absolute
-               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
-              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
-                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
-                    </svg>
-                    8 days 7 nights
-                  </span>
-                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
-                </div>
-              </div>
-            </div>
-            <div class="px-4 pt-4 pb-6 text-white">
-              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
-               text-white sm:text-[18px]">$1,199.00 <span class="text-[13px] font-normal
-                 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Bali Beaches &amp; Temples</h3>
-            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              Bali, Indonesia
-            </p>
-            </div>
-          </article>
-          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
-            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
-              <img
-                src="./assets/images/destination-02-tongariro.jpg"
-                alt="Volcanic peaks and alpine trail at Tongariro, New Zealand"
-                class="h-[280px] w-full object-cover transition
-                 duration-500 group-hover:scale-105 group-hover:brightness-90
-                  group-hover:contrast-125"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="pointer-events-none absolute
-               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
-              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
-                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
-                    </svg>
-                    4 days 3 nights
-                  </span>
-                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
-                </div>
-              </div>
-            </div>
-            <div class="px-4 pt-4 pb-6 text-white">
-              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
-               text-white sm:text-[18px]">$729.00 <span class="text-[13px] font-normal
-                 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Tongariro Alpine Trek</h3>
-            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
-              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
-              </svg>
-              Waikato, New Zealand
+              Zurich, Lucerne &amp; Interlaken, Switzerland
             </p>
             </div>
           </article>
@@ -1043,8 +971,8 @@
           <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
             <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
-                src="./assets/images/destination-12-maldives.jpg"
-                alt="Overwater villas and turquoise lagoon in the Maldives"
+                src="./assets/images/greece.png"
+                alt="Coastal Greek islands and blue Mediterranean sea"
                 class="h-[280px] w-full object-cover transition
                  duration-500 group-hover:scale-105 group-hover:brightness-90
                   group-hover:contrast-125"
@@ -1056,12 +984,12 @@
               <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
                 <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
                   <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" 
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
                     </svg>
-                    6 days 5 nights
+                    3 nights · 2 days
                   </span>
                   <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
                 </div>
@@ -1069,17 +997,137 @@
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
               <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
-               text-white sm:text-[18px]">$2,499.00 <span class="text-[13px] font-normal
-                 sm:text-[14px]">/pp</span></p>
-            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Maldives Lagoon Escape</h3>
+               text-white sm:text-[18px]">£232</p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Greece Island Escape</h3>
             <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
               <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
               </svg>
-              North Malé Atoll, Maldives
+              Santorini &amp; Athens, Greece
             </p>
             </div>
           </article>
+
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+              <img
+                src="./assets/images/spain.jpg"
+                alt="Barcelona waterfront and Mediterranean coast, Spain"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+                    </svg>
+                    5 nights · 4 days
+                  </span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">£325</p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Spain Discovery Package</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Barcelona &amp; Madrid, Spain
+            </p>
+            </div>
+          </article>
+
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+              <img
+                src="./assets/images/usa.jpg"
+                alt="New York City skyline and urban landmarks, USA"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+                    </svg>
+                    7 nights · 6 days
+                  </span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">£1,400</p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">USA Dream Vacation</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              New York, USA
+            </p>
+            </div>
+          </article>
+
+          <article class="group bg-[var(--color-primary-blue)] rounded-2xl">
+            <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+              <img
+                src="./assets/images/canada.jpg"
+                alt="Toronto skyline and Niagara Falls region, Canada"
+                class="h-[280px] w-full object-cover transition
+                 duration-500 group-hover:scale-105 group-hover:brightness-90
+                  group-hover:contrast-125"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="pointer-events-none absolute
+               inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
+              <div class="pointer-events-none absolute left-5 right-5 top-5 translate-y-[-10px] opacity-0 transition duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                <div class="flex items-center justify-between rounded-full bg-primary-yellow px-4 py-3 text-slate-800 shadow-lg">
+                  <span class="inline-flex items-center text-[15px] font-medium text-[#01004b]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+                    </svg>
+                    7 nights · 6 days
+                  </span>
+                  <span class="inline-flex items-center text-[16px] font-semibold text-[#01004b]">Explore Now</span>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 pt-4 pb-6 text-white">
+              <p class="mt-4 text-[17px] font-medium leading-none tracking-tight
+               text-white sm:text-[18px]">£1,300</p>
+            <h3 class="mt-3 mb-2 text-primary-yellow text-[18px] font-medium tracking-tight  sm:text-[20px]">Canada Adventure Package</h3>
+            <p class="mt-1 inline-flex items-center text-[17px]  sm:text-[18px]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Toronto &amp; Niagara Falls, Canada
+            </p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -1177,8 +1225,8 @@
             <div class="aspect-square overflow-hidden rounded-full border border-slate-200/90 bg-white shadow-[0_18px_38px_-28px_rgba(15,23,42,0.45)]">
               <img
                 id="testimonial-main-image"
-                src="./src/assets/images/human-1.png"
-                alt="Olivia Mitchell portrait"
+                src="./src/assets/images/indian.jpg"
+                alt="Arjun Menon portrait"
                 class="h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -1206,30 +1254,29 @@
               id="testimonial-name"
               class="mt-4 text-[18px] font-semibold uppercase tracking-tight text-primary-yellow sm:text-[20px]"
             >
-              Olivia Mitchell
+              Arjun Menon
             </p>
             <p id="testimonial-role" class="mt-1 text-[1.35rem] text-primary-blue">Student</p>
           </div>
 
           <div
-            class="mx-auto flex w-full max-w-[420px] flex-row items-center j
-            ustify-center gap-3 rounded-2xl bg-primary-blue p-3 lg:mx-0 lg:w-auto lg:max-w-none lg:flex-col"
+            class="mx-auto flex w-full max-w-[420px] flex-row items-center justify-center gap-3 rounded-2xl bg-primary-blue p-3 lg:mx-0 lg:w-auto lg:max-w-none lg:flex-col"
             data-test-anim="thumbs"
           >
-            <button type="button" class="testimonial-thumb is-active h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#0047ab] ring-offset-2 ring-offset-[#f1f0ee] transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="0" aria-label="Show feedback from Olivia Mitchell">
-              <img src="./src/assets/images/human-1.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb is-active h-14 w-14 overflow-hidden rounded-full ring-2 ring-[#0047ab] ring-offset-2 ring-offset-[#f1f0ee] transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="0" aria-label="Show feedback from Arjun Menon">
+              <img src="./src/assets/images/indian.jpg" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="1" aria-label="Show feedback from Ethan Carter">
-              <img src="./src/assets/images/human-2.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="1" aria-label="Show feedback from Hassan Malik">
+              <img src="./src/assets/images/pk-1.jpg" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="2" aria-label="Show feedback from Noah Williams">
-              <img src="./src/assets/images/human-3.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="2" aria-label="Show feedback from Bilal Qureshi">
+              <img src="./src/assets/images/pk-2.jpg" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="3" aria-label="Show feedback from Mia Thompson">
-              <img src="./src/assets/images/human-4.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="3" aria-label="Show feedback from Kwame Osei">
+              <img src="./src/assets/images/african-1.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
-            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="4" aria-label="Show feedback from Liam Davis">
-              <img src="./src/assets/images/human-5.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
+            <button type="button" class="testimonial-thumb h-14 w-14 overflow-hidden rounded-full ring-1 ring-slate-300 transition duration-300 hover:scale-105 lg:h-12 lg:w-12" data-index="4" aria-label="Show feedback from Chinedu Okonkwo">
+              <img src="./src/assets/images/african-2.png" alt="" class="h-full w-full object-cover" loading="lazy" decoding="async" />
             </button>
           </div>
         </div>
@@ -1625,7 +1672,7 @@
             <div
               class="absolute bottom-2 right-2 z-[2] w-[min(calc(100%-0.75rem),220px)] rounded-xl bg-white p-3.5 shadow-lg shadow-slate-900/10 ring-1 ring-slate-200/90 sm:bottom-3 sm:right-3 sm:p-4 lg:bottom-0 lg:right-0 lg:translate-x-[6%] lg:translate-y-[28%]"
             >
-              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">50+</p>
+              <p class="text-2xl font-bold leading-none tracking-tight text-slate-900">75+</p>
               <p class="mt-1 text-xs leading-snug text-slate-600 sm:text-[13px]">Countries to Explore</p>
               <div
                 class="pointer-events-none absolute bottom-0 right-0 h-8 w-12 overflow-hidden rounded-br-xl"
@@ -2494,36 +2541,36 @@
 
       const testimonials = [
         {
-          image: "./src/assets/images/human-1.png",
-          name: "Olivia Mitchell",
+          image: "./src/assets/images/indian.jpg",
+          name: "Arjun Menon",
           role: "Student",
           quote:
             "Visa Nest made my visa process surprisingly easy. Every step was explained clearly and their travel planning support saved me hours.",
         },
         {
-          image: "./src/assets/images/human-2.png",
-          name: "Ethan Carter",
+          image: "./src/assets/images/pk-1.jpg",
+          name: "Hassan Malik",
           role: "Software Engineer",
           quote:
             "From document review to appointment booking, their team was sharp and responsive. I got my Schengen visa without stress.",
         },
         {
-          image: "./src/assets/images/human-3.png",
-          name: "Noah Williams",
+          image: "./src/assets/images/pk-2.jpg",
+          name: "Bilal Qureshi",
           role: "Business Owner",
           quote:
             "I needed a fast turnaround for a business trip and Visa Nest handled everything with precision. The updates were timely and clear.",
         },
         {
-          image: "./src/assets/images/human-4.png",
-          name: "Mia Thompson",
+          image: "./src/assets/images/african-1.png",
+          name: "Kwame Osei",
           role: "Marketing Specialist",
           quote:
             "They are professional, patient, and very organized. My travel plan and visa documentation were handled in one smooth process.",
         },
         {
-          image: "./src/assets/images/human-5.png",
-          name: "Liam Davis",
+          image: "./src/assets/images/african-2.png",
+          name: "Chinedu Okonkwo",
           role: "Project Manager",
           quote:
             "Best support I have used so far. They simplified complex requirements and gave practical guidance at every stage. The updates were timely and clear.",

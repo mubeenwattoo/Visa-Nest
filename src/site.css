@@ -775,6 +775,94 @@ body {
   }
 }
 
+/* Policies nav: desktop hover/focus-within disclosure + mobile accordion */
+.nav-dropdown {
+  position: relative;
+}
+
+/* Bridge hover gap between trigger and panel so the menu stays open while moving the pointer */
+.nav-dropdown::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px;
+  z-index: 135;
+  /* Always hit-testable so the pointer can cross the layout gap (absolute panel) without leaving the <li> hover zone */
+  pointer-events: auto;
+}
+
+.nav-dropdown-trigger {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-dropdown-trigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--color-primary-yellow, #f4b400);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown-trigger:hover::after,
+.nav-dropdown-trigger:focus-visible::after,
+.nav-dropdown-trigger[data-nav-active="true"]::after {
+  transform: scaleX(1);
+}
+
+.nav-dropdown-trigger[data-nav-active="true"] {
+  color: var(--color-primary-yellow, #f4b400);
+}
+
+.policies-nav-chevron {
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .policies-nav-chevron,
+.nav-dropdown:focus-within .policies-nav-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown .nav-dropdown-panel {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.nav-dropdown:hover .nav-dropdown-panel,
+.nav-dropdown:focus-within .nav-dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-dropdown-panel,
+  .nav-dropdown-trigger::after,
+  .mobile-policies-chevron,
+  .policies-nav-chevron,
+  .nav-dropdown .nav-dropdown-panel {
+    transition: none !important;
+  }
+
+  .nav-dropdown .nav-dropdown-panel {
+    transform: translate(-50%, 0);
+  }
+}
+
 #site-header.mobile-nav-open .mobile-menu-surface {
   transform: translate3d(0, 0, 0);
   transition-delay: 0.03s;

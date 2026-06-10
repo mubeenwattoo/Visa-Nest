@@ -123,36 +123,36 @@ function initTestimonialsCarousel() {
 
   const testimonials = [
     {
-      image: "./src/assets/images/human-1.png",
-      name: "Olivia Mitchell",
+      image: "./src/assets/images/indian.jpg",
+      name: "Arjun Menon",
       role: "Student",
       quote:
         "Visa Nest made my visa process surprisingly easy. Every step was explained clearly and their travel planning support saved me hours.",
     },
     {
-      image: "./src/assets/images/human-2.png",
-      name: "Ethan Carter",
+      image: "./src/assets/images/pk-1.jpg",
+      name: "Hassan Malik",
       role: "Software Engineer",
       quote:
         "From document review to appointment booking, their team was sharp and responsive. I got my Schengen visa without stress.",
     },
     {
-      image: "./src/assets/images/human-3.png",
-      name: "Noah Williams",
+      image: "./src/assets/images/pk-2.jpg",
+      name: "Bilal Qureshi",
       role: "Business Owner",
       quote:
         "I needed a fast turnaround for a business trip and Visa Nest handled everything with precision. The updates were timely and clear.",
     },
     {
-      image: "./src/assets/images/human-4.png",
-      name: "Mia Thompson",
+      image: "./src/assets/images/african-1.png",
+      name: "Kwame Osei",
       role: "Marketing Specialist",
       quote:
         "They are professional, patient, and very organized. My travel plan and visa documentation were handled in one smooth process.",
     },
     {
-      image: "./src/assets/images/human-5.png",
-      name: "Liam Davis",
+      image: "./src/assets/images/african-2.png",
+      name: "Chinedu Okonkwo",
       role: "Project Manager",
       quote:
         "Best support I have used so far. They simplified complex requirements and gave practical guidance at every stage. The updates were timely and clear.",

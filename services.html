@@ -65,6 +65,37 @@
           <li class="load-nav"><a href="services.html" data-nav="services" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
           <li class="load-nav"><a href="faq.html" data-nav="faq" class="nav-link normal-case relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">FAQ's</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+          <li class="load-nav nav-dropdown relative z-[130]" data-nav-dropdown>
+            <button
+              type="button"
+              class="nav-dropdown-trigger flex items-center gap-0.5 border-0 bg-transparent pb-1 text-[14px] font-medium uppercase text-white outline-none transition-colors duration-300 hover:text-primary-yellow focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="nav-policies-menu"
+              id="nav-policies-trigger"
+              data-nav-policies-trigger
+            >
+              Policies
+              <svg class="policies-nav-chevron h-3.5 w-3.5 shrink-0 opacity-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              id="nav-policies-menu"
+              class="nav-dropdown-panel absolute left-1/2 top-full z-[140] mt-2 w-[min(100vw-2rem,240px)]"
+              role="menu"
+              aria-labelledby="nav-policies-trigger"
+            >
+              <ul class="overflow-hidden rounded-xl border border-slate-200/90 bg-white py-1.5 text-left text-[13px] font-medium normal-case text-slate-800 shadow-lg shadow-slate-900/15 ring-1 ring-black/5">
+                <li role="none">
+                  <a href="privacy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="privacy">Privacy Policy</a>
+                </li>
+                <li role="none">
+                  <a href="refund-policy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="refund-policy">Refund &amp; Cancellation Policy</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
         
       </div>
@@ -117,6 +148,27 @@
             <li><a href="services.html" data-nav="services" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Services</a></li>
             <li><a href="faq.html" data-nav="faq" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">FAQ's</a></li>
             <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+            <li class="mt-0.5 list-none">
+              <button
+                type="button"
+                class="mobile-policies-toggle flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12"
+                aria-expanded="false"
+                aria-controls="mobile-policies-submenu"
+              >
+                <span>Policies</span>
+                <svg class="mobile-policies-chevron h-4 w-4 shrink-0 text-slate-500 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <ul id="mobile-policies-submenu" class="hidden space-y-0.5 border-l-2 border-[#F4B400]/35 py-1 pl-3 ml-1 mt-0.5" role="list">
+                <li>
+                  <a href="privacy.html" data-nav="privacy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="refund-policy.html" data-nav="refund-policy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Refund &amp; Cancellation</a>
+                </li>
+              </ul>
+            </li>
             <li class="pt-2">
               <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
             </li>
@@ -227,7 +279,7 @@
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
               <h3 class="mt-1 text-[18px] font-medium tracking-tight text-primary-yellow
-               sm:text-[20px]">Schengen Visa</h3>
+               sm:text-[20px]">Schengen Tourist Visa</h3>
               <p class="mt-3 text-[14px] leading-relaxed text-white/90 sm:text-[15px]">Short-stay Schengen help—forms, travel insurance, and itinerary proof for tourist or business trips.</p>
               <a
                 href="contact.html#contact-form"
@@ -263,7 +315,7 @@
           <article class="service-visa-card group bg-[var(--color-primary-blue)] rounded-2xl">
             <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
-                src="./assets/images/download.jpg"
+                src="./assets/images/usa.jpg"
                 alt="Busy international airport terminal, a gateway for travel to the United States"
                 class="h-[220px] w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-90 group-hover:contrast-125 sm:h-[236px]"
                 loading="lazy"
@@ -273,7 +325,7 @@
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
               <h3 class="mt-1 text-[18px] font-medium tracking-tight
-               text-primary-yellow sm:text-[20px]">US Visa</h3>
+               text-primary-yellow sm:text-[20px]">US Tourist Visa</h3>
               <p class="mt-3 text-[14px] leading-relaxed text-white/90 sm:text-[15px]">US visitor (B1/B2) support—appointment prep, ties to home country, and interview guidance in plain language.</p>
               <a
                 href="contact.html#contact-form"
@@ -295,7 +347,7 @@
               <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
-              <h3 class="mt-1 text-[18px] font-medium tracking-tight text-primary-yellow sm:text-[20px]">Canada Visa</h3>
+              <h3 class="mt-1 text-[18px] font-medium tracking-tight text-primary-yellow sm:text-[20px]">Canada Tourist Visa</h3>
               <p class="mt-3 text-[14px] leading-relaxed text-white/90 sm:text-[15px]">Visitor visa planning—funds, invitation letters, and a consistent story across your application.</p>
               <a
                 href="contact.html#contact-form"
@@ -317,7 +369,7 @@
               <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
-              <h3 class="mt-1 text-[18px] font-medium tracking-tight text-primary-yellow sm:text-[20px]">Australia Visa</h3>
+              <h3 class="mt-1 text-[18px] font-medium tracking-tight text-primary-yellow sm:text-[20px]">Australia Tourist Visa</h3>
               <p class="mt-3 text-[14px] leading-relaxed text-white/90 sm:text-[15px]">Tourist-stream help with realistic timelines, health cover pointers, and tidy supporting documents.</p>
               <a
                 href="contact.html#contact-form"
@@ -330,7 +382,7 @@
           <article class="service-visa-card group bg-[var(--color-primary-blue)] rounded-2xl">
             <div class="relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               <img
-                src="./assets/images/moroco.jpg"
+                src="./assets/images/turkey.png"
                 alt="Golden sand dunes at sunset, evoking Morocco’s Sahara landscapes"
                 class="h-[220px] w-full object-cover transition duration-500 group-hover:scale-105 group-hover:brightness-90 group-hover:contrast-125 sm:h-[236px]"
                 loading="lazy"
@@ -339,7 +391,7 @@
               <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-slate-900/5 to-transparent opacity-0 transition duration-500 ease-out group-hover:opacity-100"></div>
             </div>
             <div class="px-4 pt-4 pb-6 text-white">
-              <h3 class="mt-1 text-[18px] font-medium tracking-tight text-primary-yellow sm:text-[20px]">Morocco Visa</h3>
+              <h3 class="mt-1 text-[18px] font-medium tracking-tight text-primary-yellow sm:text-[20px]">Turkey Tourist Visa</h3>
               <p class="mt-3 text-[14px] leading-relaxed text-white/90 sm:text-[15px]">Entry routes simplified—hotels, sponsor letters, and embassy-ready paperwork for UK-based travellers.</p>
               <a
                 href="contact.html#contact-form"

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Visa Nest FAQs — answers about trips, visas, bookings, and support before you travel.">
+  <meta name="description" content="Visa Nest FAQs — Schengen visa eligibility, costs, services, holiday packages, approvals, refunds, and processing times for UK-based applicants.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,6 +12,70 @@
   
   <link href="./src/output.css" rel="stylesheet">
   <title>FAQs | Visa Nest</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is eligible to apply for a Schengen visa through Visa Nest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non-British nationals who are legally residing in the United Kingdom are generally eligible to apply for a Schengen visa through our services. Applicants must hold valid UK residency status and meet the requirements of the relevant embassy or consulate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the total cost of a Schengen visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The total cost depends on several factors, including the destination country, the number of applicants, and the services required. Please contact our team for a personalised quotation based on your travel plans."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Schengen visa services do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide comprehensive Schengen visa assistance, including visa appointment booking, document preparation and review, visa consultation, professional guidance throughout the application process, profile assessment and eligibility review, and verification of supporting documents before submission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer holiday and travel packages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. In addition to visa services, we offer complete holiday and travel packages, including flight bookings, hotel reservations, activity and attraction bookings, cruise tours, historical and sightseeing tours, airport pick-up and drop-off services, and customised travel itineraries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you guarantee visa approval?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Visa approval and visa validity are solely at the discretion of the relevant embassy or consulate. While no agency can legally guarantee a visa, Visa Nest provides experienced professional guidance and thorough application preparation and works closely with applicants to help meet embassy standards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I receive a refund if my visa application is refused?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Refund eligibility applies in specific circumstances, such as refusal resulting from an error by our team, delay caused by us, or incorrect documentation prepared by our staff. Refunds are not provided for refusals due to fake, misleading, or incomplete applicant information, or for embassy-only decisions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the Schengen visa process take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The standard processing time is approximately 15 working days from when the embassy or consulate receives your application. Times may vary by season and workload; additional embassy requests can extend processing. Visa Nest keeps you informed throughout."
+        }
+      }
+    ]
+  }
+  </script>
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body
@@ -65,6 +129,37 @@
           <li class="load-nav"><a href="services.html" data-nav="services" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Services</a></li>
           <li class="load-nav"><a href="faq.html" data-nav="faq" class="nav-link normal-case relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">FAQ's</a></li>
           <li class="load-nav"><a href="blog.html" data-nav="blog" class="nav-link relative pb-1 text-white transition-colors duration-300 hover:text-primary-yellow after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary-yellow after:transition-transform after:duration-300 hover:after:scale-x-100">Blog</a></li>
+          <li class="load-nav nav-dropdown relative z-[130]" data-nav-dropdown>
+            <button
+              type="button"
+              class="nav-dropdown-trigger flex items-center gap-0.5 border-0 bg-transparent pb-1 text-[14px] font-medium uppercase text-white outline-none transition-colors duration-300 hover:text-primary-yellow focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="nav-policies-menu"
+              id="nav-policies-trigger"
+              data-nav-policies-trigger
+            >
+              Policies
+              <svg class="policies-nav-chevron h-3.5 w-3.5 shrink-0 opacity-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div
+              id="nav-policies-menu"
+              class="nav-dropdown-panel absolute left-1/2 top-full z-[140] mt-2 w-[min(100vw-2rem,240px)]"
+              role="menu"
+              aria-labelledby="nav-policies-trigger"
+            >
+              <ul class="overflow-hidden rounded-xl border border-slate-200/90 bg-white py-1.5 text-left text-[13px] font-medium normal-case text-slate-800 shadow-lg shadow-slate-900/15 ring-1 ring-black/5">
+                <li role="none">
+                  <a href="privacy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="privacy">Privacy Policy</a>
+                </li>
+                <li role="none">
+                  <a href="refund-policy.html" role="menuitem" class="block px-4 py-2.5 text-slate-800 transition hover:bg-[#F4B400]/15 hover:text-[#0047ab]" data-nav="refund-policy">Refund &amp; Cancellation Policy</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
         
       </div>
@@ -117,6 +212,27 @@
             <li><a href="services.html" data-nav="services" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Services</a></li>
             <li><a href="faq.html" data-nav="faq" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">FAQ's</a></li>
             <li><a href="blog.html" data-nav="blog" class="block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12">Blog</a></li>
+            <li class="mt-0.5 list-none">
+              <button
+                type="button"
+                class="mobile-policies-toggle flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12"
+                aria-expanded="false"
+                aria-controls="mobile-policies-submenu"
+              >
+                <span>Policies</span>
+                <svg class="mobile-policies-chevron h-4 w-4 shrink-0 text-slate-500 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <ul id="mobile-policies-submenu" class="hidden space-y-0.5 border-l-2 border-[#F4B400]/35 py-1 pl-3 ml-1 mt-0.5" role="list">
+                <li>
+                  <a href="privacy.html" data-nav="privacy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="refund-policy.html" data-nav="refund-policy" class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-[#F4B400]/12">Refund &amp; Cancellation</a>
+                </li>
+              </ul>
+            </li>
             <li class="pt-2">
               <a href="contact.html" class="load-nav inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F4B400] bg-[#F4B400] px-6 py-3 text-[14px] font-semibold text-white shadow-sm shadow-amber-900/10 transition duration-500 hover:bg-transparent hover:text-[#113e7a]">Contact <span aria-hidden="true">&rarr;</span></a>
             </li>
@@ -169,7 +285,7 @@
               </h1>
               <p class="load-hero mx-auto mt-[15px] max-w-2xl text-[12px] font-normal leading-[1.65]
                text-white sm:text-[17px] lg:text-[18px]">
-                Common questions about our travel planning, visa guidance, bookings, and on-trip support—so you know what to expect.
+                Answers about Schengen visas for UK residents, our services, packages, refunds, and timelines—so you know what to expect from Visa Nest.
               </p>
             </div>
           </div>
@@ -203,7 +319,7 @@
             id="faq-section-heading"
             class="mt-4 text-[1.65rem] font-bold leading-[1.2] tracking-tight text-primary-blue sm:mt-5 sm:text-3xl lg:text-[2.15rem]"
           >
-            Everything You Need To Know Before You Travel
+            Schengen Visas, Packages &amp; Support — Your Questions Answered
           </h2>
         </div>
 
@@ -220,257 +336,142 @@
               aria-controls="faq-panel-1"
               id="faq-trigger-1"
             >
-              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">What type of trips do you offer?</span>
+              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">Who is eligible to apply for a Schengen visa through Visa Nest?</span>
               <span
                 class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15"
                 aria-hidden="true"
               >
-                <svg
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="currentColor"
-                  stroke-width="2.35"
-                  stroke-linecap="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
               </span>
             </button>
-            <div
-              id="faq-panel-1"
-              role="region"
-              aria-labelledby="faq-trigger-1"
-              class="grid transition-[grid-template-rows] duration-300 ease-out"
-              style="grid-template-rows: 0fr"
-              data-faq-panel
-            >
+            <div id="faq-panel-1" role="region" aria-labelledby="faq-trigger-1" class="grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr" data-faq-panel>
               <div class="min-h-0 overflow-hidden">
-                <p class="border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
-                  We plan leisure getaways, adventure routes, cultural tours, and fully custom itineraries worldwide—with visa guidance included whenever you need it.
-                </p>
+                <div class="space-y-3 border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
+                  <p>Non-British nationals who are legally residing in the United Kingdom are generally eligible to apply for a Schengen visa through our services. Applicants must hold valid UK residency status and meet the requirements of the relevant embassy or consulate.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="services-faq-card group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(0,71,171,0.16)] sm:rounded-3xl" data-faq-item>
-            <button
-              type="button"
-              class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5"
-              data-faq-trigger
-              aria-expanded="false"
-              aria-controls="faq-panel-2"
-              id="faq-trigger-2"
-            >
-              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">Are your trips suitable for solo travelers?</span>
-              <span
-                class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15"
-                aria-hidden="true"
-              >
-                <svg
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="currentColor"
-                  stroke-width="2.35"
-                  stroke-linecap="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
+            <button type="button" class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-2" id="faq-trigger-2">
+              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">What is the total cost of a Schengen visa?</span>
+              <span class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15" aria-hidden="true">
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
               </span>
             </button>
-            <div
-              id="faq-panel-2"
-              role="region"
-              aria-labelledby="faq-trigger-2"
-              class="grid transition-[grid-template-rows] duration-300 ease-out"
-              style="grid-template-rows: 0fr"
-              data-faq-panel
-            >
+            <div id="faq-panel-2" role="region" aria-labelledby="faq-trigger-2" class="grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr" data-faq-panel>
               <div class="min-h-0 overflow-hidden">
-                <p class="border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
-                  Yes. Many itineraries work beautifully solo—we’ll align you with small-group departures or private guides depending on your comfort level and budget.
-                </p>
+                <div class="space-y-3 border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
+                  <p>The total cost depends on several factors, including the destination country, the number of applicants, and the services required. Please <a class="font-medium text-[#0047ab] underline underline-offset-2 hover:text-[#003686]" href="contact.html#contact-form">contact our team</a> for a personalised quotation based on your travel plans.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="services-faq-card group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(0,71,171,0.16)] sm:rounded-3xl" data-faq-item>
-            <button
-              type="button"
-              class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5"
-              data-faq-trigger
-              aria-expanded="false"
-              aria-controls="faq-panel-3"
-              id="faq-trigger-3"
-            >
-              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">Do you handle flights and visas?</span>
-              <span
-                class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15"
-                aria-hidden="true"
-              >
-                <svg
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="currentColor"
-                  stroke-width="2.35"
-                  stroke-linecap="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
+            <button type="button" class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-3" id="faq-trigger-3">
+              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">What Schengen visa services do you offer?</span>
+              <span class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15" aria-hidden="true">
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
               </span>
             </button>
-            <div
-              id="faq-panel-3"
-              role="region"
-              aria-labelledby="faq-trigger-3"
-              class="grid transition-[grid-template-rows] duration-300 ease-out"
-              style="grid-template-rows: 0fr"
-              data-faq-panel
-            >
+            <div id="faq-panel-3" role="region" aria-labelledby="faq-trigger-3" class="grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr" data-faq-panel>
               <div class="min-h-0 overflow-hidden">
-                <p class="border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
-                  We help coordinate flights when needed and walk you through visa requirements, documents, and timelines so nothing is left to guesswork.
-                </p>
+                <div class="space-y-3 border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
+                  <p>We provide comprehensive Schengen visa assistance, including:</p>
+                  <ul class="list-disc space-y-2 pl-5">
+                    <li>Visa appointment booking</li>
+                    <li>Document preparation and review</li>
+                    <li>Visa consultation</li>
+                    <li>Professional guidance throughout the application process</li>
+                    <li>Profile assessment and eligibility review</li>
+                    <li>Verification of supporting documents before submission</li>
+                  </ul>
+                  <p>Our experienced team ensures that your application is prepared according to embassy requirements.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="services-faq-card group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(0,71,171,0.16)] sm:rounded-3xl" data-faq-item>
-            <button
-              type="button"
-              class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5"
-              data-faq-trigger
-              aria-expanded="false"
-              aria-controls="faq-panel-4"
-              id="faq-trigger-4"
-            >
-              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">Will there be on-ground support during the trip?</span>
-              <span
-                class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15"
-                aria-hidden="true"
-              >
-                <svg
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="currentColor"
-                  stroke-width="2.35"
-                  stroke-linecap="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
+            <button type="button" class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-4" id="faq-trigger-4">
+              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">Do you offer holiday and travel packages?</span>
+              <span class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15" aria-hidden="true">
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
               </span>
             </button>
-            <div
-              id="faq-panel-4"
-              role="region"
-              aria-labelledby="faq-trigger-4"
-              class="grid transition-[grid-template-rows] duration-300 ease-out"
-              style="grid-template-rows: 0fr"
-              data-faq-panel
-            >
+            <div id="faq-panel-4" role="region" aria-labelledby="faq-trigger-4" class="grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr" data-faq-panel>
               <div class="min-h-0 overflow-hidden">
-                <p class="border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
-                  Our local partners provide on-ground assistance and clear escalation paths, plus emergency contact details for active bookings.
-                </p>
+                <div class="space-y-3 border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
+                  <p>Yes. In addition to visa services, we offer complete holiday and travel packages, including:</p>
+                  <ul class="list-disc space-y-2 pl-5">
+                    <li>Flight bookings</li>
+                    <li>Hotel reservations</li>
+                    <li>Activity and attraction bookings</li>
+                    <li>Cruise tours</li>
+                    <li>Historical and sightseeing tours</li>
+                    <li>Airport pick-up and drop-off services</li>
+                    <li>Customised travel itineraries</li>
+                  </ul>
+                  <p>We can tailor your package according to your budget and travel preferences.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="services-faq-card group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(0,71,171,0.16)] sm:rounded-3xl" data-faq-item>
-            <button
-              type="button"
-              class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5"
-              data-faq-trigger
-              aria-expanded="false"
-              aria-controls="faq-panel-5"
-              id="faq-trigger-5"
-            >
-              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">How do I book a trip?</span>
-              <span
-                class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15"
-                aria-hidden="true"
-              >
-                <svg
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="currentColor"
-                  stroke-width="2.35"
-                  stroke-linecap="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
+            <button type="button" class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-5" id="faq-trigger-5">
+              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">Do you guarantee visa approval?</span>
+              <span class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15" aria-hidden="true">
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
               </span>
             </button>
-            <div
-              id="faq-panel-5"
-              role="region"
-              aria-labelledby="faq-trigger-5"
-              class="grid transition-[grid-template-rows] duration-300 ease-out"
-              style="grid-template-rows: 0fr"
-              data-faq-panel
-            >
+            <div id="faq-panel-5" role="region" aria-labelledby="faq-trigger-5" class="grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr" data-faq-panel>
               <div class="min-h-0 overflow-hidden">
-                <p class="border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
-                  Reach out with your dates and destination—we’ll share curated options, a transparent quote, and simple steps to confirm and pay.
-                </p>
+                <div class="space-y-3 border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
+                  <p>Visa approval and visa validity are solely at the discretion of the relevant embassy or consulate. While no agency can legally guarantee a visa, Visa Nest has achieved a high approval success rate thanks to our experience, professional guidance, and thorough application preparation. We work closely with applicants to help ensure their profiles and documents meet embassy standards.</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="services-faq-card group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(0,71,171,0.16)] sm:rounded-3xl" data-faq-item>
-            <button
-              type="button"
-              class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5"
-              data-faq-trigger
-              aria-expanded="false"
-              aria-controls="faq-panel-6"
-              id="faq-trigger-6"
-            >
-              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">What is included in the trip cost?</span>
-              <span
-                class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15"
-                aria-hidden="true"
-              >
-                <svg
-                  class="h-5 w-5 sm:h-6 sm:w-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke="currentColor"
-                  stroke-width="2.35"
-                  stroke-linecap="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
+            <button type="button" class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-6" id="faq-trigger-6">
+              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">Will I receive a refund if my visa application is refused?</span>
+              <span class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15" aria-hidden="true">
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
               </span>
             </button>
-            <div
-              id="faq-panel-6"
-              role="region"
-              aria-labelledby="faq-trigger-6"
-              class="grid transition-[grid-template-rows] duration-300 ease-out"
-              style="grid-template-rows: 0fr"
-              data-faq-panel
-            >
+            <div id="faq-panel-6" role="region" aria-labelledby="faq-trigger-6" class="grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr" data-faq-panel>
               <div class="min-h-0 overflow-hidden">
-                <p class="border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
-                  Each package lists its inclusions upfront—typically stays, key transfers, and outlined experiences—so you always know what’s covered before you commit.
-                </p>
+                <div class="space-y-3 border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
+                  <p>Refund eligibility applies in specific circumstances. You may be eligible for a refund of our service fees if:</p>
+                  <ul class="list-disc space-y-2 pl-5">
+                    <li>The refusal resulted from an error made by our team.</li>
+                    <li>There was a delay in services caused by us.</li>
+                    <li>Incorrect documentation was prepared by our staff.</li>
+                  </ul>
+                  <p>However, refunds will not be provided for visa refusals resulting from fake, misleading, or incomplete information supplied by the applicant, or for decisions made solely by the embassy or consulate. For full details, see our <a class="font-medium text-[#0047ab] underline underline-offset-2 hover:text-[#003686]" href="refund-policy.html">Refund Policy</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="services-faq-card group relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-[0_4px_28px_-12px_rgba(15,23,42,0.10)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_20px_50px_-28px_rgba(0,71,171,0.16)] sm:rounded-3xl" data-faq-item>
+            <button type="button" class="flex w-full items-center justify-between gap-3 px-5 py-5 text-left transition-colors duration-300 hover:bg-slate-50/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#0047ab]/30 sm:gap-4 sm:px-6 sm:py-5" data-faq-trigger aria-expanded="false" aria-controls="faq-panel-7" id="faq-trigger-7">
+              <span class="min-w-0 flex-1 pr-1 text-[15px] font-semibold leading-snug text-[#1a1a1a] sm:text-base">How long does the Schengen visa process take?</span>
+              <span class="faq-icon-plus origin-center inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-primary-blue bg-primary-blue/10 text-primary-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] transition-all duration-300 ease-out group-hover:border-primary-blue group-hover:bg-primary-blue/15" aria-hidden="true">
+                <svg class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.35" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+              </span>
+            </button>
+            <div id="faq-panel-7" role="region" aria-labelledby="faq-trigger-7" class="grid transition-[grid-template-rows] duration-300 ease-out" style="grid-template-rows: 0fr" data-faq-panel>
+              <div class="min-h-0 overflow-hidden">
+                <div class="space-y-3 border-t border-slate-100 px-5 pb-5 pt-4 text-[15px] leading-relaxed text-slate-600 sm:px-6 sm:pb-6 sm:text-base">
+                  <p>The standard processing time for a Schengen visa is approximately <strong>15 working days</strong> from the date the embassy or consulate receives your application. However, processing times may vary depending on the applicant&apos;s circumstances, travel season, and the embassy&apos;s workload.</p>
+                  <p>In some cases, the embassy may require additional scrutiny, verification, or supporting documents. When this happens, the processing time may be extended beyond the standard 15 working days.</p>
+                  <p>Visa Nest will keep you informed throughout the process and provide guidance if any additional information is requested by the embassy.</p>
+                </div>
               </div>
             </div>
           </div>

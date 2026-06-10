@@ -11,12 +11,17 @@ const MOBILE_IDLE =
   "block rounded-lg px-3 py-2 font-medium text-slate-700 transition-colors duration-200 hover:bg-[#F4B400]/12";
 
 function applyActiveNav(active) {
-  document.querySelectorAll("#desktop-nav-links a[data-nav]").forEach((a) => {
+  document.querySelectorAll("#desktop-nav-links > li > a[data-nav]").forEach((a) => {
     a.className = a.dataset.nav === active ? DESKTOP_ACTIVE : DESKTOP_IDLE;
   });
   document.querySelectorAll("#mobile-menu a[data-nav]").forEach((a) => {
     a.className = a.dataset.nav === active ? MOBILE_ACTIVE : MOBILE_IDLE;
   });
+  const policiesTrigger = document.querySelector("[data-nav-policies-trigger]");
+  if (policiesTrigger) {
+    const policiesOn = active === "privacy" || active === "refund-policy";
+    policiesTrigger.dataset.navActive = policiesOn ? "true" : "false";
+  }
 }
 
 function bindMediaQueryClose(setMobileNavOpen) {
@@ -56,6 +61,16 @@ function initHeaderChrome() {
     window.addEventListener("scroll", updateHeaderOnScroll, { passive: true });
   }
 
+  const collapseMobilePoliciesSubmenus = () => {
+    document.querySelectorAll(".mobile-policies-toggle").forEach((btn) => {
+      const id = btn.getAttribute("aria-controls");
+      const sub = id ? document.getElementById(id) : null;
+      btn.setAttribute("aria-expanded", "false");
+      sub?.classList.add("hidden");
+      btn.querySelector(".mobile-policies-chevron")?.classList.remove("rotate-180");
+    });
+  };
+
   const setMobileNavOpen = (open) => {
     if (!siteHeader || !menuBtn || !mobileMenu) return;
     siteHeader.classList.toggle("mobile-nav-open", open);
@@ -70,6 +85,7 @@ function initHeaderChrome() {
       /* ignore */
     }
     document.body.style.overflow = open ? "hidden" : "";
+    if (!open) collapseMobilePoliciesSubmenus();
   };
 
   if (menuBtn && mobileMenu && siteHeader) {
@@ -87,10 +103,38 @@ function initHeaderChrome() {
   }
 }
 
+function initPoliciesDropdown() {
+  document.querySelectorAll(".mobile-policies-toggle").forEach((btn) => {
+    const panelId = btn.getAttribute("aria-controls");
+    const panel = panelId ? document.getElementById(panelId) : null;
+    if (!panel) return;
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") === "true";
+      const next = !open;
+      btn.setAttribute("aria-expanded", String(next));
+      panel.classList.toggle("hidden", !next);
+      btn.querySelector(".mobile-policies-chevron")?.classList.toggle("rotate-180", next);
+    });
+  });
+
+  document.querySelectorAll("[data-nav-dropdown]").forEach((li) => {
+    const trigger = li.querySelector(".nav-dropdown-trigger");
+    if (!trigger) return;
+    const setExpanded = (v) => trigger.setAttribute("aria-expanded", v ? "true" : "false");
+    li.addEventListener("mouseenter", () => setExpanded(true));
+    li.addEventListener("mouseleave", () => setExpanded(false));
+    li.addEventListener("focusin", () => setExpanded(true));
+    li.addEventListener("focusout", (e) => {
+      if (!li.contains(e.relatedTarget)) setExpanded(false);
+    });
+  });
+}
+
 function wireNav() {
   const active = document.body.dataset.activeNav || "home";
   applyActiveNav(active);
   initHeaderChrome();
+  initPoliciesDropdown();
 }
 
 async function fetchPartial(candidates) {
